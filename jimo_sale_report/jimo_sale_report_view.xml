@@ -21,7 +21,7 @@
                 <field name="saleperson_id" />
                 <field name="customer_id" />
                 <field name="product_id" />
-                <field name="ean13" />
+<!--            <field name="ean13" />					-->
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
@@ -51,8 +51,9 @@
                 <field name="shop_id" />
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
-                    <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
+                    <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>
                     <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
+                    <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
                     <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
                     <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
                     <filter name="group_customer" string="Customer" context="{'group_by':'customer_id'}"/>
