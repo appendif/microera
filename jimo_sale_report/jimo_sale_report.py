@@ -21,7 +21,7 @@
 
 from openerp.osv import fields, osv
 from openerp.tools.sql import drop_view_if_exists
-from openerp.addons.decimal_precision import decimal_precision as dp
+#from openerp.addons.decimal_precision import decimal_precision as dp
 
 
 class jimo_sale_report(osv.osv):
@@ -50,9 +50,33 @@ class jimo_sale_report(osv.osv):
         'standard_price':fields.float('Cost Price', digits=(16,2), readonly=True, help=""),
         'unit_price':fields.float('Unit Price', digits=(16,2), readonly=True, help=""),
         'total_price':fields.float('Total Price', digits=(16,2), readonly=True, help=""),
+        'employee_id':fields.many2one('hr.employee', 'Employee', readonly=True),
+        'manager1_id':fields.many2one('hr.employee', 'Manager1', readonly=True),
+        'manager2_id':fields.many2one('hr.employee', 'Manager2', readonly=True),
     }
     
     def init(self, cr):
+        drop_view_if_exists(cr, 'user_to_employee')
+        cr.execute("""
+            create or replace view user_to_employee as ( 
+SELECT    
+    u.id AS id, 
+    u.user_id AS user_id, 
+    e1.id AS employee_id,
+    e1.name_related AS employee_name,
+    e2.id AS manager1_id,
+    e2.name_related AS manager1_name,
+    e3.id AS manager2_id,
+    e3.name_related AS manager2_name
+    FROM resource_resource u
+    LEFT JOIN hr_employee e1 ON (e1.resource_id=u.id)
+    LEFT JOIN hr_employee e2 ON (e2.id=e1.parent_id)
+    LEFT JOIN hr_employee e3 ON (e3.id=e2.parent_id)
+    WHERE u.resource_type = 'user'
+      AND e1.id IS NOT NULL
+            )""")
+
+        
         drop_view_if_exists(cr, 'jimo_sale_report')
         cr.execute("""
             create or replace view jimo_sale_report as ( 
@@ -80,7 +104,11 @@ SELECT
         from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS unit_price,
 
     ( select sum(price_unit * product_uom_qty * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0)      
-        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS total_price
+        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS total_price,
+
+    ue.employee_id AS employee_id,
+    ue.manager1_id AS manager1_id,
+    ue.manager2_id AS manager2_id
     
     FROM stock_picking sp
     LEFT JOIN sale_order so           ON (sp.sale_id=so.id)
@@ -88,6 +116,7 @@ SELECT
     LEFT JOIN product_product pp      ON (sm.product_id=pp.id)
          JOIN product_template pt     ON (pp.product_tmpl_id=pt.id)
     LEFT JOIN product_supplierinfo si ON (pp.id=si.product_id)
+    LEFT JOIN user_to_employee ue     ON (ue.user_id=so.user_id)
 
     WHERE sp.date_done IS NOT NULL
       AND sp.type = 'out'
