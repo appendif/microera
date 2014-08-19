@@ -31,6 +31,7 @@ Jimo Sale Report
     'depends': ['base', 'product', 'stock', 'sale', 'purchase', 'product_brand'],
     'data': [
         'jimo_sale_report_view.xml',
+        'security/ir.model.access.csv',
     ],
     'demo': [],
     'installable': True,
