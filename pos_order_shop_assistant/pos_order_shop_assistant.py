@@ -16,18 +16,15 @@
 #    GNU Affero General Public License for more details.
 ##############################################################################
 
-import openerp
-from openerp import netsvc, tools, pooler
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
-import time
 
 class inherit_pos_order_for_shopass(osv.osv):
     _name='pos.order'
     _inherit='pos.order'
 
     _columns = {
-        'shopass_id': fields.many2one('hr.employee', 'Shop Assistant', required=True),
+        'shopass_id': fields.many2one('hr.employee', 'Shop Assistant', required=False),
     }
 
 inherit_pos_order_for_shopass()
