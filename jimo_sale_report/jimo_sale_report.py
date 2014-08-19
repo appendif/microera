@@ -121,7 +121,7 @@ SELECT
     WHERE sp.date_done IS NOT NULL
       AND sp.type = 'out'
       AND sp.sale_id IS NOT NULL
-            )""")
+            )""" )
 
 jimo_sale_report()
 

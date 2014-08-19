@@ -32,6 +32,7 @@ Jimo Sale Report
     'data': [
         'jimo_sale_report_view.xml',
         'security/ir.model.access.csv',
+        'security/jimo_sale_report_security.xml',
     ],
     'demo': [],
     'installable': True,
