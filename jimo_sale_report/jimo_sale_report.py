@@ -19,15 +19,25 @@
 #                                                                               #
 #################################################################################
 
-from openerp.osv import fields, osv
+from openerp.osv import fields, orm
 from openerp.tools.sql import drop_view_if_exists
-#from openerp.addons.decimal_precision import decimal_precision as dp
 
+class jimo_sale_report(orm.Model):
 
-class jimo_sale_report(osv.osv):
     _name = "jimo.sale.report"
-    _description = "Jimo Sale report"
+    _description = "Jimo delivered sale report"
     _auto = False
+
+    def _invoiced(self, cr, uid, ids, name, arg, context=None):
+        res = {}
+        for line in self.browse(cr, uid, ids, context=context):
+            res[line.id] = False
+            if line.commorder_id:
+                sale = line.commorder_id
+                if sale.invoiced:
+                    res[line.id] = True
+        return res
+    
     _columns = {
         'date_done': fields.date('Delivery Date', readonly=True),
         'year': fields.char('Year', size=4, readonly=True),
@@ -53,7 +63,10 @@ class jimo_sale_report(osv.osv):
         'employee_id':fields.many2one('hr.employee', 'Employee', readonly=True),
         'manager1_id':fields.many2one('hr.employee', 'Manager1', readonly=True),
         'manager2_id':fields.many2one('hr.employee', 'Manager2', readonly=True),
+        'commorder_id':fields.many2one('sale.order', 'Commission Order', readonly=True),
+        'comm_paid': fields.function(_invoiced, string='Commission Paid', type='boolean'),
     }
+    
     
     def init(self, cr):
         drop_view_if_exists(cr, 'user_to_employee')
@@ -76,7 +89,6 @@ SELECT
       AND e1.id IS NOT NULL
             )""")
 
-        
         drop_view_if_exists(cr, 'jimo_sale_report')
         cr.execute("""
             create or replace view jimo_sale_report as ( 
@@ -92,35 +104,43 @@ SELECT
     pp.id  AS product_id,
     pp.ean13 AS ean13,
     pt.product_brand_id AS brand_id,
-    si.company_id AS company_id,
-    si.name AS supplier_id,
+    so.company_id AS company_id,
     so.shop_id AS shop_id,
-    sm.product_qty AS shipped_qty,
-    ( select sum(product_uom_qty) from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS order_qty,
+    sp.type AS type,
+
+    ( select min(name) from product_supplierinfo where product_id=pp.id and company_id=so.company_id ) AS supplier_id,
+
+    (CASE WHEN sp.type='out' THEN sm.product_qty ELSE -sm.product_qty END) AS shipped_qty,
+     
+    ( select sum( (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END) ) 
+        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS order_qty,
+
     pt.list_price AS list_price,
     pt.standard_price AS standard_price,
-        
-    ( select sum(price_unit * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0)      
+
+    ( select sum(price_unit * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0 )      
         from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS unit_price,
 
-    ( select sum(price_unit * product_uom_qty * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0)      
+    ( select sum(  (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END)
+        * price_unit * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0 )      
         from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS total_price,
 
     ue.employee_id AS employee_id,
     ue.manager1_id AS manager1_id,
-    ue.manager2_id AS manager2_id
+    ue.manager2_id AS manager2_id,
     
+    ( select max(id) from sale_order where origin=so.name and company_id=so.company_id and state<>'cancel') AS commorder_id
+     
     FROM stock_picking sp
-    LEFT JOIN sale_order so           ON (sp.sale_id=so.id)
-    LEFT JOIN stock_move sm           ON (sm.picking_id=sp.id)
-    LEFT JOIN product_product pp      ON (sm.product_id=pp.id)
-         JOIN product_template pt     ON (pp.product_tmpl_id=pt.id)
-    LEFT JOIN product_supplierinfo si ON (pp.id=si.product_id)
-    LEFT JOIN user_to_employee ue     ON (ue.user_id=so.user_id)
+         JOIN sale_order so        ON (sp.sale_id=so.id)
+    LEFT JOIN stock_move sm        ON (sm.picking_id=sp.id)
+         JOIN product_product pp   ON (sm.product_id=pp.id)
+         JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
+    LEFT JOIN user_to_employee ue  ON (ue.user_id=so.user_id)
 
     WHERE sp.date_done IS NOT NULL
-      AND sp.type = 'out'
       AND sp.sale_id IS NOT NULL
+    ORDER BY sp.date_done DESC
             )""" )
 
 jimo_sale_report()

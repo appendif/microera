@@ -29,6 +29,8 @@
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
+                <field name="commorder_id" />
+                <field name="comm_paid" />
            </tree>
         </field>
     </record>
@@ -49,6 +51,7 @@
                 <field name="product_id" default_focus="1"/>
                 <field name="brand_id" />
                 <field name="shop_id" />
+                <field name="commorder_id" />
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
                     <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>
@@ -71,7 +74,7 @@
 
         
     <record id="action_sale_report" model="ir.actions.act_window">
-        <field name="name">Jimo Sale report</field>
+        <field name="name">Jimo delivered sale report</field>
         <field name="res_model">jimo.sale.report</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree</field>
