@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_pos_sale_report_tree" model="ir.ui.view">
+        <field name="name">jimo.pos.sale.report.tree</field>
+        <field name="model">jimo.pos.sale.report</field>
+        <field name="arch" type="xml">
+            <tree string="POS Sale report" create="false">
+                <field name="date_order" invisible="1" />
+                <field name="year" />
+                <field name="month" />
+                <field name="day" />
+                <field name="posorder_id" />
+                <field name="pos_reference" />
+                <field name="saleperson_id" />
+<!--            <field name="customer_id" />            -->
+                <field name="product_id" />
+<!--            <field name="ean13" />                  -->
+                <field name="brand_id" />
+                <field name="company_id" />
+                <field name="supplier_id" />
+<!--            <field name="shop_id" />                -->
+                <field name="pos_name" />
+                <field name="quantity"   sum="Quantity"/>
+                <field name="list_price" />
+<!--            <field name="standard_price" />         -->
+                <field name="unit_price" />
+                <field name="discount" />
+                <field name="total_price" sum="Total Price"/>
+                <field name="employee_id" />
+                <field name="manager1_id" />
+                <field name="manager2_id" />
+           </tree>
+        </field>
+    </record>
+
+    <record id="view_pos_sale_report_search" model="ir.ui.view">
+        <field name="name">jimo.pos.sale.report.search</field>
+        <field name="model">jimo.pos.sale.report</field>
+        <field name="arch" type="xml">
+            <search string="POS Sale report">
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="pos_name" />
+                <field name="supplier_id" context="{'contact_display':'partner'}"/>
+                <field name="saleperson_id" />
+                <field name="employee_id" />
+                <field name="manager1_id" />
+                <field name="manager2_id" />
+                <field name="posorder_id" context="{'contact_display':'pos.order'}"/>
+                <field name="product_id" default_focus="1"/>
+                <field name="brand_id" />
+                <group expand="1" string="Group By...">
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    <filter name="group_pos" string="POS" context="{'group_by':'pos_name'}"/>
+                    <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
+                    <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
+                    <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
+                    <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
+                    <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
+                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_order'}" help="Order Day"/>
+                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Order Month"/>
+                    <filter string="Year"  icon="terp-go-year"  context="{'group_by':'year'}"  help="Order Year"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        
+    <record id="action_pos_sale_report" model="ir.actions.act_window">
+        <field name="name">Jimo POS Sale report</field>
+        <field name="res_model">jimo.pos.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="help">This report performs analysis on your POS sales orders.</field>
+    </record>
+
+<!--
+    <menuitem
+    id="menu_jimo_reporting"
+    name="Jimo"
+    sequence="16"
+    parent="base.menu_reporting"
+    groups="base.group_sale_manager" />
+-->
+
+    <menuitem
+    	id="menu_action_pos_sale_report"
+    	action="action_pos_sale_report"
+    	parent="jimo_sale_report.menu_jimo_reporting"
+    	sequence="2" />
+
+</data>
+</openerp>
