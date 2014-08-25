@@ -1,27 +1,27 @@
 # -*- coding: utf-8 -*-
-#################################################################################
-#                                                                               #
-#    OpenERP, Open Source Management Solution                                   #
-#    Copyright (C) 2014 MicroEra (<http://www.microera.it>).                    #
-#                                                                               #
-#    This program is free software: you can redistribute it and/or modify       #
-#    it under the terms of the GNU Affero General Public License as             #
-#    published by the Free Software Foundation, either version 3 of the         #
-#    License, or (at your option) any later version.                            #
-#                                                                               #
-#    This program is distributed in the hope that it will be useful,            #
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of             #
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the              #
-#    GNU Affero General Public License for more details.                        #
-#                                                                               #
-#    You should have received a copy of the GNU Affero General Public License   #
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.      #
-#                                                                               #
-#################################################################################
+###############################################################################
+#                                                                             #
+#   OpenERP, Open Source Management Solution                                  #
+#   Copyright (C) 2014 MicroEra (<http://www.microera.it>).                   #
+#                                                                             #
+#   This program is free software: you can redistribute it and/or modify      #
+#   it under the terms of the GNU Affero General Public License as            #
+#   published by the Free Software Foundation, either version 3 of the        #
+#   License, or (at your option) any later version.                           #
+#                                                                             #
+#   This program is distributed in the hope that it will be useful,           #
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of            #
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             #
+#   GNU Affero General Public License for more details.                       #
+#                                                                             #
+#   You should have received a copy of the GNU Affero General Public License  #
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.     #
+#                                                                             #
+###############################################################################
 
 from openerp.osv import fields, osv
 from openerp.tools.sql import drop_view_if_exists
-#from openerp.addons.decimal_precision import decimal_precision as dp
+# from openerp.addons.decimal_precision import decimal_precision as dp
 
 
 class jimo_pos_sale_report(osv.osv):
@@ -31,9 +31,9 @@ class jimo_pos_sale_report(osv.osv):
     _columns = {
         'date_order': fields.date('POS Order Date', readonly=True),
         'year': fields.char('Year', size=4, readonly=True),
-        'month':fields.selection([('01','January'), ('02','February'), ('03','March'), ('04','April'),
-            ('05','May'), ('06','June'), ('07','July'), ('08','August'), ('09','September'),
-            ('10','October'), ('11','November'), ('12','December')], 'Month',readonly=True),
+        'month':fields.selection([('01', 'January'), ('02', 'February'), ('03', 'March'), ('04', 'April'),
+            ('05', 'May'), ('06', 'June'), ('07', 'July'), ('08', 'August'), ('09', 'September'),
+            ('10', 'October'), ('11', 'November'), ('12', 'December')], 'Month', readonly=True),
         'day': fields.char('Day', size=128, readonly=True),
         'posorder_id':fields.many2one('pos.order', 'POS Order', readonly=True),
         'pos_reference':fields.char('Receipt', size=64, readonly=True, help=""),
@@ -46,21 +46,21 @@ class jimo_pos_sale_report(osv.osv):
         'supplier_id':fields.many2one('res.partner', 'Supplier', readonly=True),
         'shop_id':fields.many2one('sale.shop', 'Shop', readonly=True),
         'pos_name':fields.char('POS', size=32, readonly=True, help=""),
-        'quantity':fields.float('Quantity', digits=(16,2), readonly=True, help=""),
-        'list_price':fields.float('Sale Price', digits=(16,2), readonly=True, help=""),
-        'standard_price':fields.float('Cost Price', digits=(16,2), readonly=True, help=""),
-        'unit_price':fields.float('Unit Price', digits=(16,2), readonly=True, help=""),
-        'total_price':fields.float('Total Price', digits=(16,2), readonly=True, help=""),
-        'discount':fields.float('Discount (%)', digits=(16,2), readonly=True, help=""),
+        'quantity':fields.float('Quantity', digits=(16, 2), readonly=True, help=""),
+        'list_price':fields.float('Sale Price', digits=(16, 2), readonly=True, help=""),
+        'standard_price':fields.float('Cost Price', digits=(16, 2), readonly=True, help=""),
+        'unit_price':fields.float('Unit Price', digits=(16, 2), readonly=True, help=""),
+        'total_price':fields.float('Total Price', digits=(16, 2), readonly=True, help=""),
+        'discount':fields.float('Discount (%)', digits=(16, 2), readonly=True, help=""),
         'employee_id':fields.many2one('hr.employee', 'Shop Assistant', readonly=True),
         'manager1_id':fields.many2one('hr.employee', 'Manager1', readonly=True),
         'manager2_id':fields.many2one('hr.employee', 'Manager2', readonly=True),
     }
-    
-    def init(self, cr):       
+
+    def init(self, cr):
         drop_view_if_exists(cr, 'jimo_pos_sale_report')
         cr.execute("""
-            create or replace view jimo_pos_sale_report as ( 
+            create or replace view jimo_pos_sale_report as (
 SELECT    
     ol.id AS id,
     to_char(date_trunc('day',oh.date_order), 'YYYY-MM-DD') AS date_order,
@@ -97,8 +97,7 @@ SELECT
     LEFT JOIN user_to_employee ue ON (ue.employee_id=oh.shopass_id)
 
     WHERE oh.state IN ('paid', 'done', 'invoiced')
-    
-            )""" )
+            )""")
 
 
 jimo_pos_sale_report()
