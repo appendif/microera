@@ -31,7 +31,7 @@ Add Shop Assistant in PoS Orders
 Shop assistant is linked to employees
 
     """,
-    'depends': ["point_of_sale","hr"],
+    'depends': ["point_of_sale", "hr"],
     'data': [
         'order_shop_assistant_view.xml',
     ],
@@ -39,3 +39,5 @@ Shop assistant is linked to employees
     'application': False,
     'auto_install': False,
 }
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

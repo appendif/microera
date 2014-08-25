@@ -19,12 +19,16 @@
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 
+
 class inherit_pos_order_for_shopass(osv.osv):
-    _name='pos.order'
-    _inherit='pos.order'
+    _name = 'pos.order'
+    _inherit = 'pos.order'
 
     _columns = {
-        'shopass_id': fields.many2one('hr.employee', 'Shop Assistant', required=False),
+        'shopass_id': fields.many2one('hr.employee', 'Shop Assistant',
+                                      required=False),
     }
 
 inherit_pos_order_for_shopass()
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

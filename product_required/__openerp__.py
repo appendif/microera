@@ -27,7 +27,7 @@
     'category': 'Sales Management',
     'depends': ['product'],
     'demo_xml': [],
-    'description': 'Module to make required field "default_code" for products.',
+    'description': 'Module to make required field "default_code" for product.',
     'data': [],
     'test': [],
     'init_xml': [],

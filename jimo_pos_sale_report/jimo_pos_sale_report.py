@@ -61,7 +61,7 @@ class jimo_pos_sale_report(osv.osv):
         drop_view_if_exists(cr, 'jimo_pos_sale_report')
         cr.execute("""
             create or replace view jimo_pos_sale_report as (
-SELECT    
+SELECT
     ol.id AS id,
     to_char(date_trunc('day',oh.date_order), 'YYYY-MM-DD') AS date_order,
     to_char(date_trunc('day',oh.date_order), 'YYYY') AS year,
@@ -75,7 +75,8 @@ SELECT
     pp.ean13 AS ean13,
     pt.product_brand_id AS brand_id,
     oh.company_id AS company_id,
-    ( select min(name) from product_supplierinfo where product_id=pp.id and company_id=oh.company_id ) AS supplier_id,
+    ( select min(name) from product_supplierinfo where
+        product_id=pp.id and company_id=oh.company_id ) AS supplier_id,
     oh.shop_id AS shop_id,
     pc.name AS pos_name,
     ol.qty AS quantity,
