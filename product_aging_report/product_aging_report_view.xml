@@ -7,16 +7,18 @@
         <field name="model">product.aging.report</field>
         <field name="arch" type="xml">
             <tree string="sale report" create="false">
+                <field name="location_id" />
+                <field name="company_id" />
                 <field name="product_id" />
                 <field name="brand_id" />
                 <field name="supplier_id" />
-                <field name="company_id" />
-
                 <field name="qty_available" />
-<!--                <field name="qty_available2" />		-->
-                <field name="date" />
+                <field name="stock_real" />
+                <field name="date_done" />
+                <field name="origin" />
                 <field name="picking_id" />
-                <field name="shipped_qty" />
+                <field name="product_qty" />
+                <field name="qty" />
                 
            </tree>
         </field>
