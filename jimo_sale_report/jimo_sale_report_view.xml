@@ -12,7 +12,6 @@
                 <field name="month" />
                 <field name="day" />
                 <field name="saleorder_id" />
-                <field name="saleperson_id" />
                 <field name="customer_id" />
                 <field name="product_id" />
 <!--            <field name="ean13" />					-->
@@ -26,9 +25,12 @@
                 <field name="standard_price" />
                 <field name="unit_price" />
                 <field name="total_price" sum="Total Price"/>
+                <field name="saleperson_id" />
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
+                <field name="it_saleperson_id" />
+                <field name="it_employee_id" />
                 <field name="commorder_id" />
                 <field name="comm_paid" />
            </tree>
@@ -44,6 +46,7 @@
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
                 <field name="customer_id" context="{'contact_display':'partner'}"/>
                 <field name="saleperson_id" />
+                <field name="it_saleperson_id" />
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
@@ -59,9 +62,11 @@
                     <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
                     <filter name="group_saleorder" string="Sale Order" context="{'group_by':'saleorder_id'}"/>
                     <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
+                    <filter name="group_saleperson_it" string="Saleperson IT" context="{'group_by':'it_saleperson_id'}"/>
                     <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
                     <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
                     <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
+                    <filter name="group_employee_it" string="Employee IT" context="{'group_by':'it_employee_id'}"/>
                     <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
                     <filter name="group_customer" string="Customer" context="{'group_by':'customer_id'}"/>
                     <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_done'}" help="Day Delivered"/>

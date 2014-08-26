@@ -42,29 +42,33 @@ class jimo_sale_report(orm.Model):
     _columns = {
         'date_done': fields.date('Delivery Date', readonly=True),
         'year': fields.char('Year', size=4, readonly=True),
-        'month':fields.selection([('01', 'January'), ('02', 'February'), ('03', 'March'), ('04', 'April'),
-            ('05', 'May'), ('06', 'June'), ('07', 'July'), ('08', 'August'), ('09', 'September'),
-            ('10', 'October'), ('11', 'November'), ('12', 'December')], 'Month', readonly=True),
+        'month': fields.selection([
+            ('01', 'January'), ('02', 'February'), ('03', 'March'),
+            ('04', 'April'), ('05', 'May'), ('06', 'June'),
+            ('07', 'July'), ('08', 'August'), ('09', 'September'),
+            ('10', 'October'), ('11', 'November'), ('12', 'December')],
+            'Month', readonly=True),
         'day': fields.char('Day', size=128, readonly=True),
-        'saleorder_id':fields.many2one('sale.order', 'Sale Order', readonly=True),
-        'saleperson_id':fields.many2one('res.users', 'Saleperson', readonly=True),
-        'customer_id':fields.many2one('res.partner', 'Customer', readonly=True),
-        'product_id':fields.many2one('product.product', 'Product', readonly=True),
-        'ean13':fields.char('ean13', size=64, readonly=True, help=""),
-        'brand_id':fields.many2one('product.brand', 'Brand', readonly=True),
-        'company_id':fields.many2one('res.company', 'Company', readonly=True),
-        'supplier_id':fields.many2one('res.partner', 'Supplier', readonly=True),
-        'shop_id':fields.many2one('sale.shop', 'Shop', readonly=True),
-        'order_qty':fields.float('Order Qty', digits=(16, 2), readonly=True, help=""),
-        'shipped_qty':fields.float('Shipped Qty', digits=(16, 2), readonly=True, help=""),
-        'list_price':fields.float('Sale Price', digits=(16, 2), readonly=True, help=""),
-        'standard_price':fields.float('Cost Price', digits=(16, 2), readonly=True, help=""),
-        'unit_price':fields.float('Unit Price', digits=(16, 2), readonly=True, help=""),
-        'total_price':fields.float('Total Price', digits=(16, 2), readonly=True, help=""),
-        'employee_id':fields.many2one('hr.employee', 'Employee', readonly=True),
-        'manager1_id':fields.many2one('hr.employee', 'Manager1', readonly=True),
-        'manager2_id':fields.many2one('hr.employee', 'Manager2', readonly=True),
-        'commorder_id':fields.many2one('sale.order', 'Commission Order', readonly=True),
+        'saleorder_id': fields.many2one('sale.order', 'Sale Order', readonly=True),
+        'saleperson_id': fields.many2one('res.users', 'Saleperson', readonly=True),
+        'customer_id': fields.many2one('res.partner', 'Customer', readonly=True),
+        'product_id': fields.many2one('product.product', 'Product', readonly=True),
+        'brand_id': fields.many2one('product.brand', 'Brand', readonly=True),
+        'company_id': fields.many2one('res.company', 'Company', readonly=True),
+        'supplier_id': fields.many2one('res.partner', 'Supplier', readonly=True),
+        'it_saleperson_id': fields.many2one('res.users', 'Saleperson IT', readonly=True),
+        'shop_id': fields.many2one('sale.shop', 'Shop', readonly=True),
+        'order_qty': fields.float('Order Qty', digits=(16, 2), readonly=True),
+        'shipped_qty': fields.float('Shipped Qty', digits=(16, 2), readonly=True),
+        'list_price': fields.float('Sale Price', digits=(16, 2), readonly=True),
+        'standard_price': fields.float('Cost Price', digits=(16, 2), readonly=True),
+        'unit_price': fields.float('Unit Price', digits=(16, 2), readonly=True),
+        'total_price': fields.float('Total Price', digits=(16, 2), readonly=True),
+        'employee_id': fields.many2one('hr.employee', 'Employee', readonly=True),
+        'manager1_id': fields.many2one('hr.employee', 'Manager1', readonly=True),
+        'manager2_id': fields.many2one('hr.employee', 'Manager2', readonly=True),
+        'it_employee_id': fields.many2one('hr.employee', 'Employee IT', readonly=True),
+        'commorder_id': fields.many2one('sale.order', 'Commission Order', readonly=True),
         'comm_paid': fields.function(_invoiced, string='Commission Paid', type='boolean'),
     }
 
@@ -108,36 +112,54 @@ SELECT
     so.shop_id AS shop_id,
     sp.type AS type,
 
-    ( select min(name) from product_supplierinfo where product_id=pp.id and company_id=so.company_id ) AS supplier_id,
+    su.id AS supplier_id,
+    su.user_id AS it_saleperson_id,
 
     (CASE WHEN sp.type='out' THEN sm.product_qty ELSE -sm.product_qty END)
         AS shipped_qty,
 
-    ( select sum( (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END) ) 
-        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS order_qty,
+    ( select sum(
+        (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END))
+        from sale_order_line where order_id=so.id and product_id=sm.product_id)
+            AS order_qty,
 
     pt.list_price AS list_price,
     pt.standard_price AS standard_price,
 
-    ( select sum(price_unit * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0 )      
-        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS unit_price,
+    ( select sum(price_unit
+        * (100.0-discount) / 100.0
+        * (100.0-so.global_discount_percentage) / 100.0 )
+        from sale_order_line where order_id=so.id and product_id=sm.product_id)
+            AS unit_price,
 
-    ( select sum(  (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END)
-        * price_unit * (100.0-discount) / 100.0 * (100.0-so.global_discount_percentage) / 100.0 )      
-        from sale_order_line where order_id=so.id and product_id=sm.product_id ) AS total_price,
+    ( select sum(
+        (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END)
+        * price_unit
+        * (100.0-discount) / 100.0
+        * (100.0-so.global_discount_percentage) / 100.0 )
+        from sale_order_line where order_id=so.id and product_id=sm.product_id)
+            AS total_price,
 
-    ue.employee_id AS employee_id,
-    ue.manager1_id AS manager1_id,
-    ue.manager2_id AS manager2_id,
+    ue1.employee_id AS employee_id,
+    ue1.manager1_id AS manager1_id,
+    ue1.manager2_id AS manager2_id,
+    ue2.employee_id AS it_employee_id,
 
-    ( select max(id) from sale_order where origin=so.name and company_id=so.company_id and state<>'cancel') AS commorder_id
+    ( select max(id) from sale_order where origin=so.name and
+        company_id=so.company_id and state<>'cancel') AS commorder_id
 
     FROM stock_picking sp
          JOIN sale_order so        ON (sp.sale_id=so.id)
     LEFT JOIN stock_move sm        ON (sm.picking_id=sp.id)
          JOIN product_product pp   ON (sm.product_id=pp.id)
          JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
-    LEFT JOIN user_to_employee ue  ON (ue.user_id=so.user_id)
+
+    LEFT JOIN res_partner su ON (su.id = ( select min(name)
+            from product_supplierinfo
+            where product_id=pp.id and company_id=so.company_id ))
+
+    LEFT JOIN user_to_employee ue1  ON (ue1.user_id=so.user_id)
+    LEFT JOIN user_to_employee ue2  ON (ue2.user_id=su.user_id)
 
     WHERE sp.date_done IS NOT NULL
       AND sp.sale_id IS NOT NULL
