@@ -6,13 +6,13 @@
         <field name="name">product.aging.report.tree</field>
         <field name="model">product.aging.report</field>
         <field name="arch" type="xml">
-            <tree string="sale report" create="false">
+            <tree string="Product aging report" create="false">
                 <field name="location_id" />
-                <field name="company_id" />
+<!--            <field name="company_id" />		-->
                 <field name="product_id" />
                 <field name="brand_id" />
                 <field name="supplier_id" />
-                <field name="qty_available" />
+<!--            <field name="qty_available" /> 	-->
                 <field name="stock_real" />
                 <field name="date_done" />
                 <field name="origin" />
@@ -24,44 +24,27 @@
         </field>
     </record>
 
-<!--
     <record id="view_product_aging_report_search" model="ir.ui.view">
-        <field name="name">roduct.aging.report.search</field>
-        <field name="model">roduct.aging.report</field>
+        <field name="name">product.aging.report.search</field>
+        <field name="model">product.aging.report</field>
         <field name="arch" type="xml">
-            <search string="Sale report">
+            <search string="Product aging report">
                 <field name="company_id" groups="base.group_multi_company"/>
-                <field name="supplier_id" context="{'contact_display':'partner'}"/>
-                <field name="customer_id" context="{'contact_display':'partner'}"/>
-                <field name="saleperson_id" />
-                <field name="employee_id" />
-                <field name="manager1_id" />
-                <field name="manager2_id" />
-                <field name="saleorder_id" context="{'contact_display':'sale.order'}"/>
                 <field name="product_id" default_focus="1"/>
+                <field name="location_id" />
+                <field name="supplier_id" context="{'contact_display':'partner'}"/>
                 <field name="brand_id" />
-                <field name="shop_id" />
-                <field name="commorder_id" />
+
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
-                    <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>
-                    <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
                     <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
-                    <filter name="group_saleorder" string="Sale Order" context="{'group_by':'saleorder_id'}"/>
-                    <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
-                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
-                    <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
-                    <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
+                    <filter name="group_location" string="Location" context="{'group_by':'location_id'}"/>
                     <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
-                    <filter name="group_customer" string="Customer" context="{'group_by':'customer_id'}"/>
-                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_done'}" help="Day Delivered"/>
-                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Month Delivered"/>
-                    <filter string="Year"  icon="terp-go-year"  context="{'group_by':'year'}"  help="Year Delivered"/>
+                    <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
                 </group>
             </search>
         </field>
     </record>
--->
         
     <record id="action_product_aging_report" model="ir.actions.act_window">
         <field name="name">Product aging report</field>
