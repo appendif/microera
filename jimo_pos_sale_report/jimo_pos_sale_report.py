@@ -44,6 +44,7 @@ class jimo_pos_sale_report(osv.osv):
         'brand_id':fields.many2one('product.brand', 'Brand', readonly=True),
         'company_id':fields.many2one('res.company', 'Company', readonly=True),
         'supplier_id':fields.many2one('res.partner', 'Supplier', readonly=True),
+        'it_saleperson_id': fields.many2one('res.users', 'Saleperson IT', readonly=True),
         'shop_id':fields.many2one('sale.shop', 'Shop', readonly=True),
         'pos_name':fields.char('POS', size=32, readonly=True, help=""),
         'quantity':fields.float('Quantity', digits=(16, 2), readonly=True, help=""),
@@ -75,8 +76,8 @@ SELECT
     pp.ean13 AS ean13,
     pt.product_brand_id AS brand_id,
     oh.company_id AS company_id,
-    ( select min(name) from product_supplierinfo where
-        product_id=pp.id and company_id=oh.company_id ) AS supplier_id,
+    su.id AS supplier_id,
+    su.user_id AS it_saleperson_id,
     oh.shop_id AS shop_id,
     pc.name AS pos_name,
     ol.qty AS quantity,
@@ -85,17 +86,22 @@ SELECT
     ol.price_unit as unit_price,
     ol.price_subtotal_incl as total_price,
     ol.discount as discount,
-    ue.employee_id AS employee_id,
-    ue.manager1_id AS manager1_id,
-    ue.manager2_id AS manager2_id
+    ue1.employee_id AS employee_id,
+    ue1.manager1_id AS manager1_id,
+    ue1.manager2_id AS manager2_id,
+    ue2.employee_id AS it_employee_id
 
     FROM pos_order_line ol
-    LEFT JOIN pos_order oh        ON (ol.order_id=oh.id)
-         JOIN product_product pp  ON (ol.product_id=pp.id)
-         JOIN product_template pt ON (pp.product_tmpl_id=pt.id)
-    LEFT JOIN pos_session ps      ON (oh.session_id=ps.id)
-    LEFT JOIN pos_config pc       ON (ps.config_id=pc.id)
-    LEFT JOIN user_to_employee ue ON (ue.employee_id=oh.shopass_id)
+    LEFT JOIN pos_order oh         ON (ol.order_id=oh.id)
+         JOIN product_product pp   ON (ol.product_id=pp.id)
+         JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
+    LEFT JOIN res_partner su       ON
+        (su.id = ( select min(name) FROM product_supplierinfo
+         WHERE product_id=pp.id AND company_id=oh.company_id ))
+    LEFT JOIN pos_session ps       ON (oh.session_id=ps.id)
+    LEFT JOIN pos_config pc        ON (ps.config_id=pc.id)
+    LEFT JOIN user_to_employee ue1 ON (ue1.employee_id=oh.shopass_id)
+    LEFT JOIN user_to_employee ue2 ON (ue2.user_id=su.user_id)
 
     WHERE oh.state IN ('paid', 'done', 'invoiced')
             )""")

@@ -28,6 +28,7 @@
                 <field name="unit_price" />
                 <field name="discount" />
                 <field name="total_price" sum="Total Price"/>
+                <field name="it_saleperson_id" />
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
@@ -44,6 +45,7 @@
                 <field name="pos_name" />
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
                 <field name="saleperson_id" />
+                <field name="it_saleperson_id" />
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
@@ -56,6 +58,7 @@
                     <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
                     <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
                     <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
+                    <filter name="group_saleperson_it" string="Saleperson IT" context="{'group_by':'it_saleperson_id'}"/>
                     <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
                     <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
                     <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
