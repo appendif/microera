@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-27 09:11+0000\n"
-"PO-Revision-Date: 2014-08-29 11:18+0100\n"
+"PO-Revision-Date: 2014-08-29 11:26+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,ean13:0
 msgid "ean13"
-msgstr "ean13"
+msgstr "Ean13"
 
 #. module: jimo_pos_sale_report
 #: model:ir.actions.act_window,help:jimo_pos_sale_report.action_pos_sale_report
