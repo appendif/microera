@@ -129,7 +129,7 @@ SELECT
          JOIN stock_warehouse sw ON (0=0)
          JOIN product_template pt ON (pp.product_tmpl_id=pt.id)
          JOIN stock_move sm ON (sm.product_id=pp.id AND
-             (sm.location_dest_id=sw.lot_stock_id OR sm.location_id=sw.lot_stock_id))
+             (sm.location_dest_id=sw.lot_input_id OR sm.location_id=sw.lot_input_id))
          JOIN stock_picking sp ON (sm.picking_id=sp.id)
     LEFT JOIN stock_location sl1 ON (sm.location_dest_id=sl1.id)
     LEFT JOIN stock_location sl2 ON (sm.location_id=sl2.id)
