@@ -42,6 +42,15 @@
         <field name="model">jimo.sale.report</field>
         <field name="arch" type="xml">
             <search string="Sale report">
+<!--		
+            	<group expand="1" string="Commission...">
+    				<filter string="Paid"   icon="terp-dolar_ok!" domain="[('comm_paid','!=',False)]" help = "Commission Paid"   />
+    				<filter string="Unpaid" icon="terp-dolar"     domain="[('comm_paid','=' ,False)]" help = "Commission Unpaid" />
+            	</group>
+-->
+                <field name="date_done" />
+                <field name="month" />
+                <field name="year" />
                 <field name="company_id" groups="base.group_multi_company"/>
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
                 <field name="customer_id" context="{'contact_display':'partner'}"/>
@@ -55,6 +64,7 @@
                 <field name="brand_id" />
                 <field name="shop_id" />
                 <field name="commorder_id" />
+
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
                     <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>

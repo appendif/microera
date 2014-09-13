@@ -13,7 +13,6 @@
                 <field name="day" />
                 <field name="posorder_id" />
                 <field name="pos_reference" />
-                <field name="saleperson_id" />
 <!--            <field name="customer_id" />            -->
                 <field name="product_id" />
 <!--            <field name="ean13" />                  -->
@@ -28,10 +27,11 @@
                 <field name="unit_price" />
                 <field name="discount" />
                 <field name="total_price" sum="Total Price"/>
-                <field name="it_saleperson_id" />
+                <field name="saleperson_id" />
                 <field name="employee_id" />
                 <field name="manager1_id" />
                 <field name="manager2_id" />
+                <field name="it_saleperson_id" />
            </tree>
         </field>
     </record>
@@ -41,6 +41,9 @@
         <field name="model">jimo.pos.sale.report</field>
         <field name="arch" type="xml">
             <search string="POS Sale report">
+                <field name="date_order" />
+                <field name="month" />
+                <field name="year" />
                 <field name="company_id" groups="base.group_multi_company"/>
                 <field name="pos_name" />
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
@@ -52,6 +55,7 @@
                 <field name="posorder_id" context="{'contact_display':'pos.order'}"/>
                 <field name="product_id" default_focus="1"/>
                 <field name="brand_id" />
+                
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
                     <filter name="group_pos" string="POS" context="{'group_by':'pos_name'}"/>
