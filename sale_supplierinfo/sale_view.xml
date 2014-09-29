@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="view_sale_order_inherit_form">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+
+			<field name="arch" type="xml">
+			
+				<field name="pricelist_id" position="after">
+					<field name="supplier_id"
+						context="{'default_customer':0,'search_default_supplier':1,'default_supplier':1}" /> <!-- on_change="onchange_supp(supplier_id)"/>  -->
+					<field name="prod_ids" /> <!-- invisible="1" --> />
+				</field>
+				
+				 <xpath expr="//notebook/page[@string='Order Lines']/field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+	  				<attribute name="domain">[('id', 'in', parent.prod_ids[parent.id])]</attribute>
+				 </xpath>	
+				 			
+				 <xpath expr="//notebook/page[@string='Order Lines']/field[@name='order_line']/form/group/group/field[@name='product_id']" position="attributes">
+	  				<attribute name="domain">[('id', 'in', parent.prod_ids[parent.id])]</attribute>	  				
+				 </xpath>				
+								
+			</field>
+		</record>
+
+	</data>
+</openerp>
