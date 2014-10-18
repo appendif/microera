@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+
+		<record id="product_normal_form_view" model="ir.ui.view">
+			<field name="name">product.normal.form.inherit</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="stock.view_normal_procurement_locations_form" />
+			<field name="arch" type="xml">
+				<field name="ean13" position="after">
+					<div>
+						<button name="auto_ean" type="object" string="Generate unused EAN code"
+							attrs="{'invisible': [('ean13', '!=', False)]}" class="oe_edit_only oe_link" />
+					</div>
+				</field>
+			</field>
+		</record>
+
+
+		<record model="ir.ui.view" id="pos_ean13_generator">
+			<field name="name">product.ean_wizard</field>
+			<field name="model">product.ean_wizard</field>
+			<field name="arch" type="xml">
+				<form string="Ean13 Generator" version="7.0">
+					<p class="oe_grey">
+						Enter code components, its will be converted
+						automatically to next unused valid EAN number.
+					</p>
+					<group>
+						<field name="prefix" class="oe_inline"
+							on_change="onchange_params(prefix, partner)" />
+						<field name="partner" class="oe_inline"
+							on_change="onchange_params(prefix, partner)" />
+						<field name="last_used" class="oe_inline" readonly="0" />
+						<field name="next" class="oe_inline" readonly="0" />
+						<field name="ean13" class="oe_inline" readonly="0" />
+					</group>
+					<footer>
+						<button name="sanitize_ean13" type="object" string="Apply"
+							class="oe_highlight" />
+						or
+						<button icon="gtk-stop" special="cancel" string="Cancel"
+							class="oe_link" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+
+	</data>
+</openerp>
