@@ -27,7 +27,7 @@ import openerp.addons.product.product
 class ean_wizard(osv.osv_memory):
     _name = 'product.ean_wizard'
 
-    DEFAULT_PREFIX = '80'
+    DEFAULT_PREFIX = '20'
     DEFAULT_PARTNER = '00000'
 
     def param_format(self, cr, uid, value, length):
@@ -55,15 +55,15 @@ class ean_wizard(osv.osv_memory):
         if not last:
             last = 0
 
-        result['last_used'] = self.param_format(cr, uid, last, 5) 
+        result['last_used'] = self.param_format(cr, uid, last, 5)
         result['next'] = self.param_format(cr, uid, last + 1, 5)
         ean13 = result['prefix'] + result['partner'] + result['next']
         result['ean13'] = openerp.addons.product.product.sanitize_ean13(ean13)
         return result
 
     def default_get(self, cr, uid, fields, context=None):
-        #list: ['last_used', 'ean13', 'next']
-        result = super(ean_wizard, self).default_get(cr, uid, fields, context=context)
+        result = super(ean_wizard, self).default_get(cr, uid, fields,
+                                                     context=context)
         result['prefix'] = self.param_format(cr, uid, self.DEFAULT_PREFIX, 2)
         result['partner'] = self.param_format(cr, uid, self.DEFAULT_PARTNER, 5)
 
@@ -87,17 +87,15 @@ class ean_wizard(osv.osv_memory):
         return {'value': result}
 
     _columns = {
-        'prefix': fields.char('Prefix', size=2, required=True, translate=True),
-        'partner': fields.char('Partner', size=5, required=True, translate=True),
-        'last_used': fields.char('Last used', size=5, required=True, translate=True),
-        'next': fields.char('Next', size=5, required=True, translate=True),
-        'ean13': fields.char('EAN13', size=13, required=True, translate=True),
+        'prefix': fields.char('Prefix', size=2, required=True),
+        'partner': fields.char('Partner', size=5, required=True),
+        'last_used': fields.char('Last used', size=5),
+        'next': fields.char('Next', size=5),
+        'ean13': fields.char('EAN13', size=13),
     }
 
     def sanitize_ean13(self, cr, uid, ids, context):
         for r in self.browse(cr, uid, ids):
-            #pattern = r.prefix + r.partner + r.next
-            #ean13 = openerp.addons.product.product.sanitize_ean13(pattern)
             if r.ean13:
                 m = context.get('active_model')
                 m_id = context.get('active_id')
