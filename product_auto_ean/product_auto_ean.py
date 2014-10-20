@@ -22,6 +22,7 @@
 from openerp.osv import fields, osv
 from openerp.tools.translate import _
 import openerp.addons.product.product
+import re
 
 
 class ean_wizard(osv.osv_memory):
@@ -34,7 +35,8 @@ class ean_wizard(osv.osv_memory):
         if isinstance(value, int):
             v = value
         else:
-            v = int(value)
+            v = re.sub("[^0-9]", "", value)
+            v = int(v)
             if not v:
                 v = 0
         l = '0' + str(length)
@@ -51,6 +53,7 @@ class ean_wizard(osv.osv_memory):
         else:
             last = '0'
 
+        last = re.sub("[^0-9]", "", last)
         last = int(last)
         if not last:
             last = 0
@@ -72,9 +75,9 @@ class ean_wizard(osv.osv_memory):
         product = self.pool.get(m)
         product_id = product.browse(cr, uid, m_id, context=context)
         if product_id and product_id.seller_id and product_id.seller_id.ref:
-            ref = int(product_id.seller_id.ref)
+            ref = product_id.seller_id.ref
         else:
-            ref = 0
+            ref = '0'
         result['partner'] = self.param_format(cr, uid, ref, 5)
         result = self.calc_next(cr, uid, result)
         return result
