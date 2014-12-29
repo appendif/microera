@@ -1,4 +1,4 @@
 microera
 ========
 
-MicroEra OpenERP modules for version 8
+MicroEra Odoo (formerly OpenERP) modules for version 8
