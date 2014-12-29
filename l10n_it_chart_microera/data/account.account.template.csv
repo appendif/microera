@@ -1,0 +1,1593 @@
+id,code,name,parent_id:id,user_type:id,type,reconcile
+00,00,AZIENDA,,account.data_account_type_view,view,FALSE
+01,01,CREDITI VERSO SOCI,00,account.data_account_type_view,view,TRUE
+0101,01.01,SOCI C/APPORTI,01,account.data_account_type_view,view,TRUE
+010101,01.01.01,Crediti verso soci per cap.sottoscritto,0101,account.data_account_type_asset,other,TRUE
+010103,01.01.03,Crediti verso soci per cap. richiamato,0101,account.data_account_type_asset,other,TRUE
+010105,01.01.05,Crediti verso soci morosi,0101,account.data_account_type_asset,other,TRUE
+03,03,IMMOBILIZZAZIONI IMMATERIALI,00,account.data_account_type_view,view,TRUE
+0301,03.01,COSTI D'IMPIANTO E DI AMPLIAMENTO,03,account.data_account_type_view,view,TRUE
+030101,03.01.01,Spese societarie,0301,account.data_account_type_asset,other,TRUE
+030103,03.01.03,Spese organizzative,0301,account.data_account_type_asset,other,TRUE
+030105,03.01.05,Spese avviamento impianti o produzione,0301,account.data_account_type_asset,other,TRUE
+030107,03.01.07,Costi di impianto e di ampliamento,0301,account.data_account_type_asset,other,TRUE
+0303,03.03,BENI IMMATERIALI,03,account.data_account_type_view,view,TRUE
+030301,03.03.01,Software di proprieta' capitalizzato,0303,account.data_account_type_asset,other,TRUE
+030303,03.03.03,Software in concessione capitalizzato,0303,account.data_account_type_asset,other,TRUE
+030305,03.03.05,Dir.brev.industr.e utilizz.opere ingegno,0303,account.data_account_type_asset,other,TRUE
+030307,03.03.07,Marchi,0303,account.data_account_type_asset,other,TRUE
+030309,03.03.09,Concessioni e licenze,0303,account.data_account_type_asset,other,TRUE
+030311,03.03.11,Avviamento,0303,account.data_account_type_asset,other,TRUE
+030351,03.03.51,Altri beni immateriali,0303,account.data_account_type_asset,other,TRUE
+0305,03.05,SPESE PLURIENNALI,03,account.data_account_type_view,view,TRUE
+030501,03.05.01,Costi di ricerca e sviluppo,0305,account.data_account_type_asset,other,TRUE
+030503,03.05.03,Costi di pubblicita',0305,account.data_account_type_asset,other,TRUE
+030505,03.05.05,Spese di manutenzione da ammortizzare,0305,account.data_account_type_asset,other,TRUE
+030507,03.05.07,Spese manut.su beni di terzi da ammort.,0305,account.data_account_type_asset,other,TRUE
+030509,03.05.09,Spese finanziarie da ammortizzare,0305,account.data_account_type_asset,other,TRUE
+030551,03.05.51,Altre spese pluriennali,0305,account.data_account_type_asset,other,TRUE
+0307,03.07,IMMOBILIZZ. IMMAT.IN CORSO E ACCONTI,03,account.data_account_type_view,view,TRUE
+030701,03.07.01,Brevetti in corso,0307,account.data_account_type_asset,other,TRUE
+030703,03.07.03,Costi ricerca e sviluppo in corso,0307,account.data_account_type_asset,other,TRUE
+030705,03.07.05,Software in corso,0307,account.data_account_type_asset,other,TRUE
+030751,03.07.51,Altre immobilizz. immateriali in corso,0307,account.data_account_type_asset,other,TRUE
+05,05,IMMOBILIZZAZIONI MATERIALI,00,account.data_account_type_view,view,TRUE
+0501,05.01,TERRENI E FABBRICATI,05,account.data_account_type_view,view,TRUE
+050101,05.01.01,Terreni edificabili,0501,account.data_account_type_asset,other,TRUE
+050103,05.01.03,Terreni agricoli,0501,account.data_account_type_asset,other,TRUE
+050105,05.01.05,Fabbricati civili,0501,account.data_account_type_asset,other,TRUE
+050107,05.01.07,Fabbricati strumentali,0501,account.data_account_type_asset,other,TRUE
+050109,05.01.09,Costruzioni leggere,0501,account.data_account_type_asset,other,TRUE
+050111,05.01.11,Costruzioni pesanti,0501,account.data_account_type_asset,other,TRUE
+050113,05.01.13,Terreni edificati,0501,account.data_account_type_asset,other,TRUE
+050151,05.01.51,Altri terreni e fabbricati,0501,account.data_account_type_asset,other,TRUE
+0503,05.03,IMPIANTI E MACCHINARI,05,account.data_account_type_view,view,TRUE
+050301,05.03.01,Impianti di condizionamento,0503,account.data_account_type_asset,other,TRUE
+050303,05.03.03,Impianti idrotermosanitari,0503,account.data_account_type_asset,other,TRUE
+050305,05.03.05,Impianti elettrici,0503,account.data_account_type_asset,other,TRUE
+050307,05.03.07,Impianti telefonici,0503,account.data_account_type_asset,other,TRUE
+050309,05.03.09,Impianti specifici,0503,account.data_account_type_asset,other,TRUE
+050311,05.03.11,Macchinari non automatici,0503,account.data_account_type_asset,other,TRUE
+050313,05.03.13,Macchinari automatici,0503,account.data_account_type_asset,other,TRUE
+050351,05.03.51,Altri impianti e macchinari,0503,account.data_account_type_asset,other,TRUE
+0505,05.05,ATTREZZATURE INDUSTRIALI E COMMERCIALI,05,account.data_account_type_view,view,TRUE
+050501,05.05.01,Attrez.specifica industr.commer.e agric.,0505,account.data_account_type_asset,other,TRUE
+050551,05.05.51,Attrezzatura varia e minuta,0505,account.data_account_type_asset,other,TRUE
+0507,05.07,ALTRE IMMOBILIZZAZIONI MATERIALI,05,account.data_account_type_view,view,TRUE
+050701,05.07.01,Mobili e arredi,0507,account.data_account_type_asset,other,TRUE
+050703,05.07.03,Mobili e macchine ordinarie d'ufficio,0507,account.data_account_type_asset,other,TRUE
+050705,05.07.05,Macchine d'ufficio elettroniche,0507,account.data_account_type_asset,other,TRUE
+050707,05.07.07,Telefonia mobile,0507,account.data_account_type_asset,other,TRUE
+050709,05.07.09,Automezzi,0507,account.data_account_type_asset,other,TRUE
+050711,05.07.11,Mezzi di trasporto aerei e marittimi,0507,account.data_account_type_asset,other,TRUE
+050713,05.07.13,Mezzi di trasporto interno,0507,account.data_account_type_asset,other,TRUE
+050715,05.07.15,Autoveicoli,0507,account.data_account_type_asset,other,TRUE
+050717,05.07.17,Imballaggi da riutilizzare,0507,account.data_account_type_asset,other,TRUE
+050751,05.07.51,Altri beni materiali,0507,account.data_account_type_asset,other,TRUE
+0509,05.09,IMMOBILIZZ.MATERIALI IN CORSO E ACCONTI,05,account.data_account_type_view,view,TRUE
+050901,05.09.01,Fabbricati in corso,0509,account.data_account_type_asset,other,TRUE
+050903,05.09.03,Impianti e macchinari in corso,0509,account.data_account_type_asset,other,TRUE
+050905,05.09.05,Attrezzat. industr. e commerc. in corso,0509,account.data_account_type_asset,other,TRUE
+050951,05.09.51,Altri beni materiali in corso,0509,account.data_account_type_asset,other,TRUE
+07,07,IMMOBILIZZAZIONI FINANZIARIE,00,account.data_account_type_view,view,TRUE
+0701,07.01,PARTECIPAZIONI IMMOBILIZZATE,07,account.data_account_type_view,view,TRUE
+070107,07.01.07,Partecipazioni in altre imprese,0701,account.data_account_type_asset,other,TRUE
+0703,07.03,FINANZIAM. ATTIVI E ALTRI CRED. IMMOBIL.,07,account.data_account_type_view,view,TRUE
+070307,07.03.07,Finanziamenti attivi a terzi,0703,account.data_account_type_asset,other,TRUE
+070309,07.03.09,Crediti v/assicur.per tratt.fine mandato,0703,account.data_account_type_asset,other,TRUE
+070311,07.03.11,Crediti v/assic.per tratt.fine rapporto,0703,account.data_account_type_asset,other,TRUE
+070351,07.03.51,Altri crediti immobilizzati verso terzi,0703,account.data_account_type_asset,other,TRUE
+0705,07.05,TITOLI D'INVESTIMENTO ED AZIONI PROPRIE,07,account.data_account_type_view,view,TRUE
+070501,07.05.01,Titoli di stato,0705,account.data_account_type_asset,other,TRUE
+070503,07.05.03,Obbligazioni ordinarie,0705,account.data_account_type_asset,other,TRUE
+070505,07.05.05,Obbligazioni convertibili,0705,account.data_account_type_asset,other,TRUE
+070507,07.05.07,Quote di fondi comuni d'investimento,0705,account.data_account_type_asset,other,TRUE
+070509,07.05.09,Azioni proprie,0705,account.data_account_type_asset,other,TRUE
+070551,07.05.51,Altri titoli d'investimento,0705,account.data_account_type_asset,other,TRUE
+09,09,RIMANENZE,00,account.data_account_type_view,view,TRUE
+0901,09.01,RIMANENZE DI MAGAZZINO,09,account.data_account_type_view,view,TRUE
+090101,09.01.01,Rimanenze di prodotti finiti,0901,account.data_account_type_asset,other,TRUE
+090103,09.01.03,Rimanenze di merci,0901,account.data_account_type_asset,other,TRUE
+090111,09.01.11,Riman. prod.in corso lavoraz. e semilav.,0901,account.data_account_type_asset,other,TRUE
+090113,09.01.13,"Riman. mat.prime, sussid. e di consumo",0901,account.data_account_type_asset,other,TRUE
+090115,09.01.15,Rimanenze imballaggi,0901,account.data_account_type_asset,other,TRUE
+090117,09.01.17,Riman.di servizi in corso non ultrann.,0901,account.data_account_type_asset,other,TRUE
+090119,09.01.19,Rimanenze di opere e lavori ultrannuali,0901,account.data_account_type_asset,other,TRUE
+090121,09.01.21,Rimanenze di sottoprodotti,0901,account.data_account_type_asset,other,TRUE
+0903,09.03,LAVORI IN CORSO,09,account.data_account_type_view,view,TRUE
+090301,09.03.01,Lavori in corso su ordinazione,0903,account.data_account_type_asset,other,TRUE
+090303,09.03.03,Servizi in corso di esecuzione,0903,account.data_account_type_asset,other,TRUE
+11,11,CREDITI COMMERCIALI,00,account.data_account_type_view,view,TRUE
+1101,11.01,FATTURE/NOTE CREDITO DA EMETTERE,11,account.data_account_type_view,view,TRUE
+110101,11.01.01,Fatture da emettere a clienti terzi,1101,account.data_account_type_receivable,receivable,TRUE
+110109,11.01.09,Note credito da emettere a clienti terzi,1101,account.data_account_type_payable,payable,TRUE
+1103,11.03,CLIENTI,11,account.data_account_type_view,view,TRUE
+110301,11.03.01,Clienti terzi Italia,1103,account.data_account_type_receivable,receivable,TRUE
+110303,11.03.03,Clienti terzi Estero,1103,account.data_account_type_receivable,receivable,TRUE
+110311,11.03.11,Clienti c/ricevute bancarie,1103,account.data_account_type_receivable,receivable,TRUE
+110313,11.03.13,Documento riepilogativo clienti,1103,account.data_account_type_asset,other,TRUE
+1105,11.05,CLIENTI C/ADEGUAMENTO DA VALUTAZ.PARTITE,11,account.data_account_type_view,view,TRUE
+110501,11.05.01,Clienti c/adeguamento da valutaz.partite,1105,account.data_account_type_asset,other,TRUE
+1107,11.07,PORTAFOGLIO CLIENTI,11,account.data_account_type_view,view,TRUE
+110701,11.07.01,Effetti attivi,1107,account.data_account_type_asset,other,TRUE
+110703,11.07.03,Effetti all'incasso,1107,account.data_account_type_asset,other,TRUE
+110705,11.07.05,Effetti allo sconto,1107,account.data_account_type_asset,other,TRUE
+110707,11.07.07,Effetti richiamati o insoluti,1107,account.data_account_type_asset,other,TRUE
+110708,11.07.08,Clienti c/effetti(transit.IVA per cassa),1107,account.data_account_type_asset,other,TRUE
+110709,11.07.09,Cambiali attive,1107,account.data_account_type_asset,other,TRUE
+110711,11.07.11,Clienti c/cambiali,1107,account.data_account_type_asset,other,TRUE
+1111,11.11,CLIENTI C/SPESE ANTICIPATE,11,account.data_account_type_view,view,TRUE
+111101,11.11.01,Clienti terzi c/spese anticipate,1111,account.data_account_type_asset,other,TRUE
+1113,11.13,PARTITE ATTIVE DA LIQUIDARE,11,account.data_account_type_view,view,TRUE
+111301,11.13.01,Partite commerciali attive da liquidare,1113,account.data_account_type_asset,other,TRUE
+13,13,FINANZIAMENTI ATTIVI A BREVE TERMINE,00,account.data_account_type_view,view,TRUE
+1301,13.01,FINANZIAMENTI ATTIVI,13,account.data_account_type_view,view,TRUE
+130107,13.01.07,Finanziamenti attivi a terzi,1301,account.data_account_type_asset,other,TRUE
+15,15,CREDITI VARI,00,account.data_account_type_view,view,TRUE
+1501,15.01,ANTICIPI A FORNITORI,15,account.data_account_type_view,view,TRUE
+150107,15.01.07,Anticipi a fornitori terzi,1501,account.data_account_type_asset,other,TRUE
+150109,15.01.09,Anticipi per acq.immobilizz.immateriali,1501,account.data_account_type_asset,other,TRUE
+150111,15.01.11,Anticipi per acq.immobilizz. materiali,1501,account.data_account_type_asset,other,TRUE
+150113,15.01.13,Anticipi acquisti per magazzino,1501,account.data_account_type_asset,other,TRUE
+150115,15.01.15,Costi sospesi,1501,account.data_account_type_asset,other,TRUE
+150151,15.01.51,Anticipi diversi,1501,account.data_account_type_asset,other,TRUE
+1505,15.05,CREDITI VARI V/TERZI,15,account.data_account_type_view,view,TRUE
+150501,15.05.01,Depositi cauzionali per utenze,1505,account.data_account_type_asset,other,TRUE
+150503,15.05.03,Depositi cauzionali vari,1505,account.data_account_type_asset,other,TRUE
+150505,15.05.05,Crediti per caparre confirmatorie,1505,account.data_account_type_asset,other,TRUE
+150507,15.05.07,Anticipazioni professionisti,1505,account.data_account_type_asset,other,TRUE
+150509,15.05.09,Clienti c/anticipaz.in nome e per conto,1505,account.data_account_type_asset,other,TRUE
+150511,15.05.11,Crediti per risarcimenti,1505,account.data_account_type_asset,other,TRUE
+150513,15.05.13,Crediti per interessi di mora v/terzi,1505,account.data_account_type_asset,other,TRUE
+150515,15.05.15,Crediti v/factor,1505,account.data_account_type_asset,other,TRUE
+150517,15.05.17,Obbligazionisti c/sottoscrizione,1505,account.data_account_type_asset,other,TRUE
+150551,15.05.51,Crediti vari v/terzi,1505,account.data_account_type_asset,other,TRUE
+1507,15.07,CREDITI VERSO IL PERSONALE,15,account.data_account_type_view,view,TRUE
+150701,15.07.01,Anticipi in c/retribuzione,1507,account.data_account_type_asset,other,TRUE
+150703,15.07.03,Anticipi in c/spese,1507,account.data_account_type_asset,other,TRUE
+150705,15.07.05,"Dipend.antic.contrib.0,50 art.3 l.297/82",1507,account.data_account_type_asset,other,TRUE
+150707,15.07.07,Prestiti a dipendenti,1507,account.data_account_type_asset,other,TRUE
+150709,15.07.09,Personale c/arrotondamenti,1507,account.data_account_type_asset,other,TRUE
+150711,15.07.11,Crediti v/personale per INPS sospesa,1507,account.data_account_type_asset,other,TRUE
+150713,15.07.13,Crediti v/personale per IRPEF sospesa,1507,account.data_account_type_asset,other,TRUE
+1509,15.09,CREDITI VERSO ENTI PREVIDENZIALI,15,account.data_account_type_view,view,TRUE
+150901,15.09.01,INPS c/assegni famigliari,1509,account.data_account_type_asset,other,TRUE
+150903,15.09.03,INPS c/crediti per Cassa Int.Guadagni,1509,account.data_account_type_asset,other,TRUE
+150905,15.09.05,INPS c/rimborsi,1509,account.data_account_type_asset,other,TRUE
+150907,15.09.07,INAIL c/rimborsi,1509,account.data_account_type_asset,other,TRUE
+150909,15.09.09,Enti previd.ed assist.vari c/anticipi,1509,account.data_account_type_asset,other,TRUE
+150911,15.09.11,INAIL c/anticipi,1509,account.data_account_type_asset,other,TRUE
+17,17,ATTIVITA' FINANZIARIE NON IMMOBILIZZATE,00,account.data_account_type_view,view,TRUE
+1701,17.01,PARTECIPAZIONI NON IMMOBILIZZATE,17,account.data_account_type_view,view,TRUE
+170107,17.01.07,Partecipazioni in altre imprese,1701,account.data_account_type_asset,other,TRUE
+1703,17.03,TITOLI NEGOZIABILI E AZIONI PROPRIE,17,account.data_account_type_view,view,TRUE
+170301,17.03.01,Titoli di Stato,1703,account.data_account_type_asset,other,TRUE
+170303,17.03.03,Obbligazioni ordinarie,1703,account.data_account_type_asset,other,TRUE
+170305,17.03.05,Obbligazioni convertibili,1703,account.data_account_type_asset,other,TRUE
+170307,17.03.07,Altre obbligazioni private,1703,account.data_account_type_asset,other,TRUE
+170309,17.03.09,Quote fondi comuni di investimento,1703,account.data_account_type_asset,other,TRUE
+170311,17.03.11,Azioni proprie,1703,account.data_account_type_asset,other,TRUE
+170351,17.03.51,Altri titoli negoziabili,1703,account.data_account_type_asset,other,TRUE
+19,19,DISPONIBILITA' LIQUIDE,00,account.data_account_type_view,view,TRUE
+1901,19.01,BANCHE C/C E POSTA C/C,19,account.data_account_type_view,view,TRUE
+190101,19.01.01,Banca c/c,1901,account.data_account_type_bank,liquidity,TRUE
+190103,19.01.03,Posta c/c,1901,account.data_account_type_bank,liquidity,TRUE
+190191,19.01.91,MPS,1901,account.data_account_type_bank,liquidity,TRUE
+1903,19.03,CASSA,19,account.data_account_type_view,view,TRUE
+190301,19.03.01,Cassa assegni,1903,account.data_account_type_cash,liquidity,TRUE
+190303,19.03.03,Cassa contanti,1903,account.data_account_type_cash,liquidity,TRUE
+190305,19.03.05,Cassa valori,1903,account.data_account_type_cash,liquidity,TRUE
+190307,19.03.07,Cassa valuta,1903,account.data_account_type_cash,liquidity,TRUE
+21,21,RATEI E RISCONTI ATTIVI,00,account.data_account_type_view,view,TRUE
+2101,21.01,RATEI E RISCONTI ATTIVI,21,account.data_account_type_view,view,TRUE
+210101,21.01.01,Ratei attivi,2101,account.data_account_type_asset,other,TRUE
+210103,21.01.03,Risconti attivi,2101,account.data_account_type_asset,other,TRUE
+210105,21.01.05,Risconti attivi per disaggio su prestiti,2101,account.data_account_type_asset,other,TRUE
+23,23,CAPITALE E RISERVE,00,account.data_account_type_view,view,TRUE
+2301,23.01,CAPITALE E RISERVE,23,account.data_account_type_view,view,TRUE
+230101,23.01.01,Capitale sociale,2301,account.data_account_type_view,view,TRUE
+23010101,23.01.01.01,Capitale sociale,230101,account.data_account_type_liability,other,TRUE
+23010103,23.01.01.03,Capitale sociale formato con utili,230101,account.data_account_type_liability,other,TRUE
+23010105,23.01.01.05,Cap.soc.formato da riserve in sosp.d'imp,230101,account.data_account_type_liability,other,TRUE
+230103,23.01.03,Riserva da rivalutazioni,2301,account.data_account_type_view,view,TRUE
+23010301,23.01.03.01,Riserva da rivalutazioni,230103,account.data_account_type_liability,other,TRUE
+23010303,23.01.03.03,Riserva da rivalut.(non in sospensione),230103,account.data_account_type_liability,other,TRUE
+230105,23.01.05,Riserva legale,2301,account.data_account_type_view,view,TRUE
+23010501,23.01.05.01,Riserva legale,230105,account.data_account_type_liability,other,TRUE
+23010503,23.01.05.03,Riserva legale (con utili fino al 2007),230105,account.data_account_type_liability,other,TRUE
+230107,23.01.07,Riserva per azioni proprie,2301,account.data_account_type_view,view,TRUE
+23010701,23.01.07.01,Riserva per azioni proprie,230107,account.data_account_type_liability,other,TRUE
+23010703,23.01.07.03,Ris.per az.proprie(con utili fino 2007),230107,account.data_account_type_liability,other,TRUE
+230109,23.01.09,Riserva statutaria,2301,account.data_account_type_view,view,TRUE
+23010901,23.01.09.01,Riserva statutaria,230109,account.data_account_type_liability,other,TRUE
+23010903,23.01.09.03,Ris.statutaria (con utili fino al 2007),230109,account.data_account_type_liability,other,TRUE
+230111,23.01.11,Riserva copertura perdite,2301,account.data_account_type_liability,other,TRUE
+230113,23.01.13,Riserva da sovrapprezzo,2301,account.data_account_type_liability,other,TRUE
+230115,23.01.15,Riserva in sospensione d'imposta,2301,account.data_account_type_liability,other,TRUE
+230117,23.01.17,Riserva straordinaria,2301,account.data_account_type_view,view,TRUE
+23011701,23.01.17.01,Riserva straordinaria,230117,account.data_account_type_liability,other,TRUE
+23011703,23.01.17.03,Ris.straordin.(con utili fino al 2007),230117,account.data_account_type_liability,other,TRUE
+230119,23.01.19,Riserva da versamenti in c/capitale,2301,account.data_account_type_liability,other,TRUE
+230121,23.01.21,Riserva per acquisto azioni proprie,2301,account.data_account_type_view,view,TRUE
+23012101,23.01.21.01,Riserva per acquisto azioni proprie,230121,account.data_account_type_liability,other,TRUE
+23012103,23.01.21.03,Ris.per acq.az.prop(con utili fino 2007),230121,account.data_account_type_liability,other,TRUE
+230125,23.01.25,Riserva da deroghe ex art.2423 C.C.,2301,account.data_account_type_view,view,TRUE
+23012501,23.01.25.01,Riserva da deroghe ex art.2423 C.C.,230125,account.data_account_type_liability,other,TRUE
+23012503,23.01.25.03,Ris.da deroghe ex art.2423 C.C(fino '07),230125,account.data_account_type_liability,other,TRUE
+230131,23.01.31,Riserva da utili su cambi,2301,account.data_account_type_liability,other,TRUE
+230133,23.01.33,Altre riserve,2301,account.data_account_type_view,view,TRUE
+23013301,23.01.33.01,Altre riserve,230133,account.data_account_type_liability,other,TRUE
+23013303,23.01.33.03,Altre riserve (con utili fino al 2007),230133,account.data_account_type_liability,other,TRUE
+230135,23.01.35,Soci c/prelevamenti,2301,account.data_account_type_liability,other,TRUE
+230137,23.01.37,Titolare c/prelevamenti,2301,account.data_account_type_liability,other,TRUE
+230139,23.01.39,Capitale netto (ditte individuali),2301,account.data_account_type_liability,other,TRUE
+230141,23.01.41,Titolare c/versamenti,2301,account.data_account_type_liability,other,TRUE
+230151,23.01.51,Versamenti in conto aumento di capitale,2301,account.data_account_type_liability,other,TRUE
+230153,23.01.53,Versam.in conto futuro aumento di capit.,2301,account.data_account_type_liability,other,TRUE
+230155,23.01.55,Riserva da trasformazione ex soc.persone,2301,account.data_account_type_liability,other,TRUE
+230157,23.01.57,Riserva da riduzione capitale sociale,2301,account.data_account_type_liability,other,TRUE
+230165,23.01.65,Riserva diff. arrotond. unita' di Euro,2301,account.data_account_type_liability,other,TRUE
+230167,23.01.67,Riserve da trasformazione ex società di capitali,2301,account.data_account_type_liability,other,TRUE
+25,25,RISULTATI DELL'ESERCIZIO,00,account.data_account_type_view,view,TRUE
+2501,25.01,RISULTATI PORTATI A NUOVO,25,account.data_account_type_view,view,TRUE
+250101,25.01.01,Utile portato a nuovo,2501,account.data_account_type_view,view,TRUE
+25010101,25.01.01.01,Utile portato a nuovo,250101,account.data_account_type_liability,other,TRUE
+25010103,25.01.01.03,Utile a nuovo (con utili fino al 2007),250101,account.data_account_type_liability,other,TRUE
+250103,25.01.03,Perdita portata a nuovo,2501,account.data_account_type_asset,other,TRUE
+250105,25.01.05,Avanzo utili,2501,account.data_account_type_view,view,TRUE
+25010501,25.01.05.01,Avanzo utili,250105,account.data_account_type_liability,other,TRUE
+25010503,25.01.05.03,Avanzo utili (con utili fino al 2007),250105,account.data_account_type_liability,other,TRUE
+250107,25.01.07,Risultato da assegn. periodi precedenti,2501,account.data_account_type_asset,other,TRUE
+2503,25.03,RISULTATO D'ESERCIZIO,25,account.data_account_type_view,view,TRUE
+250301,25.03.01,Utile d'esercizio,2503,account.data_account_type_liability,other,TRUE
+250303,25.03.03,Perdita d'esercizio,2503,account.data_account_type_asset,other,TRUE
+27,27,FONDI RISCHI E ONERI,00,account.data_account_type_view,view,TRUE
+2701,27.01,FONDI DI QUIESCENZA E SIMILI,27,account.data_account_type_view,view,TRUE
+270101,27.01.01,F.do pensione integrativa personale dip.,2701,account.data_account_type_liability,other,TRUE
+270103,27.01.03,Fondo indennita' di cessazione co.co.co.,2701,account.data_account_type_liability,other,TRUE
+270109,27.01.09,Fondo TFM amministratori,2701,account.data_account_type_liability,other,TRUE
+2703,27.03,FONDI IMPOSTE,27,account.data_account_type_view,view,TRUE
+270301,27.03.01,Fondo imposte,2703,account.data_account_type_liability,other,TRUE
+270303,27.03.03,Fondo imposte differite,2703,account.data_account_type_liability,other,TRUE
+270305,27.03.05,Fondo imposte contenzioso tributario,2703,account.data_account_type_liability,other,TRUE
+270307,27.03.07,Fondo imposte differite IRES,2703,account.data_account_type_liability,other,TRUE
+270309,27.03.09,Fondo imposte differite IRAP,2703,account.data_account_type_liability,other,TRUE
+2705,27.05,ALTRI FONDI RISCHI E ONERI,27,account.data_account_type_view,view,TRUE
+270501,27.05.01,Fondo manutenzione ciclica,2705,account.data_account_type_liability,other,TRUE
+270503,27.05.03,Fondo buoni sconto e concorsi a premio,2705,account.data_account_type_liability,other,TRUE
+270505,27.05.05,F.do copertura perdite di soc.partecipate,2705,account.data_account_type_liability,other,TRUE
+270507,27.05.07,Fondo garanzia prodotti,2705,account.data_account_type_liability,other,TRUE
+270509,27.05.09,Fondo ripristino beni azienda in affitto,2705,account.data_account_type_liability,other,TRUE
+270551,27.05.51,Altri fondi per rischi e oneri differiti,2705,account.data_account_type_liability,other,TRUE
+29,29,FONDO TFR,00,account.data_account_type_view,view,TRUE
+2901,29.01,FONDO TFR,29,account.data_account_type_view,view,TRUE
+290101,29.01.01,Fondo TFR,2901,account.data_account_type_liability,other,TRUE
+290103,29.01.03,Anticipi su TFR,2901,account.data_account_type_liability,other,TRUE
+31,31,FINANZIAMENTI DI TERZI,00,account.data_account_type_view,view,TRUE
+3101,31.01,PRESTITI OBBLIGAZIONARI,31,account.data_account_type_view,view,TRUE
+310101,31.01.01,Prestiti obbligazionari ordinari,3101,account.data_account_type_liability,other,TRUE
+310103,31.01.03,Prestiti obbligazionari convertibili,3101,account.data_account_type_liability,other,TRUE
+3103,31.03,MUTUI E FINANZIAMENTI,31,account.data_account_type_view,view,TRUE
+310301,31.03.01,Banca c/anticipazioni,3103,account.data_account_type_liability,other,TRUE
+310303,31.03.03,Mutui ipotecari bancari,3103,account.data_account_type_liability,other,TRUE
+310305,31.03.05,Finanz.a medio/lungo termine bancari,3103,account.data_account_type_liability,other,TRUE
+310307,31.03.07,Effetti passivi finanziari,3103,account.data_account_type_liability,other,TRUE
+310309,31.03.09,Banche c/finanziamenti valut.,3103,account.data_account_type_liability,other,TRUE
+310311,31.03.11,Mutui ipotecari di terzi,3103,account.data_account_type_liability,other,TRUE
+310313,31.03.13,Finanz.a medio/lungo termine di terzi,3103,account.data_account_type_liability,other,TRUE
+310315,31.03.15,Soci c/finanziamento infruttifero,3103,account.data_account_type_liability,other,TRUE
+310317,31.03.17,Soci c/finanziamento fruttifero,3103,account.data_account_type_liability,other,TRUE
+310319,31.03.19,Debiti v/factor,3103,account.data_account_type_liability,other,TRUE
+310323,31.03.23,Banca c/ricevute bancarie sbf,3103,account.data_account_type_liability,other,TRUE
+310325,31.03.25,Debiti v/associati in part.c/apporti,3103,account.data_account_type_liability,other,TRUE
+310351,31.03.51,Altri debiti finanziari,3103,account.data_account_type_liability,other,TRUE
+33,33,DEBITI COMMERCIALI,00,account.data_account_type_view,view,TRUE
+3301,33.01,FATTURE/NOTE CREDITO DA RICEVERE,33,account.data_account_type_view,view,TRUE
+330101,33.01.01,Fatture da ricevere da fornitori terzi,3301,account.data_account_type_liability,other,TRUE
+330109,33.01.09,Note credito da ricevere da fornit.terzi,3301,account.data_account_type_liability,other,TRUE
+3303,33.03,FORNITORI,33,account.data_account_type_view,view,TRUE
+330301,33.03.01,Fornitori terzi Italia,3303,account.data_account_type_payable,payable,TRUE
+330303,33.03.03,Fornitori terzi Estero,3303,account.data_account_type_payable,payable,TRUE
+330311,33.03.11,Bolla doganale,3303,account.data_account_type_liability,other,TRUE
+330313,33.03.13,Documento riepilogativo fornitori,3303,account.data_account_type_liability,other,TRUE
+330315,33.03.15,Fornitore canoni leasing art.102 c.7,3303,account.data_account_type_liability,other,TRUE
+3305,33.05,FORNITORI C/ADEGUAM. DA VALUTAZ.PARTITE,33,account.data_account_type_view,view,TRUE
+330501,33.05.01,Fornitori c/adeguam.da valutaz.partite,3305,account.data_account_type_liability,other,TRUE
+3307,33.07,DEBITI FINANZIARI V/FORNITORI,33,account.data_account_type_view,view,TRUE
+330701,33.07.01,Debiti finanziari v/fornitori,3307,account.data_account_type_payable,payable,TRUE
+3309,33.09,DEBITI CAMBIARI,33,account.data_account_type_view,view,TRUE
+330901,33.09.01,Effetti passivi verso fornitori,3309,account.data_account_type_liability,other,TRUE
+330905,33.09.05,Fornitori c/effetti(trans.IVA per cassa),3309,account.data_account_type_liability,other,TRUE
+3311,33.11,FORNITORI C/SPESE ANTICIPATE,33,account.data_account_type_view,view,TRUE
+331101,33.11.01,Fornitori terzi c/spese anticipate,3311,account.data_account_type_liability,other,TRUE
+3313,33.13,PARTITE PASSIVE DA LIQUIDARE,33,account.data_account_type_view,view,TRUE
+331301,33.13.01,Partite commerciali passive da liquidare,3313,account.data_account_type_liability,other,TRUE
+35,35,CONTI ERARIALI,00,account.data_account_type_view,view,TRUE
+3501,35.01,ERARIO C/IVA,35,account.data_account_type_view,view,TRUE
+350101,35.01.01,IVA su acquisti,3501,account.data_account_type_asset,other,TRUE
+350103,35.01.03,IVA su vendite,3501,account.data_account_type_liability,other,TRUE
+350105,35.01.05,IVA su corrispettivi,3501,account.data_account_type_liability,other,TRUE
+350107,35.01.07,IVA sosp.su acq.art.6 c.5 DPR 633/72,3501,account.data_account_type_asset,other,TRUE
+350109,35.01.09,IVA sosp.su vend.art.6 c.5 DPR 633/72,3501,account.data_account_type_asset,other,TRUE
+350111,35.01.11,Erario c/liquidazione IVA,3501,account.data_account_type_asset,other,TRUE
+350113,35.01.13,IVA in attesa di rimborso,3501,account.data_account_type_asset,other,TRUE
+350114,35.01.14,IVA c/erario da compensare,3501,account.data_account_type_asset,other,TRUE
+350115,35.01.15,Interessi su IVA in attesa di rimborso,3501,account.data_account_type_asset,other,TRUE
+350119,35.01.19,IVA corrispettivi da incassare,3501,account.data_account_type_liability,other,TRUE
+350121,35.01.21,IVA a credito acquisti intracomunitari,3501,account.data_account_type_asset,other,TRUE
+350123,35.01.23,IVA a debito acquisti intracomunitari,3501,account.data_account_type_asset,other,TRUE
+350125,35.01.25,Erario c/sanzioni IVA,3501,account.data_account_type_payable,payable,TRUE
+350131,35.01.31,IVA sospesa su acquisti art.7 DL 185/08,3501,account.data_account_type_asset,other,TRUE
+350133,35.01.33,IVA sospesa su vendite art.7 DL 185/08,3501,account.data_account_type_asset,other,TRUE
+350141,35.01.41,IVA sospesa acquisti art.32-bis DL 83/12,3501,account.data_account_type_asset,other,TRUE
+350143,35.01.43,IVA sospesa vendite art.32-bis DL 83/12,3501,account.data_account_type_asset,other,TRUE
+350145,35.01.45,IVA sospesa su vendite,3501,account.data_account_type_asset,other,TRUE
+3503,35.03,ERARIO C/SOSTITUTO D'IMPOSTA,35,account.data_account_type_view,view,TRUE
+350301,35.03.01,Erario c/riten.su redd.lav.dipend.e ass.,3503,account.data_account_type_asset,other,TRUE
+350305,35.03.05,Erario c/ritenute su redditi lav. auton.,3503,account.data_account_type_asset,other,TRUE
+350309,35.03.09,Erario c/ritenute su redditi di capitale,3503,account.data_account_type_asset,other,TRUE
+350311,35.03.11,Erario c/ritenute su altri redditi,3503,account.data_account_type_asset,other,TRUE
+350313,35.03.13,Erario c/vers.imposte da sostituto (730),3503,account.data_account_type_asset,other,TRUE
+350315,35.03.15,Erario c/imposte sostitutive su TFR,3503,account.data_account_type_asset,other,TRUE
+350317,35.03.17,Addizionale regionale,3503,account.data_account_type_asset,other,TRUE
+350319,35.03.19,Addizionale comunale,3503,account.data_account_type_asset,other,TRUE
+350321,35.03.21,Recupero somme erogate D.L.66/2014,3503,account.data_account_type_asset,other,TRUE
+3505,35.05,ERARIO C/RIT. SUBITE E CREDITI D'IMPOSTA,35,account.data_account_type_view,view,TRUE
+350501,35.05.01,Ritenute subite su interessi attivi,3505,account.data_account_type_asset,other,TRUE
+350503,35.05.03,Ritenute subite su provvigioni,3505,account.data_account_type_asset,other,TRUE
+350507,35.05.07,Erario c/rimb.rit.subite e cred.imposta,3505,account.data_account_type_asset,other,TRUE
+350509,35.05.09,Erario c/crediti d'imposta su TFR,3505,account.data_account_type_asset,other,TRUE
+350511,35.05.11,Erario c/crediti d'imposta vari,3505,account.data_account_type_asset,other,TRUE
+350513,35.05.13,Erario c/crediti di imposta tributari,3505,account.data_account_type_asset,other,TRUE
+350515,35.05.15,Crediti d'imposta da leggi speciali,3505,account.data_account_type_asset,other,TRUE
+350551,35.05.51,Altre ritenute subite,3505,account.data_account_type_asset,other,TRUE
+3507,35.07,ERARIO C/IMPOSTE,35,account.data_account_type_view,view,TRUE
+350701,35.07.01,Erario c/IRES,3507,account.data_account_type_asset,other,TRUE
+350703,35.07.03,Erario c/acconti IRES,3507,account.data_account_type_asset,other,TRUE
+350705,35.07.05,Erario c/IRAP,3507,account.data_account_type_asset,other,TRUE
+350707,35.07.07,Erario c/acconti IRAP,3507,account.data_account_type_asset,other,TRUE
+350709,35.07.09,Erario c/imposte sostitutive,3507,account.data_account_type_asset,other,TRUE
+350711,35.07.11,Esattoria,3507,account.data_account_type_asset,other,TRUE
+350713,35.07.13,Erario c/rimborsi imposte,3507,account.data_account_type_asset,other,TRUE
+350715,35.07.15,Erario c/sanzioni,3507,account.data_account_type_liability,other,TRUE
+350717,35.07.17,Erario c/interessi da rateizzazione,3507,account.data_account_type_liability,other,TRUE
+350719,35.07.19,Erario c/imposte sospese e rateizzate,3507,account.data_account_type_liability,other,TRUE
+350721,35.07.21,Crediti per imposte anticipate,3507,account.data_account_type_asset,other,TRUE
+350723,35.07.23,Crediti IRES per imposte anticipate,3507,account.data_account_type_asset,other,TRUE
+350725,35.07.25,Crediti IRAP per imposte anticipate,3507,account.data_account_type_asset,other,TRUE
+350751,35.07.51,Erario c/altri tributi,3507,account.data_account_type_asset,other,TRUE
+37,37,ENTI PREVIDENZIALI,00,account.data_account_type_view,view,TRUE
+3701,37.01,ENTI PREVIDENZIALI,37,account.data_account_type_view,view,TRUE
+370101,37.01.01,INPS dipendenti,3701,account.data_account_type_asset,other,TRUE
+370103,37.01.03,INPS collaboratori,3701,account.data_account_type_asset,other,TRUE
+370105,37.01.05,INAIL dipendenti/collaboratori,3701,account.data_account_type_asset,other,TRUE
+370107,37.01.07,INAIL dipendenti/collab.(da liquidare),3701,account.data_account_type_liability,other,TRUE
+370113,37.01.13,INPS c/retribuzioni differite,3701,account.data_account_type_asset,other,TRUE
+370115,37.01.15,Cassa previdenza,3701,account.data_account_type_liability,other,TRUE
+370117,37.01.17,Fondo tesoreria INPS,3701,account.data_account_type_liability,other,TRUE
+370151,37.01.51,Enti previdenziali e assistenziali vari,3701,account.data_account_type_asset,other,TRUE
+39,39,ALTRI DEBITI,00,account.data_account_type_view,view,TRUE
+3901,39.01,ANTICIPI DA CLIENTI,39,account.data_account_type_view,view,TRUE
+390107,39.01.07,Anticipi da clienti terzi e fondi spese,3901,account.data_account_type_liability,other,TRUE
+390111,39.01.11,Ritenute da versare c/clienti,3901,account.data_account_type_liability,other,TRUE
+390113,39.01.13,Ricavi sospesi,3901,account.data_account_type_liability,other,TRUE
+3905,39.05,DEBITI VARI,39,account.data_account_type_view,view,TRUE
+390501,39.05.01,Depositi cauzionali ricevuti,3905,account.data_account_type_payable,payable,TRUE
+390503,39.05.03,Debiti v/amministratori,3905,account.data_account_type_payable,payable,TRUE
+390505,39.05.05,Debiti v/collaboratori,3905,account.data_account_type_payable,payable,TRUE
+390507,39.05.07,Sindacati c/ritenute,3905,account.data_account_type_payable,payable,TRUE
+390509,39.05.09,Obbligazionisti c/rimborso,3905,account.data_account_type_payable,payable,TRUE
+390511,39.05.11,Obbligazionisti c/interessi,3905,account.data_account_type_payable,payable,TRUE
+390513,39.05.13,Debiti per contributi ambientali,3905,account.data_account_type_payable,payable,TRUE
+390515,39.05.15,Debiti v/fondi previdenza complementare,3905,account.data_account_type_payable,payable,TRUE
+390517,39.05.17,Debiti per trattenute c/terzi,3905,account.data_account_type_payable,payable,TRUE
+390519,39.05.19,Debiti v/emittenti carte di credito,3905,account.data_account_type_payable,payable,TRUE
+390521,39.05.21,Debiti per caparre confirmatorie,3905,account.data_account_type_payable,payable,TRUE
+390551,39.05.51,Debiti diversi verso terzi,3905,account.data_account_type_payable,payable,TRUE
+3907,39.07,DEBITI VERSO IL PERSONALE,39,account.data_account_type_view,view,TRUE
+390701,39.07.01,Personale c/retribuzioni,3907,account.data_account_type_payable,payable,TRUE
+390703,39.07.03,Personale c/nota spese,3907,account.data_account_type_payable,payable,TRUE
+390705,39.07.05,Personale c/liquidazione,3907,account.data_account_type_payable,payable,TRUE
+390707,39.07.07,Personale c/arrotondamenti,3907,account.data_account_type_payable,payable,TRUE
+390709,39.07.09,Dipendenti c/retribuzioni differite,3907,account.data_account_type_payable,payable,TRUE
+3909,39.09,COMPETENZE SOCI,39,account.data_account_type_view,view,TRUE
+390901,39.09.01,Azionisti c/dividendi,3909,account.data_account_type_liability,other,TRUE
+390903,39.09.03,Soci c/utili,3909,account.data_account_type_liability,other,TRUE
+390905,39.09.05,Soci c/interessi su finanziamenti,3909,account.data_account_type_liability,other,TRUE
+390907,39.09.07,Debiti vs soci per capitale da rimbors.,3909,account.data_account_type_liability,other,TRUE
+41,41,FONDI AMMORTAMENTO IMMOBILIZZAZIONI,00,account.data_account_type_view,view,TRUE
+4101,41.01,FONDI AMMORT. IMMOBILIZZAZ. IMMATERIALI,41,account.data_account_type_view,view,TRUE
+410101,41.01.01,F.do amm.to spese societarie,4101,account.data_account_type_liability,other,TRUE
+410103,41.01.03,F.do amm.to spese organizzative,4101,account.data_account_type_liability,other,TRUE
+410105,41.01.05,F.do amm.to avviamento impianti o prod.,4101,account.data_account_type_liability,other,TRUE
+410107,41.01.07,F.do amm.to costi di impianto e ampliam.,4101,account.data_account_type_liability,other,TRUE
+410109,41.01.09,F.do ammortam. costi di ric.e sviluppo,4101,account.data_account_type_liability,other,TRUE
+410111,41.01.11,F.do ammortamento costi di pubblicita',4101,account.data_account_type_liability,other,TRUE
+410113,41.01.13,F.do amm.dir.brev.e utilizz.opere ingeg.,4101,account.data_account_type_liability,other,TRUE
+410115,41.01.15,F.do ammortamento marchi,4101,account.data_account_type_liability,other,TRUE
+410117,41.01.17,F.do ammortamento concessioni e licenze,4101,account.data_account_type_liability,other,TRUE
+410119,41.01.19,F.do ammortamento avviamento,4101,account.data_account_type_liability,other,TRUE
+410121,41.01.21,F.do amm.to sw di proprieta' capitalizz.,4101,account.data_account_type_liability,other,TRUE
+410123,41.01.23,F.do amm.sw in concessione capitalizzato,4101,account.data_account_type_liability,other,TRUE
+410125,41.01.25,F.do amm.to spese di manutenzione,4101,account.data_account_type_liability,other,TRUE
+410127,41.01.27,F.do amm.to spese di manut.beni di terzi,4101,account.data_account_type_liability,other,TRUE
+410129,41.01.29,F.do ammort. spese finanz. da ammortizz.,4101,account.data_account_type_liability,other,TRUE
+410151,41.01.51,F.do amm. altri beni immateriali,4101,account.data_account_type_liability,other,TRUE
+410153,41.01.53,F.do amm. altre spese pluriennali,4101,account.data_account_type_liability,other,TRUE
+4103,41.03,FONDI AMMORTAMENTO FABBRICATI,41,account.data_account_type_view,view,TRUE
+410301,41.03.01,F.do ammortamento fabbricati civili,4103,account.data_account_type_liability,other,TRUE
+410303,41.03.03,F.do ammort.fabbricati strumentali,4103,account.data_account_type_liability,other,TRUE
+410305,41.03.05,F.do ammortamento costruzioni leggere,4103,account.data_account_type_liability,other,TRUE
+410307,41.03.07,F.do ammort. costruzioni pesanti,4103,account.data_account_type_liability,other,TRUE
+410351,41.03.51,F.do amm.to altri terreni e fabbricati,4103,account.data_account_type_liability,other,TRUE
+4105,41.05,FONDI AMMORTAMENTO IMPIANTI E MACCHINARI,41,account.data_account_type_view,view,TRUE
+410501,41.05.01,F.do ammort. impianti di condizionamento,4105,account.data_account_type_liability,other,TRUE
+410503,41.05.03,F.do ammort. impianti idrotermosanitari,4105,account.data_account_type_liability,other,TRUE
+410505,41.05.05,F.do ammortamento impianti elettrici,4105,account.data_account_type_liability,other,TRUE
+410507,41.05.07,F.do ammortamento impianti telefonici,4105,account.data_account_type_liability,other,TRUE
+410509,41.05.09,F.do ammortamento impianti specifici,4105,account.data_account_type_liability,other,TRUE
+410511,41.05.11,F.do ammort. macchinari non automatici,4105,account.data_account_type_liability,other,TRUE
+410513,41.05.13,F.do ammortamento macchinari automatici,4105,account.data_account_type_liability,other,TRUE
+410551,41.05.51,F.do ammort. altri impianti e macchinari,4105,account.data_account_type_liability,other,TRUE
+4107,41.07,FONDI AMMORT.ATTREZZ.INDUSTR.E COMMERC.,41,account.data_account_type_view,view,TRUE
+410701,41.07.01,F.do amm.attr.spec.industr.e commer.agr.,4107,account.data_account_type_liability,other,TRUE
+410703,41.07.03,F.do ammort. attrezzatura varia e minuta,4107,account.data_account_type_liability,other,TRUE
+4109,41.09,FONDI AMMORTAMENTO ALTRI BENI MATERIALI,41,account.data_account_type_view,view,TRUE
+410901,41.09.01,F.do ammortamento mobili e arredi,4109,account.data_account_type_liability,other,TRUE
+410903,41.09.03,F.do amm. mobili e macch.ordin.d'ufficio,4109,account.data_account_type_liability,other,TRUE
+410905,41.09.05,F.do amm.macchine d'ufficio elettroniche,4109,account.data_account_type_liability,other,TRUE
+410907,41.09.07,F.do ammortamento automezzi,4109,account.data_account_type_liability,other,TRUE
+410909,41.09.09,F.do ammortamento autoveicoli,4109,account.data_account_type_liability,other,TRUE
+410911,41.09.11,F.do ammortamento telefonia mobile,4109,account.data_account_type_liability,other,TRUE
+410913,41.09.13,F.do amm.to imballaggi da riutilizzare,4109,account.data_account_type_liability,other,TRUE
+410915,41.09.15,F.do ammort. mezzi trasp.aerei e maritt.,4109,account.data_account_type_liability,other,TRUE
+410917,41.09.17,F.do ammort.mezzi di trasporto interno,4109,account.data_account_type_liability,other,TRUE
+410951,41.09.51,F.do ammortamento altri beni materiali,4109,account.data_account_type_liability,other,TRUE
+43,43,FONDI SVALUTAZIONE,00,account.data_account_type_view,view,TRUE
+4301,43.01,FONDI SVALUTAZ. IMMOBILIZZ.IMMATERIALI,43,account.data_account_type_view,view,TRUE
+430101,43.01.01,F.do svalutazione spese societarie,4301,account.data_account_type_liability,other,TRUE
+430103,43.01.03,F.do svalutazione spese organizzative,4301,account.data_account_type_liability,other,TRUE
+430105,43.01.05,F.do sval. avviamento impianti o produz.,4301,account.data_account_type_liability,other,TRUE
+430107,43.01.07,F.do svalut.costi di impianto e ampliam.,4301,account.data_account_type_liability,other,TRUE
+430109,43.01.09,F.do svalutaz. costi di ric.e sviluppo,4301,account.data_account_type_liability,other,TRUE
+430111,43.01.11,F.do svalutazione costi di pubblicita',4301,account.data_account_type_liability,other,TRUE
+430113,43.01.13,F.do sval. diritti brev. e utilizz.opere,4301,account.data_account_type_liability,other,TRUE
+430115,43.01.15,F.do svalutazione marchi,4301,account.data_account_type_liability,other,TRUE
+430117,43.01.17,F.do svalutazione concessioni e licenze,4301,account.data_account_type_liability,other,TRUE
+430119,43.01.19,F.do svalutazione avviamento,4301,account.data_account_type_liability,other,TRUE
+430121,43.01.21,F.do svalut.sw di proprieta' capitalizz.,4301,account.data_account_type_liability,other,TRUE
+430123,43.01.23,F.do svalutaz. sw in concessione,4301,account.data_account_type_liability,other,TRUE
+430151,43.01.51,F.do sval. altre immobilizz. immateriali,4301,account.data_account_type_liability,other,TRUE
+4303,43.03,FONDI SVAL.IMMOBILIZZAZIONI MATERIALI,43,account.data_account_type_view,view,TRUE
+430301,43.03.01,F.do svalutazione terreni edificabili,4303,account.data_account_type_liability,other,TRUE
+430303,43.03.03,F.do svalutazione terreni agricoli,4303,account.data_account_type_liability,other,TRUE
+430305,43.03.05,F.do svalutazione fabbricati civili,4303,account.data_account_type_liability,other,TRUE
+430307,43.03.07,F.do svalutazione fabbricati strumentali,4303,account.data_account_type_liability,other,TRUE
+430309,43.03.09,F.do svalutaz.altri terreni e fabbricati,4303,account.data_account_type_liability,other,TRUE
+430311,43.03.11,F.do svalutazione impianti specifici,4303,account.data_account_type_liability,other,TRUE
+430313,43.03.13,F.do svalutaz.macchinari non automatici,4303,account.data_account_type_liability,other,TRUE
+430315,43.03.15,F.do svalutazione macchinari automatici,4303,account.data_account_type_liability,other,TRUE
+430317,43.03.17,F.do svalutaz. altri impianti e macchin.,4303,account.data_account_type_liability,other,TRUE
+430319,43.03.19,F.do sval.attr.specif.industr.comm.agric,4303,account.data_account_type_liability,other,TRUE
+430321,43.03.21,F.do svalutaz.attrezzat. varia e minuta,4303,account.data_account_type_liability,other,TRUE
+430323,43.03.23,F.do sval.mobili e macch.ordin.d'ufficio,4303,account.data_account_type_liability,other,TRUE
+430325,43.03.25,F.do svalut.macchine d'ufficio elettron.,4303,account.data_account_type_liability,other,TRUE
+430327,43.03.27,F.do svalutazione automezzi,4303,account.data_account_type_liability,other,TRUE
+430329,43.03.29,F.do svalutazione autoveicoli,4303,account.data_account_type_liability,other,TRUE
+430331,43.03.31,F.do svalutazione mobili ed arredi,4303,account.data_account_type_liability,other,TRUE
+430333,43.03.33,F.do svalutazione elaboratori,4303,account.data_account_type_liability,other,TRUE
+430335,43.03.35,F.do svalutazione costruzioni leggere,4303,account.data_account_type_liability,other,TRUE
+430337,43.03.37,F.do svalutazione impianti generici,4303,account.data_account_type_liability,other,TRUE
+430339,43.03.39,F.do sval.mezzi trasp.aerei e maritt.,4303,account.data_account_type_liability,other,TRUE
+430341,43.03.41,F.do sval.costruzioni pesanti,4303,account.data_account_type_liability,other,TRUE
+430343,43.03.43,F.do svalut.mezzi di trasporto interno,4303,account.data_account_type_liability,other,TRUE
+430351,43.03.51,F.do svalutazione altri beni materiali,4303,account.data_account_type_liability,other,TRUE
+4305,43.05,FONDI SVAL.IMMOBILIZZAZIONI FINANZIARIE,43,account.data_account_type_view,view,TRUE
+430507,43.05.07,F.do svalut. partecip. in altre imprese,4305,account.data_account_type_liability,other,TRUE
+430509,43.05.09,F.do svalutazione titoli di Stato,4305,account.data_account_type_liability,other,TRUE
+430511,43.05.11,F.do svalutazione obbligazioni ordinarie,4305,account.data_account_type_liability,other,TRUE
+430513,43.05.13,F.do svalutaz. obbligazioni convertibili,4305,account.data_account_type_liability,other,TRUE
+430515,43.05.15,F.do sval.quote di fondi comuni d'invest,4305,account.data_account_type_liability,other,TRUE
+430517,43.05.17,F.do svalutazione azioni proprie,4305,account.data_account_type_liability,other,TRUE
+430519,43.05.19,F.do svalut. altri titoli d'investimento,4305,account.data_account_type_liability,other,TRUE
+430527,43.05.27,F.do sval. finanziamenti attivi a terzi,4305,account.data_account_type_liability,other,TRUE
+4307,43.07,F.DI SVALUT.ATTIVITA' FINANZ. NON IMMOB.,43,account.data_account_type_view,view,TRUE
+430701,43.07.01,F.do svalutazione titoli negoziabili,4307,account.data_account_type_liability,other,TRUE
+430703,43.07.03,F.do svalut. azioni proprie negoziabili,4307,account.data_account_type_liability,other,TRUE
+430705,43.07.05,F.do svalut.partecipaz.non immobilizzate,4307,account.data_account_type_liability,other,TRUE
+4309,43.09,FONDI SVALUTAZIONE CREDITI,43,account.data_account_type_view,view,TRUE
+430901,43.09.01,Fondo svalutaz. crediti verso clienti,4309,account.data_account_type_liability,other,TRUE
+430907,43.09.07,Fondo svalut.crediti interessi di mora,4309,account.data_account_type_liability,other,TRUE
+430909,43.09.09,Fondo svalutazione crediti diversi,4309,account.data_account_type_liability,other,TRUE
+45,45,RATEI E RISCONTI PASSIVI,00,account.data_account_type_view,view,TRUE
+4501,45.01,RATEI E RISCONTI PASSIVI,45,account.data_account_type_view,view,TRUE
+450101,45.01.01,Ratei passivi,4501,account.data_account_type_liability,other,TRUE
+450103,45.01.03,Risconti passivi,4501,account.data_account_type_liability,other,TRUE
+450105,45.01.05,Risconti passivi per aggio su prestiti,4501,account.data_account_type_liability,other,TRUE
+47,47,RICAVI DELLE VENDITE E DELLE PRESTAZIONI,00,account.data_account_type_view,view,TRUE
+4701,47.01,VENDITE PRODOTTI FINITI E MERCI,47,account.data_account_type_view,view,TRUE
+470101,47.01.01,Vendita prodotti finiti,4701,account.data_account_type_income,other,TRUE
+470103,47.01.03,Vendita merci,4701,account.data_account_type_income,other,TRUE
+470123,47.01.23,Autoconsumo,4701,account.data_account_type_income,other,TRUE
+470127,47.01.27,Ricavi per omaggi,4701,account.data_account_type_income,other,TRUE
+4703,47.03,VENDITE SEMILAVORATI,47,account.data_account_type_view,view,TRUE
+470301,47.03.01,Vendite semilavorati,4703,account.data_account_type_income,other,TRUE
+470365,47.03.65,Vendite sottoprodotti,4703,account.data_account_type_income,other,TRUE
+4705,47.05,VENDITE MATERIE PRIME E SUSSIDIARIE,47,account.data_account_type_view,view,TRUE
+470501,47.05.01,Vendite materie prime,4705,account.data_account_type_income,other,TRUE
+470503,47.05.03,Vendite materie sussidiarie,4705,account.data_account_type_income,other,TRUE
+470505,47.05.05,Vendite materiali di consumo,4705,account.data_account_type_income,other,TRUE
+470507,47.05.07,Vendite imballaggi,4705,account.data_account_type_income,other,TRUE
+4707,47.07,CORRISPETTIVI,47,account.data_account_type_view,view,TRUE
+470701,47.07.01,Corrispettivi,4707,account.data_account_type_income,other,TRUE
+470703,47.07.03,Corrispettivi ventilati,4707,account.data_account_type_income,other,TRUE
+470705,47.07.05,C/transitorio corrispettivi da ventilare,4707,account.data_account_type_income,other,TRUE
+470707,47.07.07,C/transit.corrisp.autocons.da ventilare,4707,account.data_account_type_income,other,TRUE
+470709,47.07.09,Corrispettivi autoconsumo ventilati,4707,account.data_account_type_income,other,TRUE
+470711,47.07.11,Corrispettivi autoconsumo,4707,account.data_account_type_income,other,TRUE
+4709,47.09,RICAVI ACCESSORI DI VENDITA,47,account.data_account_type_view,view,TRUE
+470901,47.09.01,Rivalsa spese di trasporto e installaz.,4709,account.data_account_type_income,other,TRUE
+470903,47.09.03,Rivalsa spese di incasso,4709,account.data_account_type_income,other,TRUE
+470905,47.09.05,Ricavi accessori diversi,4709,account.data_account_type_income,other,TRUE
+4711,47.11,RICAVI DA PRESTAZIONI,47,account.data_account_type_view,view,TRUE
+471101,47.11.01,Prestazioni di servizi sogg. a ritenuta,4711,account.data_account_type_income,other,TRUE
+471103,47.11.03,Prestazioni di servizi,4711,account.data_account_type_income,other,TRUE
+471107,47.11.07,Corsi di formazione,4711,account.data_account_type_income,other,TRUE
+471109,47.11.09,Canoni di noleggio,4711,account.data_account_type_income,other,TRUE
+471111,47.11.11,Canoni per prestazioni,4711,account.data_account_type_income,other,TRUE
+471113,47.11.13,Lavorazioni conto terzi,4711,account.data_account_type_income,other,TRUE
+471115,47.11.15,Provvigioni attive,4711,account.data_account_type_income,other,TRUE
+471125,47.11.25,Noli util.navi iscr.registro internaz.,4711,account.data_account_type_income,other,TRUE
+4713,47.13,VARIAZIONI PASSIVE SU VENDITE,47,account.data_account_type_view,view,TRUE
+471301,47.13.01,Resi su vendite,4713,account.data_account_type_income,other,TRUE
+471303,47.13.03,Sconti commerciali su vendite,4713,account.data_account_type_income,other,TRUE
+471305,47.13.05,Ribassi e abbuoni passivi,4713,account.data_account_type_income,other,TRUE
+471307,47.13.07,Premi su vendite,4713,account.data_account_type_income,other,TRUE
+49,49,VARIAZ.RIM.FINALI E COSTRUZIONI INTERNE,00,account.data_account_type_view,view,TRUE
+4901,49.01,RIMANENZE FINALI,49,account.data_account_type_view,view,TRUE
+490101,49.01.01,Rimanenze finali prodotti finiti,4901,account.data_account_type_income,other,TRUE
+490103,49.01.03,Rimanenze finali di merci,4901,account.data_account_type_income,other,TRUE
+490111,49.01.11,Rim.finali prod.in corso lavor. e semil.,4901,account.data_account_type_income,other,TRUE
+490113,49.01.13,"Rim.finali mat.prime,sussid.e di consumo",4901,account.data_account_type_income,other,TRUE
+490115,49.01.15,Rimanenze finali imballaggi,4901,account.data_account_type_income,other,TRUE
+490117,49.01.17,Rim.finali servizi in corso non ultrann.,4901,account.data_account_type_income,other,TRUE
+490119,49.01.19,Rim.finali opere e lavori ultrannuali,4901,account.data_account_type_income,other,TRUE
+490123,49.01.23,Rimanenze finali di sottoprodotti,4901,account.data_account_type_income,other,TRUE
+4903,49.03,COSTRUZIONI INTERNE,49,account.data_account_type_view,view,TRUE
+490301,49.03.01,Incrementi di immobilizz.immateriali,4903,account.data_account_type_view,view,TRUE
+49030101,49.03.01.01,Incrementi di immobilizz.immateriali,490301,account.data_account_type_income,other,TRUE
+49030103,49.03.01.03,Incrementi imm.immater. non rilev.IRAP,490301,account.data_account_type_income,other,TRUE
+490303,49.03.03,Incrementi di immobilizz. materiali,4903,account.data_account_type_view,view,TRUE
+49030301,49.03.03.01,Incrementi di immobilizz. materiali,490303,account.data_account_type_income,other,TRUE
+49030303,49.03.03.03,Incrementi imm.materiali non rilev.IRAP,490303,account.data_account_type_income,other,TRUE
+51,51,VARIAZ. RIMANENZE INIZIALI,00,account.data_account_type_view,view,TRUE
+5101,51.01,RIMANENZE INIZIALI,51,account.data_account_type_view,view,TRUE
+510101,51.01.01,Rimanenze iniziali prodotti finiti,5101,account.data_account_type_expense,other,TRUE
+510103,51.01.03,Rimanenze iniziali di merci,5101,account.data_account_type_expense,other,TRUE
+510111,51.01.11,Rim.iniz.prod.in corso lavoraz.e semil.,5101,account.data_account_type_expense,other,TRUE
+510113,51.01.13,"Rim.iniz.mat.prime, sussid.e di consumo",5101,account.data_account_type_expense,other,TRUE
+510115,51.01.15,Rimanenze iniziali imballaggi,5101,account.data_account_type_expense,other,TRUE
+510117,51.01.17,Rim.iniz. servizi in corso non ultrann.,5101,account.data_account_type_expense,other,TRUE
+510119,51.01.19,Rim. iniziali opere e lavori ultrannuali,5101,account.data_account_type_expense,other,TRUE
+510123,51.01.23,Rimanenze iniziali di sottoprodotti,5101,account.data_account_type_expense,other,TRUE
+53,53,ALTRI RICAVI E PROVENTI,00,account.data_account_type_view,view,TRUE
+5301,53.01,PROVENTI DIVERSI,53,account.data_account_type_view,view,TRUE
+530101,53.01.01,Proventi immobiliari,5301,account.data_account_type_view,view,TRUE
+53010101,53.01.01.01,Proventi da immobili strumentali,530101,account.data_account_type_income,other,TRUE
+53010103,53.01.01.03,Proventi da immobili non strumentali,530101,account.data_account_type_income,other,TRUE
+530107,53.01.07,"Proventi per royalties, brevetti, marchi",5301,account.data_account_type_income,other,TRUE
+530109,53.01.09,Rimborsi spese di trasferta da clienti,5301,account.data_account_type_income,other,TRUE
+530111,53.01.11,Rimb.spese chilom.trasferta da clienti,5301,account.data_account_type_income,other,TRUE
+530113,53.01.13,Rivalsa costi diversi,5301,account.data_account_type_income,other,TRUE
+530115,53.01.15,Risarcim.danni perdita prodotti/sinistri,5301,account.data_account_type_income,other,TRUE
+530119,53.01.19,Sopravvenienze attive da gestione ordin.,5301,account.data_account_type_view,view,TRUE
+53011901,53.01.19.01,Sopravv.attive da gestione ordin.impon.,530119,account.data_account_type_income,other,TRUE
+53011903,53.01.19.03,Sopravv.attive da gestione ordin.non imp,530119,account.data_account_type_income,other,TRUE
+53011999,53.01.19.99,Sopravvenienze attive da gestione ordin.,530119,account.data_account_type_income,other,TRUE
+530121,53.01.21,"Sopravvenienze attive art.88, c.2",5301,account.data_account_type_view,view,TRUE
+53012101,53.01.21.01,"Sopravv. attive art.88, c.2 rateizzate",530121,account.data_account_type_income,other,TRUE
+53012103,53.01.21.03,"Sopravv. attive a.88, c.2 non rateizzate",530121,account.data_account_type_income,other,TRUE
+53012199,53.01.21.99,"Sopravvenienze attive art.88, c.2",530121,account.data_account_type_income,other,TRUE
+530123,53.01.23,Contributi in conto esercizio,5301,account.data_account_type_view,view,TRUE
+53012301,53.01.23.01,Contributi in conto esercizio impon.,530123,account.data_account_type_income,other,TRUE
+53012303,53.01.23.03,Contributi in c/esercizio non impon.IRAP,530123,account.data_account_type_income,other,TRUE
+53012305,53.01.23.05,Contributi in c/esercizio non imponibili,530123,account.data_account_type_income,other,TRUE
+53012307,53.01.23.07,Contributi c/esercizio imp.solo IRAP,530123,account.data_account_type_income,other,TRUE
+53012399,53.01.23.99,Contributi in conto esercizio,530123,account.data_account_type_income,other,TRUE
+530125,53.01.25,Contributi in base a contratto,5301,account.data_account_type_income,other,TRUE
+530127,53.01.27,Contributi in conto impianti,5301,account.data_account_type_income,other,TRUE
+530129,53.01.29,Arrotondamenti attivi diversi,5301,account.data_account_type_income,other,TRUE
+530131,53.01.31,Penali attive,5301,account.data_account_type_income,other,TRUE
+530133,53.01.33,Canoni attivi affitto azienda,5301,account.data_account_type_income,other,TRUE
+530135,53.01.35,Rimborsi spese imponibili,5301,account.data_account_type_income,other,TRUE
+530139,53.01.39,Ricavi al netto marg.cess.occ.beni usati,5301,account.data_account_type_income,other,TRUE
+530141,53.01.41,Margine posit. cessione occas.beni usati,5301,account.data_account_type_income,other,TRUE
+530145,53.01.45,Rimborso personale distaccato,5301,account.data_account_type_income,other,TRUE
+530147,53.01.47,Credito di imposta f.di comuni invest.,5301,account.data_account_type_income,other,TRUE
+530151,53.01.51,Altri ricavi e proventi,5301,account.data_account_type_view,view,TRUE
+53015101,53.01.51.01,Altri ricavi e proventi imponibili,530151,account.data_account_type_income,other,TRUE
+53015103,53.01.51.03,Altri ricavi e proventi non imponibili,530151,account.data_account_type_income,other,TRUE
+53015105,53.01.51.05,Altri ricavi e proventi non impon. IRAP,530151,account.data_account_type_income,other,TRUE
+53015199,53.01.51.99,Altri ricavi e proventi,530151,account.data_account_type_income,other,TRUE
+530153,53.01.53,Differenza di arrotondamento all' EURO,5301,account.data_account_type_income,other,TRUE
+5303,53.03,PLUSVAL.DA ALIENAZIONE CESPITI,53,account.data_account_type_view,view,TRUE
+530301,53.03.01,Plusvalenze da alienazione cespiti,5303,account.data_account_type_view,view,TRUE
+53030101,53.03.01.01,Plusv. da alienazione cespiti impon.,530301,account.data_account_type_income,other,TRUE
+53030103,53.03.01.03,Plusv.rateizzabili da alienaz.cespiti,530301,account.data_account_type_income,other,TRUE
+53030105,53.03.01.05,Plusv.non imponibili da alien.cespiti,530301,account.data_account_type_income,other,TRUE
+53030199,53.03.01.99,Plusvalenze da alienazione cespiti,530301,account.data_account_type_income,other,TRUE
+530303,53.03.03,Ricavi per cessione cespiti ammortizzati,5303,account.data_account_type_income,other,TRUE
+530305,53.03.05,Plusv.civilistica da alienazione cespiti,5303,account.data_account_type_income,other,TRUE
+5305,53.05,ALTRI COMPONENTI POSITIVI,53,account.data_account_type_view,view,TRUE
+530501,53.05.01,IVA da detrazione forfettaria,5305,account.data_account_type_income,other,TRUE
+530503,53.05.03,Utilizzo fondi,5305,account.data_account_type_income,other,TRUE
+55,55,ACQUISTI DI BENI,00,account.data_account_type_view,view,TRUE
+5501,55.01,ACQ. PER PRODUZ.DI BENI E PER RIVENDITA,55,account.data_account_type_view,view,TRUE
+550101,55.01.01,Acquisti materie prime,5501,account.data_account_type_expense,other,TRUE
+550103,55.01.03,Acquisti materie sussidiarie,5501,account.data_account_type_expense,other,TRUE
+550105,55.01.05,Acquisti materiali di consumo,5501,account.data_account_type_expense,other,TRUE
+550107,55.01.07,Acquisti merci per la rivendita,5501,account.data_account_type_expense,other,TRUE
+550109,55.01.09,Confezioni e imballi,5501,account.data_account_type_expense,other,TRUE
+550117,55.01.17,Acquisti materiali vari,5501,account.data_account_type_expense,other,TRUE
+550119,55.01.19,Oneri accessori su acquisti,5501,account.data_account_type_expense,other,TRUE
+550121,55.01.21,Acquisti merci per la rivendita(ventil.),5501,account.data_account_type_expense,other,TRUE
+5503,55.03,ACQUISTI PER LA PRODUZIONE DI SERVIZI,55,account.data_account_type_view,view,TRUE
+550301,55.03.01,Acq.beni materiali per produz. servizi,5503,account.data_account_type_expense,other,TRUE
+550303,55.03.03,Acq.materiali di consumo (att.servizi),5503,account.data_account_type_expense,other,TRUE
+550305,55.03.05,Oneri accessori su acquisti (att.serv.),5503,account.data_account_type_expense,other,TRUE
+5505,55.05,VARIAZIONI ATTIVE SU ACQUISTI,55,account.data_account_type_view,view,TRUE
+550501,55.05.01,Sconti su acquisti,5505,account.data_account_type_view,view,TRUE
+55050101,55.05.01.01,Sconti su acquisti,550501,account.data_account_type_expense,other,TRUE
+55050103,55.05.01.03,Sconti su acquisti beni per produz.serv.,550501,account.data_account_type_expense,other,TRUE
+550503,55.05.03,Abbuoni e arrotond.attivi su acquisti,5505,account.data_account_type_view,view,TRUE
+55050301,55.05.03.01,Abb.e arrotond.attivi su acquisti,550503,account.data_account_type_expense,other,TRUE
+55050303,55.05.03.03,Abb.arrot.attivi acq.beni per prod.serv.,550503,account.data_account_type_expense,other,TRUE
+550505,55.05.05,Premi su acquisti,5505,account.data_account_type_view,view,TRUE
+55050501,55.05.05.01,Premi su acquisti,550505,account.data_account_type_expense,other,TRUE
+55050503,55.05.05.03,Premi su acquisti beni per prod.servizi,550505,account.data_account_type_expense,other,TRUE
+550507,55.05.07,Resi su acquisti,5505,account.data_account_type_view,view,TRUE
+55050701,55.05.07.01,Resi su acquisti,550507,account.data_account_type_expense,other,TRUE
+55050703,55.05.07.03,Resi su acquisti beni per produz.servizi,550507,account.data_account_type_expense,other,TRUE
+5507,55.07,ACQUISTI DIVERSI,55,account.data_account_type_view,view,TRUE
+550701,55.07.01,"Acquisto beni strumentali< 516,46",5507,account.data_account_type_view,view,TRUE
+55070101,55.07.01.01,"Acquisto beni strumentali< 516,46 ded.",550701,account.data_account_type_expense,other,TRUE
+55070103,55.07.01.03,"Acq.beni strum<516,46 telef.fissa/mobile",550701,account.data_account_type_expense,other,TRUE
+55070105,55.07.01.05,"Acq.beni strum<516,46 ad uso promiscuo",550701,account.data_account_type_expense,other,TRUE
+55070109,55.07.01.09,"Acquisto beni strum.<516,46 inded.",550701,account.data_account_type_expense,other,TRUE
+55070115,55.07.01.15,"Acq.beni strum<516,46 veic.prom.dipend.",550701,account.data_account_type_expense,other,TRUE
+55070117,55.07.01.17,"Acq.beni strum<516,46 veic.az.non strum.",550701,account.data_account_type_expense,other,TRUE
+55070199,55.07.01.99,"Acquisto beni strumentali< 516,46",550701,account.data_account_type_expense,other,TRUE
+550703,55.07.03,Attrezzatura minuta,5507,account.data_account_type_expense,other,TRUE
+550707,55.07.07,Combustibili per lavorazione,5507,account.data_account_type_expense,other,TRUE
+550709,55.07.09,Materiali manutenzione fabbricati,5507,account.data_account_type_expense,other,TRUE
+550711,55.07.11,Materiali manutenz.impianti e macchinari,5507,account.data_account_type_expense,other,TRUE
+550713,55.07.13,Materiali manutenzioni diverse,5507,account.data_account_type_expense,other,TRUE
+550715,55.07.15,Acquisti diversi per la produzione,5507,account.data_account_type_expense,other,TRUE
+550717,55.07.17,Cancelleria varia,5507,account.data_account_type_expense,other,TRUE
+550719,55.07.19,Stampati amministrativi,5507,account.data_account_type_expense,other,TRUE
+550721,55.07.21,Acquisto supporti informatici,5507,account.data_account_type_expense,other,TRUE
+550723,55.07.23,Indumenti da lavoro,5507,account.data_account_type_expense,other,TRUE
+550725,55.07.25,Materiali manutenzione totalm.deducibili,5507,account.data_account_type_expense,other,TRUE
+550751,55.07.51,Materiale vario di consumo,5507,account.data_account_type_expense,other,TRUE
+57,57,ACQUISTI DI SERVIZI,00,account.data_account_type_view,view,TRUE
+5701,57.01,SERVIZI PER LA PRODUZIONE,57,account.data_account_type_view,view,TRUE
+570101,57.01.01,Lavorazioni di terzi,5701,account.data_account_type_view,view,TRUE
+57010101,57.01.01.01,Lavorazioni di terzi,570101,account.data_account_type_expense,other,TRUE
+57010103,57.01.01.03,Lavorazioni di terzi (att.servizi),570101,account.data_account_type_expense,other,TRUE
+570103,57.01.03,Costi immobili non strumentali,5701,account.data_account_type_expense,other,TRUE
+570151,57.01.51,Altri servizi per la produzione,5701,account.data_account_type_view,view,TRUE
+57015101,57.01.51.01,Altri servizi per la produzione,570151,account.data_account_type_expense,other,TRUE
+57015103,57.01.51.03,Acq.servizi diversi (attiv.di servizi),570151,account.data_account_type_expense,other,TRUE
+5703,57.03,COSTI ACCESSORI PER VENDITE,57,account.data_account_type_view,view,TRUE
+570301,57.03.01,Trasporti su vendite,5703,account.data_account_type_expense,other,TRUE
+570303,57.03.03,Spese doganali su vendite,5703,account.data_account_type_expense,other,TRUE
+570305,57.03.05,Magazzinaggio su vendite,5703,account.data_account_type_expense,other,TRUE
+570307,57.03.07,Costi di spedizione prodotti,5703,account.data_account_type_expense,other,TRUE
+5705,57.05,COSTI ACCESSORI PER ACQUISTI,57,account.data_account_type_view,view,TRUE
+570501,57.05.01,Trasporti su acquisti,5705,account.data_account_type_view,view,TRUE
+57050101,57.05.01.01,Trasporti su acquisti,570501,account.data_account_type_expense,other,TRUE
+57050103,57.05.01.03,Trasporti di terzi (attività servizi),570501,account.data_account_type_expense,other,TRUE
+570503,57.05.03,Spese doganali,5705,account.data_account_type_view,view,TRUE
+57050301,57.05.03.01,Spese doganali su acquisti,570503,account.data_account_type_expense,other,TRUE
+57050303,57.05.03.03,Spese doganali (attività servizi),570503,account.data_account_type_expense,other,TRUE
+57050399,57.05.03.99,Spese doganali,570503,account.data_account_type_expense,other,TRUE
+570505,57.05.05,Magazzinaggio su acquisti,5705,account.data_account_type_expense,other,TRUE
+570507,57.05.07,Provvigioni passive su acquisti,5705,account.data_account_type_expense,other,TRUE
+5707,57.07,COSTI PER INTERMEDIAZIONE VENDITE,57,account.data_account_type_view,view,TRUE
+570711,57.07.11,Altri costi di intermediazione,5707,account.data_account_type_view,view,TRUE
+57071101,57.07.11.01,Altri costi di intermediazione,570711,account.data_account_type_expense,other,TRUE
+57071103,57.07.11.03,Altri costi di intermed.(attività serv.),570711,account.data_account_type_expense,other,TRUE
+570713,57.07.13,Contrib.incaricati vend.domic.ded.IRAP,5707,account.data_account_type_expense,other,TRUE
+5709,57.09,COSTI PER UTENZE,57,account.data_account_type_view,view,TRUE
+570901,57.09.01,Spese telefoniche ordinarie,5709,account.data_account_type_view,view,TRUE
+57090101,57.09.01.01,Spese telefoniche ordinarie,570901,account.data_account_type_expense,other,TRUE
+57090103,57.09.01.03,Spese telefoniche ordin.ad uso promiscuo,570901,account.data_account_type_expense,other,TRUE
+570903,57.09.03,Spese telefoniche radiomobili,5709,account.data_account_type_expense,other,TRUE
+570907,57.09.07,Servizi telematici,5709,account.data_account_type_expense,other,TRUE
+570909,57.09.09,Costi gestione reti interne,5709,account.data_account_type_expense,other,TRUE
+570911,57.09.11,Forza motrice,5709,account.data_account_type_view,view,TRUE
+57091101,57.09.11.01,Forza motrice,570911,account.data_account_type_expense,other,TRUE
+57091103,57.09.11.03,Forza motrice (attività servizi),570911,account.data_account_type_expense,other,TRUE
+570913,57.09.13,Energia elettrica,5709,account.data_account_type_view,view,TRUE
+57091301,57.09.13.01,Energia elettrica,570913,account.data_account_type_expense,other,TRUE
+57091303,57.09.13.03,Energia elettrica ad uso promiscuo,570913,account.data_account_type_expense,other,TRUE
+570915,57.09.15,Riscaldamento,5709,account.data_account_type_expense,other,TRUE
+570917,57.09.17,Acqua potabile,5709,account.data_account_type_expense,other,TRUE
+570919,57.09.19,Gas,5709,account.data_account_type_expense,other,TRUE
+570921,57.09.21,Pulizia locali,5709,account.data_account_type_expense,other,TRUE
+570923,57.09.23,Spese di gestione locali,5709,account.data_account_type_expense,other,TRUE
+570951,57.09.51,Altre utenze indeducibili,5709,account.data_account_type_view,view,TRUE
+57095101,57.09.51.01,Utenze indeducibili,570951,account.data_account_type_expense,other,TRUE
+57095103,57.09.51.03,Utenze immobili non strumentali,570951,account.data_account_type_expense,other,TRUE
+57095199,57.09.51.99,Altre utenze indeducibili,570951,account.data_account_type_expense,other,TRUE
+5711,57.11,MANUTENZIONI MACCHINARI E ATTREZZATURE,57,account.data_account_type_view,view,TRUE
+571101,57.11.01,Spese manut.impianti e macchin.propri,5711,account.data_account_type_expense,other,TRUE
+571103,57.11.03,Spese manutenzione attrezzature proprie,5711,account.data_account_type_expense,other,TRUE
+571105,57.11.05,Spese manutenzione telefoni propri,5711,account.data_account_type_view,view,TRUE
+57110501,57.11.05.01,Spese manut.telefoni radiomobili propri,571105,account.data_account_type_expense,other,TRUE
+57110503,57.11.05.03,Spese manut.telefonia fissa propria,571105,account.data_account_type_expense,other,TRUE
+57110599,57.11.05.99,Spese manutenzione telefoni propri,571105,account.data_account_type_expense,other,TRUE
+571107,57.11.07,Altre spese manutenzione beni propri,5711,account.data_account_type_view,view,TRUE
+57110701,57.11.07.01,Altre spese manutenzione beni propri,571107,account.data_account_type_expense,other,TRUE
+57110703,57.11.07.03,Altre spese manut.beni propri uso prom.,571107,account.data_account_type_expense,other,TRUE
+571109,57.11.09,Canoni manut.impianti e macchin.propri,5711,account.data_account_type_expense,other,TRUE
+571111,57.11.11,Canoni manutenzione attrezzature proprie,5711,account.data_account_type_expense,other,TRUE
+571113,57.11.13,Canoni manutenzione telefoni propri,5711,account.data_account_type_view,view,TRUE
+57111301,57.11.13.01,Canoni manut.telefonia mobile propria,571113,account.data_account_type_expense,other,TRUE
+57111303,57.11.13.03,Canoni manut.telefonia fissa propria,571113,account.data_account_type_expense,other,TRUE
+57111399,57.11.13.99,Canoni manutenzione telefoni propri,571113,account.data_account_type_expense,other,TRUE
+571115,57.11.15,Spese manut.impianti e macchin.di terzi,5711,account.data_account_type_expense,other,TRUE
+571117,57.11.17,Spese manutenzione attrezzature di terzi,5711,account.data_account_type_expense,other,TRUE
+571121,57.11.21,Spese manutenzione telefoni di terzi,5711,account.data_account_type_view,view,TRUE
+57112101,57.11.21.01,Spese manut.telefonia mobile di terzi,571121,account.data_account_type_expense,other,TRUE
+57112103,57.11.21.03,Spese manut.telefonia fissa di terzi,571121,account.data_account_type_expense,other,TRUE
+57112199,57.11.21.99,Spese manutenzione telefoni di terzi,571121,account.data_account_type_expense,other,TRUE
+571123,57.11.23,Canoni manut.impianti e macchin.di terzi,5711,account.data_account_type_expense,other,TRUE
+571125,57.11.25,Canoni manut.attrezzature di terzi,5711,account.data_account_type_expense,other,TRUE
+571127,57.11.27,Canoni manutenzione telefoni di terzi,5711,account.data_account_type_view,view,TRUE
+57112701,57.11.27.01,Canoni manut.telefonia mobile di terzi,571127,account.data_account_type_expense,other,TRUE
+57112703,57.11.27.03,Canoni manut.telefonia fissa di terzi,571127,account.data_account_type_expense,other,TRUE
+57112799,57.11.27.99,Canoni manutenzione telefoni di terzi,571127,account.data_account_type_expense,other,TRUE
+5713,57.13,MANUTENZIONE FABBRICATI,57,account.data_account_type_view,view,TRUE
+571301,57.13.01,Spese manutenzione fabbricati,5713,account.data_account_type_view,view,TRUE
+57130101,57.13.01.01,Spese manut.fabbricati strumentali,571301,account.data_account_type_expense,other,TRUE
+57130105,57.13.01.05,Spese manut.fabbricati non strumentali,571301,account.data_account_type_expense,other,TRUE
+57130107,57.13.01.07,Spese manut.fabbricati ad uso promiscuo,571301,account.data_account_type_expense,other,TRUE
+57130113,57.13.01.13,Spese manut.su immobili di terzi,571301,account.data_account_type_expense,other,TRUE
+57130199,57.13.01.99,Spese manutenzione fabbricati,571301,account.data_account_type_expense,other,TRUE
+571303,57.13.03,Canoni manutenzione fabbricati,5713,account.data_account_type_view,view,TRUE
+57130301,57.13.03.01,Canoni manut.fabbricati strumentali,571303,account.data_account_type_expense,other,TRUE
+57130303,57.13.03.03,Canoni manut.fabbricati non strum.,571303,account.data_account_type_expense,other,TRUE
+57130399,57.13.03.99,Canoni manutenzione fabbricati,571303,account.data_account_type_expense,other,TRUE
+59,59,GESTIONE VEICOLI AZIENDALI,00,account.data_account_type_view,view,TRUE
+5901,59.01,ESERCIZIO AUTOMEZZI,59,account.data_account_type_view,view,TRUE
+590101,59.01.01,Carburanti e lubrificanti automezzi,5901,account.data_account_type_expense,other,TRUE
+590105,59.01.05,Premi di assicurazione automezzi,5901,account.data_account_type_expense,other,TRUE
+590106,59.01.06,Premi di assicuraz.automezzi quota SSN,5901,account.data_account_type_expense,other,TRUE
+590107,59.01.07,Altre spese automezzi,5901,account.data_account_type_expense,other,TRUE
+590109,59.01.09,Multe automezzi,5901,account.data_account_type_expense,other,TRUE
+590111,59.01.11,Tassa di possesso automezzi,5901,account.data_account_type_expense,other,TRUE
+590113,59.01.13,Spese manutenzione automezzi propri,5901,account.data_account_type_view,view,TRUE
+59011303,59.01.13.03,Spese manutenzione automezzi propri,590113,account.data_account_type_expense,other,TRUE
+590115,59.01.15,Spese manutenzione automezzi di terzi,5901,account.data_account_type_expense,other,TRUE
+590117,59.01.17,Canoni manutenzione automezzi propri,5901,account.data_account_type_view,view,TRUE
+59011703,59.01.17.03,Canoni manutenzione automezzi propri,590117,account.data_account_type_expense,other,TRUE
+590119,59.01.19,Canoni manutenzione automezzi di terzi,5901,account.data_account_type_expense,other,TRUE
+590123,59.01.23,Pedaggi autostradali automezzi,5901,account.data_account_type_expense,other,TRUE
+5903,59.03,ESERCIZIO AUTOVETTURE E ALTRI VEICOLI,59,account.data_account_type_view,view,TRUE
+590301,59.03.01,Carburanti e lubrificanti veicoli,5903,account.data_account_type_view,view,TRUE
+59030101,59.03.01.01,Carb.e lubrif.veicoli aziendali deduc.,590301,account.data_account_type_expense,other,TRUE
+59030105,59.03.01.05,Carb.e lubrif.veicoli aziend. non strum.,590301,account.data_account_type_expense,other,TRUE
+59030107,59.03.01.07,Carb.e lubrif.veicoli promiscui dipend.,590301,account.data_account_type_expense,other,TRUE
+59030111,59.03.01.11,Carburanti e lubrificanti indeducibili,590301,account.data_account_type_expense,other,TRUE
+59030199,59.03.01.99,Carburanti e lubrificanti veicoli,590301,account.data_account_type_expense,other,TRUE
+590303,59.03.03,Premi assicurazioni veicoli,5903,account.data_account_type_view,view,TRUE
+59030301,59.03.03.01,Premi assicur.veicoli aziendali deduc.,590303,account.data_account_type_expense,other,TRUE
+59030305,59.03.03.05,Premi assicur.veicoli aziend.non strum.,590303,account.data_account_type_expense,other,TRUE
+59030307,59.03.03.07,Premi assicur.veicoli promiscui dipend.,590303,account.data_account_type_expense,other,TRUE
+59030311,59.03.03.11,Premi assicur.veicoli indeducibili,590303,account.data_account_type_expense,other,TRUE
+59030313,59.03.03.13,Premi di assicurazione veicoli quota SSN,590303,account.data_account_type_expense,other,TRUE
+59030399,59.03.03.99,Premi assicurazioni veicoli,590303,account.data_account_type_expense,other,TRUE
+590305,59.03.05,Altre spese veicoli,5903,account.data_account_type_view,view,TRUE
+59030501,59.03.05.01,Altre spese veicoli aziendali deducibili,590305,account.data_account_type_expense,other,TRUE
+59030507,59.03.05.07,Altre spese veicoli aziendali non strum.,590305,account.data_account_type_expense,other,TRUE
+59030509,59.03.05.09,Altre spese veicoli indeducibili,590305,account.data_account_type_expense,other,TRUE
+59030511,59.03.05.11,Altre spese veicoli promiscui dipendenti,590305,account.data_account_type_expense,other,TRUE
+59030599,59.03.05.99,Altre spese veicoli,590305,account.data_account_type_expense,other,TRUE
+590311,59.03.11,Multe autoveicoli,5903,account.data_account_type_expense,other,TRUE
+590313,59.03.13,Tasse possesso veicoli,5903,account.data_account_type_view,view,TRUE
+59031301,59.03.13.01,Tassa possesso veicoli aziendali deduc.,590313,account.data_account_type_expense,other,TRUE
+59031307,59.03.13.07,Tassa possesso veicoli promiscui dipend.,590313,account.data_account_type_expense,other,TRUE
+59031309,59.03.13.09,Tassa possesso veicoli indeducibili,590313,account.data_account_type_expense,other,TRUE
+59031311,59.03.13.11,Tassa possesso veic. azien. non strum.,590313,account.data_account_type_expense,other,TRUE
+59031399,59.03.13.99,Tasse possesso veicoli,590313,account.data_account_type_expense,other,TRUE
+590315,59.03.15,Spese manutenzione veicoli propri,5903,account.data_account_type_view,view,TRUE
+59031501,59.03.15.01,Spese manut.veicoli aziend.propri deduc.,590315,account.data_account_type_expense,other,TRUE
+59031505,59.03.15.05,Spese manut.veic.propri promiscui dipend,590315,account.data_account_type_expense,other,TRUE
+59031507,59.03.15.07,Spese manut.veicoli aziend.propri inded.,590315,account.data_account_type_expense,other,TRUE
+59031511,59.03.15.11,Spese manut.veic.propri aziend.non strum,590315,account.data_account_type_expense,other,TRUE
+59031599,59.03.15.99,Spese manutenzione veicoli propri,590315,account.data_account_type_expense,other,TRUE
+590317,59.03.17,Spese manutenzione veicoli di terzi,5903,account.data_account_type_view,view,TRUE
+59031703,59.03.17.03,Spese manut.veic.di terzi promiscui dip.,590317,account.data_account_type_expense,other,TRUE
+59031705,59.03.17.05,Spese manut.veic.di terzi az.non strum.,590317,account.data_account_type_expense,other,TRUE
+59031709,59.03.17.09,Spese manut. veicoli di terzi indeducib.,590317,account.data_account_type_expense,other,TRUE
+59031799,59.03.17.99,Spese manutenzione veicoli di terzi,590317,account.data_account_type_expense,other,TRUE
+590319,59.03.19,Canoni manutenzione veicoli propri,5903,account.data_account_type_view,view,TRUE
+59031901,59.03.19.01,Canoni manut.veic.azien.propri deducib.,590319,account.data_account_type_expense,other,TRUE
+59031905,59.03.19.05,Canoni manut.veic.propri promiscui dip.,590319,account.data_account_type_expense,other,TRUE
+59031907,59.03.19.07,Canoni manut.veicoli propri indeducibili,590319,account.data_account_type_expense,other,TRUE
+59031909,59.03.19.09,Canoni manut.veic.propri azien.non strum,590319,account.data_account_type_expense,other,TRUE
+59031999,59.03.19.99,Canoni manutenzione veicoli propri,590319,account.data_account_type_expense,other,TRUE
+590321,59.03.21,Canoni/spese manut.veicoli di terzi,5903,account.data_account_type_view,view,TRUE
+59032103,59.03.21.03,Canoni/spese manut.veic.azien.terzi ded.,590321,account.data_account_type_expense,other,TRUE
+59032105,59.03.21.05,Can.manut.veic.di terzi azien.non strum.,590321,account.data_account_type_expense,other,TRUE
+59032107,59.03.21.07,Canoni manut.veic.terzi promiscui dipend,590321,account.data_account_type_expense,other,TRUE
+59032109,59.03.21.09,Canoni manut.veicoli di terzi indeducib.,590321,account.data_account_type_expense,other,TRUE
+59032199,59.03.21.99,Canoni/spese manut.veicoli di terzi,590321,account.data_account_type_expense,other,TRUE
+590323,59.03.23,Assicurazioni non obbligatorie veicoli,5903,account.data_account_type_view,view,TRUE
+59032301,59.03.23.01,Assicur.non obblig.veicoli deducibili,590323,account.data_account_type_expense,other,TRUE
+59032305,59.03.23.05,Assicur.non obblig.veic.azien.non strum.,590323,account.data_account_type_expense,other,TRUE
+59032307,59.03.23.07,Assicur.non obblig.veic.promisc.dipend.,590323,account.data_account_type_expense,other,TRUE
+59032309,59.03.23.09,Assicur.non obblig.veicoli indeducibili,590323,account.data_account_type_expense,other,TRUE
+59032399,59.03.23.99,Assicurazione non obbligatorie veicoli,590323,account.data_account_type_expense,other,TRUE
+590325,59.03.25,Servizi generali vari veicoli,5903,account.data_account_type_view,view,TRUE
+59032501,59.03.25.01,Servizi generali vari veicoli deducibili,590325,account.data_account_type_expense,other,TRUE
+59032505,59.03.25.05,Servizi gen.vari veic.promiscui dipend.,590325,account.data_account_type_expense,other,TRUE
+59032507,59.03.25.07,Servizi generali vari veicoli indeduc.,590325,account.data_account_type_expense,other,TRUE
+59032509,59.03.25.09,Servizi generali vari veicoli non strum.,590325,account.data_account_type_expense,other,TRUE
+59032599,59.03.25.99,Servizi generali vari veicoli,590325,account.data_account_type_expense,other,TRUE
+61,61,PRESTAZIONI DI LAVORO NON DIPENDENTE,00,account.data_account_type_view,view,TRUE
+6101,61.01,PRESTAZIONI DI LAVORO AUTONOMO,61,account.data_account_type_view,view,TRUE
+610101,61.01.01,Consulenze amministrative e fiscali,6101,account.data_account_type_view,view,TRUE
+61010101,61.01.01.01,Consulenze ammin.e fiscali (non ordin.),610101,account.data_account_type_expense,other,TRUE
+61010103,61.01.01.03,Consulenze ammin.e fiscali (ordinarie),610101,account.data_account_type_expense,other,TRUE
+61010199,61.01.01.99,Consulenze amministrative e fiscali,610101,account.data_account_type_expense,other,TRUE
+610103,61.01.03,Consulenze tecniche,6101,account.data_account_type_expense,other,TRUE
+610105,61.01.05,Consulenze legali,6101,account.data_account_type_expense,other,TRUE
+610107,61.01.07,Consulenze notarili,6101,account.data_account_type_expense,other,TRUE
+610109,61.01.09,Consulenze marketing e pubblicitarie,6101,account.data_account_type_expense,other,TRUE
+610111,61.01.11,Consulenze/prestazioni diverse,6101,account.data_account_type_view,view,TRUE
+61011101,61.01.11.01,Consulenze afferenti diverse,610111,account.data_account_type_expense,other,TRUE
+61011105,61.01.11.05,Consulenze non afferenti diverse,610111,account.data_account_type_expense,other,TRUE
+61011199,61.01.11.99,Consulenze/prestazioni diverse,610111,account.data_account_type_expense,other,TRUE
+610113,61.01.13,Spese antic.lavorat.auton.affer/non aff.,6101,account.data_account_type_expense,other,TRUE
+610115,61.01.15,Rimb.spese lavorat.autonomi,6101,account.data_account_type_view,view,TRUE
+61011501,61.01.15.01,Rimb.spese lavorat.autonomi afferenti,610115,account.data_account_type_expense,other,TRUE
+61011503,61.01.15.03,Rimb.vitto/alloggio lav.autonomi affer.,610115,account.data_account_type_expense,other,TRUE
+61011505,61.01.15.05,Rimb.spese lavorat.autonomi non affer.,610115,account.data_account_type_expense,other,TRUE
+61011507,61.01.15.07,Rimb.vitto/alloggio lavorat.aut.non aff.,610115,account.data_account_type_expense,other,TRUE
+61011599,61.01.15.99,Rimb.spese lavorat.autonomi,610115,account.data_account_type_expense,other,TRUE
+610117,61.01.17,Altri costi per prestazioni di terzi,6101,account.data_account_type_view,view,TRUE
+61011701,61.01.17.01,Altri costi per prest.di terzi affer.,610117,account.data_account_type_expense,other,TRUE
+61011703,61.01.17.03,Altri costi per prest.di terzi non affer.,610117,account.data_account_type_expense,other,TRUE
+61011799,61.01.17.99,Altri costi per prestazioni di terzi,610117,account.data_account_type_expense,other,TRUE
+610119,61.01.19,Contributi cassa previdenza lav.autonomo,6101,account.data_account_type_view,view,TRUE
+61011901,61.01.19.01,Contrib.cassa previd.lav.aut.affer.,610119,account.data_account_type_expense,other,TRUE
+61011903,61.01.19.03,Contrib.cassa previd.lav.aut. non affer.,610119,account.data_account_type_expense,other,TRUE
+61011905,61.01.19.05,Contr.cassa prev.cons.ammin.fisc.(ordin),610119,account.data_account_type_expense,other,TRUE
+61011999,61.01.19.99,Contributi cassa previdenza lav.autonomo,610119,account.data_account_type_expense,other,TRUE
+610121,61.01.21,Lav.aut.occas/assoc.in partecip.,6101,account.data_account_type_view,view,TRUE
+61012101,61.01.21.01,Lav.aut.occas/assoc.in partecip.affer.,610121,account.data_account_type_expense,other,TRUE
+61012103,61.01.21.03,Lav.aut.occas/assoc.in partecip.non aff.,610121,account.data_account_type_expense,other,TRUE
+61012199,61.01.21.99,Lav.aut.occas/assoc.in partecip.,610121,account.data_account_type_expense,other,TRUE
+610123,61.01.23,Contrib.lav.occas/assoc.in partecip.,6101,account.data_account_type_view,view,TRUE
+61012301,61.01.23.01,Contr.lav.occas/assoc.in partecip.aff.,610123,account.data_account_type_expense,other,TRUE
+61012303,61.01.23.03,Contr.lav.occas/assoc. partecip.non aff.,610123,account.data_account_type_expense,other,TRUE
+61012399,61.01.23.99,Contrib.lav.occas/assoc.in partecip.,610123,account.data_account_type_expense,other,TRUE
+610125,61.01.25,Rimb.spese lav.aut.occas/assoc.in par,6101,account.data_account_type_view,view,TRUE
+61012501,61.01.25.01,Rimb.sp.lav.aut.occas/assoc.in part.aff.,610125,account.data_account_type_expense,other,TRUE
+61012503,61.01.25.03,Rim.vitto/all.lav.aut.occ/ass.in part.aff,610125,account.data_account_type_expense,other,TRUE
+61012505,61.01.25.05,Rimb.sp.lav.aut.occas/assoc.par.non aff.,610125,account.data_account_type_expense,other,TRUE
+61012507,61.01.25.07,Rimb.vitto/all.aut.occas/assoc.in part.n,610125,account.data_account_type_expense,other,TRUE
+61012599,61.01.25.99,Rimb.spese lav.aut.occas/assoc.in par,610125,account.data_account_type_expense,other,TRUE
+610127,61.01.27,Spese antic.lav.aut.occas.aff. e non af.,6101,account.data_account_type_expense,other,TRUE
+610151,61.01.51,Compensi lavoro prestato dai familiari,6101,account.data_account_type_expense,other,TRUE
+6103,61.03,ALTRE PRESTAZIONI DI LAVORO,61,account.data_account_type_view,view,TRUE
+610301,61.03.01,Compensi/rimborsi co.co.co.,6103,account.data_account_type_view,view,TRUE
+61030101,61.03.01.01,Compensi/rimborsi co.co.co.afferenti,610301,account.data_account_type_expense,other,TRUE
+61030103,61.03.01.03,Compensi/rimborsi co.co.co.non afferenti,610301,account.data_account_type_expense,other,TRUE
+61030199,61.03.01.99,Compensi/rimborsi co.co.co.,610301,account.data_account_type_expense,other,TRUE
+610303,61.03.03,Rimborsi spese piÚ di lista co.co.co,6103,account.data_account_type_view,view,TRUE
+61030301,61.03.03.01,Rimb.spese pie'di lista co.co.co. affer.,610303,account.data_account_type_expense,other,TRUE
+61030303,61.03.03.03,Rimb.spese pie'di lista co.co.co.non aff,610303,account.data_account_type_expense,other,TRUE
+61030399,61.03.03.99,Rimborsi spese piÚ di lista co.co.co,610303,account.data_account_type_expense,other,TRUE
+610305,61.03.05,Altri rimborsi spese a co.co.co.,6103,account.data_account_type_view,view,TRUE
+61030501,61.03.05.01,Altri rimb. spese a co.co.co.afferenti,610305,account.data_account_type_expense,other,TRUE
+61030503,61.03.05.03,Altri rimb. spese a co.co.co.non affer.,610305,account.data_account_type_expense,other,TRUE
+61030505,61.03.05.05,Spese vitto/alloggio ind.co.co.co affer.,610305,account.data_account_type_expense,other,TRUE
+61030507,61.03.05.07,Spese vitto/allogg.ind.co.co.co.non aff.,610305,account.data_account_type_expense,other,TRUE
+61030509,61.03.05.09,Rimborsi chilometrici co.co.co afferenti,610305,account.data_account_type_expense,other,TRUE
+61030511,61.03.05.11,Rimborsi chilometrici co.co.co non affer,610305,account.data_account_type_expense,other,TRUE
+61030513,61.03.05.13,Rimborsi chilometrici co.co.co indeduc.,610305,account.data_account_type_expense,other,TRUE
+61030599,61.03.05.99,Altri rimborsi spese a co.co.co.,610305,account.data_account_type_expense,other,TRUE
+610307,61.03.07,Contributi previdenziali co.co.co.,6103,account.data_account_type_view,view,TRUE
+61030701,61.03.07.01,Contrib.previd. co.co.co. afferenti,610307,account.data_account_type_expense,other,TRUE
+61030703,61.03.07.03,Contrib.previd. co.co.co. non afferenti,610307,account.data_account_type_expense,other,TRUE
+61030799,61.03.07.99,Contributi previdenziali co.co.co.,610307,account.data_account_type_expense,other,TRUE
+610309,61.03.09,Liberalità a favore di co.co.co.,6103,account.data_account_type_view,view,TRUE
+61030901,61.03.09.01,Liberal.a favore di co.co.co.affer.,610309,account.data_account_type_expense,other,TRUE
+61030903,61.03.09.03,Liberal.a favore di co.co.co.non affer.,610309,account.data_account_type_expense,other,TRUE
+61030999,61.03.09.99,Liberalità a favore di co.co.co.,610309,account.data_account_type_expense,other,TRUE
+610311,61.03.11,Indenn. per cessaz.rapporti co.co.co.,6103,account.data_account_type_view,view,TRUE
+61031101,61.03.11.01,Indenn.cessaz.rapp. co.co.co. affer.,610311,account.data_account_type_expense,other,TRUE
+61031103,61.03.11.03,Indenn.cessaz.rapp. co.co.co.non affer.,610311,account.data_account_type_expense,other,TRUE
+61031199,61.03.11.99,Indenn. per cessaz.rapporti co.co.co.,610311,account.data_account_type_expense,other,TRUE
+610313,61.03.13,Contributi INAIL co.co.co,6103,account.data_account_type_expense,other,TRUE
+610315,61.03.15,Compensi per lavoro temporaneo,6103,account.data_account_type_view,view,TRUE
+61031501,61.03.15.01,Compensi per lavoro tempor.(compenso),610315,account.data_account_type_expense,other,TRUE
+61031503,61.03.15.03,Compensi per lavoro tempor.(retr.contr),610315,account.data_account_type_expense,other,TRUE
+61031599,61.03.15.99,Compensi per lavoro temporaneo,610315,account.data_account_type_expense,other,TRUE
+610317,61.03.17,Compensi per personale distaccato,6103,account.data_account_type_expense,other,TRUE
+6105,61.05,COMPENSI ORGANI SOCIALI,61,account.data_account_type_view,view,TRUE
+610501,61.05.01,Compensi amministratori,6105,account.data_account_type_view,view,TRUE
+61050101,61.05.01.01,Compensi amministratori soci profess.SC,610501,account.data_account_type_expense,other,TRUE
+61050103,61.05.01.03,Compensi ammin.non soci professionisti,610501,account.data_account_type_expense,other,TRUE
+61050105,61.05.01.05,Compensi amministr.soci co.co.co SC,610501,account.data_account_type_expense,other,TRUE
+61050107,61.05.01.07,Compensi amministr.soci co.co.co SP,610501,account.data_account_type_expense,other,TRUE
+61050109,61.05.01.09,Compensi amministr.non soci co.co.co,610501,account.data_account_type_expense,other,TRUE
+61050111,61.05.01.11,Compensi ammin.soci profess.SC non corr.,610501,account.data_account_type_expense,other,TRUE
+61050113,61.05.01.13,Comp.ammin.non soci prof.SC/SP non corr.,610501,account.data_account_type_expense,other,TRUE
+61050115,61.05.01.15,Comp.ammin.soci co.co.co SC non corr.,610501,account.data_account_type_expense,other,TRUE
+61050117,61.05.01.17,Comp.ammin.non soci co.co.co non corr.,610501,account.data_account_type_expense,other,TRUE
+61050119,61.05.01.19,Comp.ammin.soci co.co.co SP non corr,610501,account.data_account_type_expense,other,TRUE
+61050199,61.05.01.99,Compensi amministratori,610501,account.data_account_type_expense,other,TRUE
+610503,61.05.03,Rimb.spese piÚ di lista a amministratori,6105,account.data_account_type_view,view,TRUE
+61050301,61.05.03.01,Rimborsi spese amministr.profess.soci SC,610503,account.data_account_type_expense,other,TRUE
+61050303,61.05.03.03,Rimb.vitto/allogg.ammin.profess.soci SC,610503,account.data_account_type_expense,other,TRUE
+61050305,61.05.03.05,Rimb.spese amministr.co.co.co soci SC,610503,account.data_account_type_expense,other,TRUE
+61050307,61.05.03.07,Rimb.vitto/allogg.ind.amm.co.co.co.S.P.,610503,account.data_account_type_expense,other,TRUE
+61050309,61.05.03.09,Rimb.vitto/allog.amm.non soci prof.SC/SP,610503,account.data_account_type_expense,other,TRUE
+61050311,61.05.03.11,Rimb.vitto/allogg.ind.amm.co.co.co.S.C.,610503,account.data_account_type_expense,other,TRUE
+61050313,61.05.03.13,Rimb.spese ammin.non soci profess.SC/SP,610503,account.data_account_type_expense,other,TRUE
+61050315,61.05.03.15,Rimb.spese amministrat. co.co.co soci SP,610503,account.data_account_type_expense,other,TRUE
+61050317,61.05.03.17,Rimb.spese amministr.non soci co.co.co,610503,account.data_account_type_expense,other,TRUE
+61050399,61.05.03.99,Rimb.spese piÚ di lista a amministratori,610503,account.data_account_type_expense,other,TRUE
+610509,61.05.09,Rimborsi spese collegio sindacale,6105,account.data_account_type_view,view,TRUE
+61050999,61.05.09.99,Rimborsi spese collegio sindacale,610509,account.data_account_type_expense,other,TRUE
+610511,61.05.11,Contributi previdenziali amministratori,6105,account.data_account_type_view,view,TRUE
+61051101,61.05.11.01,Contrib.previd.ammin.non soci co.co.co,610511,account.data_account_type_expense,other,TRUE
+61051103,61.05.11.03,Contrib. previd. ammin.co.co.co.soci SC,610511,account.data_account_type_expense,other,TRUE
+61051105,61.05.11.05,Contrib.cassa prev.ammin.non soci prof,610511,account.data_account_type_expense,other,TRUE
+61051107,61.05.11.07,Contr. cassa prev.ammin.profess.soci SC,610511,account.data_account_type_expense,other,TRUE
+61051109,61.05.11.09,Contrib.previd.ammin.co.co.co soci SP.,610511,account.data_account_type_expense,other,TRUE
+61051199,61.05.11.99,Contributi previdenziali amministratori,610511,account.data_account_type_expense,other,TRUE
+610515,61.05.15,Premi INAIL soci/titolari,6105,account.data_account_type_expense,other,TRUE
+610517,61.05.17,Utili assoc.in partec.con apporto lavoro,6105,account.data_account_type_expense,other,TRUE
+610519,61.05.19,Acc.to TFM amministratori co.co.co,6105,account.data_account_type_view,view,TRUE
+61051901,61.05.19.01,Acc.to TFM ammin.soci co.co.co SC,610519,account.data_account_type_expense,other,TRUE
+61051903,61.05.19.03,Acc.to TFM ammin.soci co.co.co SP,610519,account.data_account_type_expense,other,TRUE
+61051999,61.05.19.99,Acc.to TFM amministratori co.co.co,610519,account.data_account_type_expense,other,TRUE
+610521,61.05.21,Rimborsi chilometrici amministratori,6105,account.data_account_type_view,view,TRUE
+61052101,61.05.21.01,Rimborsi chilom.ammin.co.co.co soci SP,610521,account.data_account_type_expense,other,TRUE
+61052103,61.05.21.03,Rimborsi chilom.ammin.co.co.co soci SC,610521,account.data_account_type_expense,other,TRUE
+61052105,61.05.21.05,Rimborsi chilom.ammin.indeducibili,610521,account.data_account_type_expense,other,TRUE
+61052107,61.05.21.07,Rimborsi chilom.ammin.co.co.co non soci,610521,account.data_account_type_expense,other,TRUE
+61052199,61.05.21.99,Rimborsi chilometrici amministratori,610521,account.data_account_type_expense,other,TRUE
+6107,61.07,CONTI TITOLARE E SOCI,61,account.data_account_type_view,view,TRUE
+610701,61.07.01,Contributi INAIL titolare e soci,6107,account.data_account_type_expense,other,TRUE
+63,63,"SPESE AMMIN.,COMM. E DI RAPPRESENTANZA",00,account.data_account_type_view,view,TRUE
+6301,63.01,SPESE COMMERCIALI E DI VIAGGIO,63,account.data_account_type_view,view,TRUE
+630101,63.01.01,"Pubblicità, inserzioni e affissioni",6301,account.data_account_type_view,view,TRUE
+63010101,63.01.01.01,"Pubblicità, inserz. e affissioni ded.",630101,account.data_account_type_expense,other,TRUE
+63010103,63.01.01.03,"Pubblicità, inserz.e affiss.da ripartire",630101,account.data_account_type_expense,other,TRUE
+63010105,63.01.01.05,"Pubblicità, inserz. e affissioni inded.",630101,account.data_account_type_expense,other,TRUE
+63010199,63.01.01.99,"Pubblicità, inserzioni e affissioni",630101,account.data_account_type_expense,other,TRUE
+630103,63.01.03,Materiale pubblicitario,6301,account.data_account_type_view,view,TRUE
+63010301,63.01.03.01,Materiale pubblicitario deducibile,630103,account.data_account_type_expense,other,TRUE
+63010303,63.01.03.03,Materiale pubblicitario da ripartire,630103,account.data_account_type_expense,other,TRUE
+63010399,63.01.03.99,Materiale pubblicitario,630103,account.data_account_type_expense,other,TRUE
+630105,63.01.05,"Fiere, mostre, convegni deducibili",6301,account.data_account_type_expense,other,TRUE
+630107,63.01.07,IVA non detratta su prestaz.alberghiere,6301,account.data_account_type_expense,other,TRUE
+630109,63.01.09,Spese per alberghi e ristoranti,6301,account.data_account_type_view,view,TRUE
+63010901,63.01.09.01,Spese per alberghi e ristoranti(no rappr.),630109,account.data_account_type_expense,other,TRUE
+63010903,63.01.09.03,"Sp.alberghi,rist(rappr.con limite ricavi)",630109,account.data_account_type_expense,other,TRUE
+63010905,63.01.09.05,"Sp.alberghi,rist(rappr.indeducibili)",630109,account.data_account_type_expense,other,TRUE
+63010999,63.01.09.99,Spese per alberghi e ristoranti,630109,account.data_account_type_expense,other,TRUE
+630113,63.01.13,Spese di viaggio,6301,account.data_account_type_expense,other,TRUE
+630115,63.01.15,Pedaggi autostradali veicoli,6301,account.data_account_type_view,view,TRUE
+63011501,63.01.15.01,Pedaggi autostr.veicoli azien.deducibili,630115,account.data_account_type_expense,other,TRUE
+63011505,63.01.15.05,Pedaggi autostr.veicoli promisc.dipend.,630115,account.data_account_type_expense,other,TRUE
+63011507,63.01.15.07,Pedaggi autostr.veicoli indeducibili,630115,account.data_account_type_expense,other,TRUE
+63011509,63.01.15.09,Pedaggi autostr.veicoli azien.non strum,630115,account.data_account_type_expense,other,TRUE
+63011599,63.01.15.99,Pedaggi autostradali veicoli,630115,account.data_account_type_expense,other,TRUE
+630117,63.01.17,Comp.per attiv.d'impresa commerc.occas.,6301,account.data_account_type_expense,other,TRUE
+630119,63.01.19,Spese pubblic.convegni imprese farmac.,6301,account.data_account_type_expense,other,TRUE
+630121,63.01.21,Spese rappres.deduc.(con limite ricavi),6301,account.data_account_type_expense,other,TRUE
+630151,63.01.51,Spese commerciali varie,6301,account.data_account_type_expense,other,TRUE
+6303,63.03,SPESE DI RAPPRESENTANZA (ON.DIV.GEST.),63,account.data_account_type_view,view,TRUE
+630301,63.03.01,Spese di rappresentanza (on.gest.),6303,account.data_account_type_view,view,TRUE
+63030101,63.03.01.01,Sp.di rappr.ded.con lim.ricavi(on.gest.),630301,account.data_account_type_expense,other,TRUE
+63030103,63.03.01.03,Sp.di rappr.indeducibili (on.gest.),630301,account.data_account_type_expense,other,TRUE
+63030199,63.03.01.99,Spese di rappresentanza (on.gest.),630301,account.data_account_type_expense,other,TRUE
+630303,63.03.03,Omaggi,6303,account.data_account_type_view,view,TRUE
+63030301,63.03.03.01,Omaggi con val.unit.<lim.art.108 c.2,630303,account.data_account_type_expense,other,TRUE
+63030303,63.03.03.03,Omaggi con val.unit.>lim.art.108 c.2 ded,630303,account.data_account_type_expense,other,TRUE
+63030305,63.03.03.05,Omaggi con val.unit>lim.art.108 c.2 ind,630303,account.data_account_type_expense,other,TRUE
+63030399,63.03.03.99,Omaggi,630303,account.data_account_type_expense,other,TRUE
+6305,63.05,SPESE AMMINISTRATIVE E GENERALI,63,account.data_account_type_view,view,TRUE
+630501,63.05.01,Spese postali,6305,account.data_account_type_expense,other,TRUE
+630503,63.05.03,Gestione fax,6305,account.data_account_type_expense,other,TRUE
+630505,63.05.05,Gestione fotocopiatrici,6305,account.data_account_type_expense,other,TRUE
+630507,63.05.07,Servizi contabili di terzi,6305,account.data_account_type_expense,other,TRUE
+630511,63.05.11,Altre spese amministrative,6305,account.data_account_type_expense,other,TRUE
+630513,63.05.13,Premi di assicurazioni non obbligatorie,6305,account.data_account_type_view,view,TRUE
+63051301,63.05.13.01,Premi di assicuraz.non obblig.deducibili,630513,account.data_account_type_expense,other,TRUE
+63051303,63.05.13.03,Premi di assicuraz.non obblig.indeducib.,630513,account.data_account_type_expense,other,TRUE
+63051399,63.05.13.99,Premi di assicurazioni non obbligatorie,630513,account.data_account_type_expense,other,TRUE
+630515,63.05.15,Premi di assicurazioni obbligatorie,6305,account.data_account_type_expense,other,TRUE
+630517,63.05.17,Pulizie e vigilanza,6305,account.data_account_type_expense,other,TRUE
+630519,63.05.19,Servizi smaltimento rifiuti,6305,account.data_account_type_expense,other,TRUE
+630521,63.05.21,Vidimazioni e certificati,6305,account.data_account_type_expense,other,TRUE
+630523,63.05.23,Valori bollati,6305,account.data_account_type_expense,other,TRUE
+630525,63.05.25,Assistenza software,6305,account.data_account_type_expense,other,TRUE
+630527,63.05.27,Costi di ricerca e sviluppo,6305,account.data_account_type_view,view,TRUE
+63052701,63.05.27.01,Costi di ricerca e sviluppo deducibili,630527,account.data_account_type_expense,other,TRUE
+63052703,63.05.27.03,Costi di ricerca e sviluppo da ripartire,630527,account.data_account_type_expense,other,TRUE
+63052799,63.05.27.99,Costi di ricerca e sviluppo,630527,account.data_account_type_expense,other,TRUE
+630531,63.05.31,Costi per servizi indeducibili,6305,account.data_account_type_expense,other,TRUE
+630551,63.05.51,Spese generali varie,6305,account.data_account_type_expense,other,TRUE
+65,65,COSTI PER GODIMENTO BENI DI TERZI,00,account.data_account_type_view,view,TRUE
+6501,65.01,GESTIONE IMMOBILI,65,account.data_account_type_view,view,TRUE
+650101,65.01.01,Canoni leasing immobili,6501,account.data_account_type_view,view,TRUE
+65010101,65.01.01.01,Canoni leasing immob deducibili,650101,account.data_account_type_expense,other,TRUE
+65010103,65.01.01.03,Canoni leasing immobili ad uso promiscuo,650101,account.data_account_type_expense,other,TRUE
+65010105,65.01.01.05,Canoni leasing immobili indeducibili,650101,account.data_account_type_expense,other,TRUE
+65010107,65.01.01.07,Canoni leasing immobili civili,650101,account.data_account_type_expense,other,TRUE
+65010109,65.01.01.09,Canoni leasing immobili art.102 c.7,650101,account.data_account_type_expense,other,TRUE
+65010199,65.01.01.99,Canoni leasing immobili,650101,account.data_account_type_expense,other,TRUE
+650103,65.01.03,Interessi canoni leasing immobili,6501,account.data_account_type_view,view,TRUE
+65010301,65.01.03.01,Inter.canoni leasing immobili deducib.,650103,account.data_account_type_expense,other,TRUE
+65010303,65.01.03.03,Inter.canoni leasing immob.indeducib.,650103,account.data_account_type_expense,other,TRUE
+65010305,65.01.03.05,Inter.canoni leasing immob.ad uso prom.,650103,account.data_account_type_expense,other,TRUE
+65010399,65.01.03.99,Interessi canoni leasing immobili,650103,account.data_account_type_expense,other,TRUE
+650105,65.01.05,Canoni locazione immobili,6501,account.data_account_type_view,view,TRUE
+65010501,65.01.05.01,Canoni locazione immobili deducibili,650105,account.data_account_type_expense,other,TRUE
+65010503,65.01.05.03,Canoni locaz.immobili ad uso promiscuo,650105,account.data_account_type_expense,other,TRUE
+65010505,65.01.05.05,Canoni locazione immobili indeducibili,650105,account.data_account_type_expense,other,TRUE
+65010506,65.01.05.06,Canoni locazione immobili ded.IRAP,650105,account.data_account_type_expense,other,TRUE
+65010509,65.01.05.09,Canoni locaz.immob.veic.aziend.non strum,650105,account.data_account_type_expense,other,TRUE
+65010511,65.01.05.11,Canoni locaz.immob.veicoli profession.,650105,account.data_account_type_expense,other,TRUE
+65010513,65.01.05.13,Canoni locaz.immob.veicoli inded.,650105,account.data_account_type_expense,other,TRUE
+65010599,65.01.05.99,Canoni locazione immobili,650105,account.data_account_type_expense,other,TRUE
+650107,65.01.07,Spese condominiali e varie,6501,account.data_account_type_view,view,TRUE
+65010701,65.01.07.01,Spese condominiali e varie deducibili,650107,account.data_account_type_expense,other,TRUE
+65010703,65.01.07.03,Spese condomin.e varie ad uso promiscuo,650107,account.data_account_type_expense,other,TRUE
+65010705,65.01.07.05,Spese condominiali e varie indeducibili,650107,account.data_account_type_expense,other,TRUE
+65010799,65.01.07.99,Spese condominiali e varie,650107,account.data_account_type_expense,other,TRUE
+6503,65.03,LOCAZ. E CANONI AUTOV. E ALTRI VEICOLI,65,account.data_account_type_view,view,TRUE
+650301,65.03.01,Canoni leasing veicoli,6503,account.data_account_type_view,view,TRUE
+65030101,65.03.01.01,Canoni leasing veicoli aziend.deducibili,650301,account.data_account_type_expense,other,TRUE
+65030103,65.03.01.03,Canoni leasing veicoli promiscui dipend.,650301,account.data_account_type_expense,other,TRUE
+65030105,65.03.01.05,Canoni leasing veicoli indeducibili,650301,account.data_account_type_expense,other,TRUE
+65030107,65.03.01.07,Spese acc.can.leas.veic.aziend.non strum.,650301,account.data_account_type_expense,other,TRUE
+65030109,65.03.01.09,Spese acc.can.leas.veic.agenti e rappr.,650301,account.data_account_type_expense,other,TRUE
+65030113,65.03.01.13,Canoni leasing veicoli art.102 c.7,650301,account.data_account_type_expense,other,TRUE
+65030199,65.03.01.99,Canoni leasing veicoli,650301,account.data_account_type_expense,other,TRUE
+650303,65.03.03,Interessi canoni leasing veicoli,6503,account.data_account_type_view,view,TRUE
+65030301,65.03.03.01,Inter.canoni leasing veic.aziend.deduc.,650303,account.data_account_type_expense,other,TRUE
+65030303,65.03.03.03,Inter.canoni leasing veicoli indeduc.,650303,account.data_account_type_expense,other,TRUE
+65030305,65.03.03.05,Inter.canoni leas.veic.promisc.dipend.,650303,account.data_account_type_expense,other,TRUE
+65030399,65.03.03.99,Interessi canoni leasing veicoli,650303,account.data_account_type_expense,other,TRUE
+650305,65.03.05,Canoni/spese access.nolegg.veicoli,6503,account.data_account_type_view,view,TRUE
+65030501,65.03.05.01,Can./spese access.noleg.veicoli deduc.,650305,account.data_account_type_expense,other,TRUE
+65030503,65.03.05.03,Can./spese access.noleg.veic.indeducib.,650305,account.data_account_type_expense,other,TRUE
+65030505,65.03.05.05,Can/spese access.noleg.veic.promi.dipend,650305,account.data_account_type_expense,other,TRUE
+65030507,65.03.05.07,Spese access.noleg.veic.azien.non strum.,650305,account.data_account_type_expense,other,TRUE
+65030599,65.03.05.99,Canoni/spese access.nolegg.veicoli,650305,account.data_account_type_expense,other,TRUE
+650307,65.03.07,Canoni leasing automezzi,6503,account.data_account_type_expense,other,TRUE
+650309,65.03.09,Interessi canoni leasing automezzi,6503,account.data_account_type_expense,other,TRUE
+6505,65.05,LOCAZIONI E CANONI IMPIANTI E ATTREZZ.,65,account.data_account_type_view,view,TRUE
+650501,65.05.01,Canoni leasing apparecchi telefonici,6505,account.data_account_type_expense,other,TRUE
+650503,65.05.03,Canoni leasing impianti e macchinari,6505,account.data_account_type_expense,other,TRUE
+650505,65.05.05,Canoni leasing attrezzature,6505,account.data_account_type_expense,other,TRUE
+650507,65.05.07,Inter.su can.leasing apparecchi telefon.,6505,account.data_account_type_expense,other,TRUE
+650509,65.05.09,Inter.canoni leasing imp.e macchinari,6505,account.data_account_type_expense,other,TRUE
+650511,65.05.11,Interessi canoni leasing attrezzature,6505,account.data_account_type_expense,other,TRUE
+650513,65.05.13,Canoni noleggio impianti e macchinari,6505,account.data_account_type_expense,other,TRUE
+650515,65.05.15,Canoni noleggio attrezzature,6505,account.data_account_type_expense,other,TRUE
+650517,65.05.17,Can.locaz.non fin./nol.beni ad uso prom.,6505,account.data_account_type_expense,other,TRUE
+650519,65.05.19,Canoni noleggio telefonia fissa,6505,account.data_account_type_expense,other,TRUE
+650521,65.05.21,Canoni noleggio telefonia mobile,6505,account.data_account_type_expense,other,TRUE
+650523,65.05.23,Canoni leasing beni immateriali,6505,account.data_account_type_expense,other,TRUE
+650525,65.05.25,Interessi su canoni leasing beni immater.,6505,account.data_account_type_expense,other,TRUE
+650527,65.05.27,Canoni leasing beni ad uso promiscuo,6505,account.data_account_type_expense,other,TRUE
+650529,65.05.29,Interessi su canoni leas.beni uso prom.,6505,account.data_account_type_expense,other,TRUE
+650531,65.05.31,Can.leas.altri beni mat.art. 102 c.7,6505,account.data_account_type_view,view,TRUE
+65053101,65.05.31.01,Can.leas.altri beni mat.art.102 c.7,650531,account.data_account_type_expense,other,TRUE
+65053103,65.05.31.03,Can.leas.altri beni mat.ded.art.102 c.7,650531,account.data_account_type_expense,other,TRUE
+65053105,65.05.31.05,Can.leas.altri beni mat.ind.art.102 c.7,650531,account.data_account_type_expense,other,TRUE
+650533,65.05.33,Inter.leas.altri beni mat.art.102 c.7,6505,account.data_account_type_view,view,TRUE
+65053301,65.05.33.01,Int.leas.altri beni mat.ded.art.102 c.7,650533,account.data_account_type_expense,other,TRUE
+65053303,65.05.33.03,Int.leas.altri beni mat.ind.art.102 c.7,650533,account.data_account_type_expense,other,TRUE
+65053399,65.05.33.99,Int.leas.altri beni mat.art.102 c.7,650533,account.data_account_type_expense,other,TRUE
+6507,65.07,CANONI E LICENZE SOFTWARE,65,account.data_account_type_view,view,TRUE
+650701,65.07.01,Canoni per utilizzo licenze software,6507,account.data_account_type_expense,other,TRUE
+650703,65.07.03,Licenze d'uso software non capitalizzati,6507,account.data_account_type_expense,other,TRUE
+6509,65.09,ROYALTIES PASSIVE,65,account.data_account_type_view,view,TRUE
+650903,65.09.03,Royalties passive,6509,account.data_account_type_view,view,TRUE
+65090301,65.09.03.01,Royalties non correlate ai ricavi,650903,account.data_account_type_expense,other,TRUE
+65090303,65.09.03.03,Royalties correlate ai ricavi,650903,account.data_account_type_expense,other,TRUE
+65090399,65.09.03.99,Royalties passive,650903,account.data_account_type_expense,other,TRUE
+6511,65.11,ALTRI COSTI GODIMENTO BENI DI TERZI,65,account.data_account_type_view,view,TRUE
+651101,65.11.01,Canoni passivi affitto d'azienda,6511,account.data_account_type_expense,other,TRUE
+67,67,COSTI PERSONALE DIPENDENTE,00,account.data_account_type_view,view,TRUE
+6701,67.01,COSTI PERSONALE DIPENDENTE,67,account.data_account_type_view,view,TRUE
+670101,67.01.01,Retribuzioni lorde,6701,account.data_account_type_view,view,TRUE
+67010101,67.01.01.01,Retribuzioni lorde dipendenti ordinari,670101,account.data_account_type_expense,other,TRUE
+67010103,67.01.01.03,Retribuzioni lorde dipend.disabili/form.,670101,account.data_account_type_expense,other,TRUE
+67010105,67.01.01.05,Retribuzioni lorde apprendisti,670101,account.data_account_type_expense,other,TRUE
+67010199,67.01.01.99,Retribuzioni lorde,670101,account.data_account_type_expense,other,TRUE
+670103,67.01.03,Contributi INPS,6701,account.data_account_type_view,view,TRUE
+67010301,67.01.03.01,Contributi INPS dipendenti ordinari,670103,account.data_account_type_expense,other,TRUE
+67010303,67.01.03.03,Contributi INPS dipend.disabili/formaz.,670103,account.data_account_type_expense,other,TRUE
+67010305,67.01.03.05,Contributi INPS apprendisti,670103,account.data_account_type_expense,other,TRUE
+67010399,67.01.03.99,Contributi INPS,670103,account.data_account_type_expense,other,TRUE
+670105,67.01.05,Oneri sociali fiscalizzati,6701,account.data_account_type_view,view,TRUE
+67010501,67.01.05.01,Oneri sociali fiscalizz. dipend.ordinari,670105,account.data_account_type_expense,other,TRUE
+67010503,67.01.05.03,Oneri sociali fiscal.dipend.disab./form.,670105,account.data_account_type_expense,other,TRUE
+67010505,67.01.05.05,Oneri sociali fiscalizzati apprendisti,670105,account.data_account_type_expense,other,TRUE
+67010599,67.01.05.99,Oneri sociali fiscalizzati,670105,account.data_account_type_expense,other,TRUE
+670107,67.01.07,Quote TFR dipendenti,6701,account.data_account_type_view,view,TRUE
+67010701,67.01.07.01,Quote TFR dipend.ordinari (in azienda),670107,account.data_account_type_expense,other,TRUE
+67010703,67.01.07.03,Quote TFR dipend.ordin.(tesoreria INPS),670107,account.data_account_type_expense,other,TRUE
+67010705,67.01.07.05,Quote TFR dipend.ordin.(previd.complem.),670107,account.data_account_type_expense,other,TRUE
+67010707,67.01.07.07,Quote TFR apprendisti (in azienda),670107,account.data_account_type_expense,other,TRUE
+67010709,67.01.07.09,Quote TFR apprendisti (tesoreria INPS),670107,account.data_account_type_expense,other,TRUE
+67010711,67.01.07.11,Quote TFR apprendisti (previd.complem.),670107,account.data_account_type_expense,other,TRUE
+67010713,67.01.07.13,Quote TFR disabili/formaz.(in azienda),670107,account.data_account_type_expense,other,TRUE
+67010715,67.01.07.15,Quote TFR disabili/formaz.(tesor.INPS),670107,account.data_account_type_expense,other,TRUE
+67010717,67.01.07.17,Quote TFR disab./formaz.(previd.compl.),670107,account.data_account_type_expense,other,TRUE
+67010799,67.01.07.99,Quote TFR dipendenti,670107,account.data_account_type_expense,other,TRUE
+670109,67.01.09,Contrib.altri enti previdenz./assistenz.,6701,account.data_account_type_view,view,TRUE
+67010901,67.01.09.01,Contrib.altri enti previd/ass.dip.ordin.,670109,account.data_account_type_expense,other,TRUE
+67010903,67.01.09.03,Contrib.altri enti previd/ass.apprend.,670109,account.data_account_type_expense,other,TRUE
+67010905,67.01.09.05,Contrib.altri enti prev./ass.disab/form.,670109,account.data_account_type_expense,other,TRUE
+67010999,67.01.09.99,Contrib.altri enti previdenz./assistenz.,670109,account.data_account_type_expense,other,TRUE
+670111,67.01.11,Premi INAIL,6701,account.data_account_type_expense,other,TRUE
+6703,67.03,COSTI DIVERSI PERSONALE DIPENDENTE,67,account.data_account_type_view,view,TRUE
+670301,67.03.01,Rimborsi chilometrici dipendenti,6703,account.data_account_type_view,view,TRUE
+67030101,67.03.01.01,Rimborsi chilometrici dipend.ordinari,670301,account.data_account_type_expense,other,TRUE
+67030103,67.03.01.03,Rimborsi chilometrici dipend.disab./form,670301,account.data_account_type_expense,other,TRUE
+67030105,67.03.01.05,Rimborsi chilometrici apprendisti,670301,account.data_account_type_expense,other,TRUE
+67030107,67.03.01.07,Rimborsi chilometrici dipendenti inded.,670301,account.data_account_type_expense,other,TRUE
+67030199,67.03.01.99,Rimborsi chilometrici dipendenti,670301,account.data_account_type_expense,other,TRUE
+670303,67.03.03,Indenn.trasf.e altri rimb.spese dipend.,6703,account.data_account_type_view,view,TRUE
+67030301,67.03.03.01,Indenn.trasf.e altri rimb.spese dip.ord.,670303,account.data_account_type_expense,other,TRUE
+67030303,67.03.03.03,Ind.trasf.altri rimb.sp.disab/form/r&s,670303,account.data_account_type_expense,other,TRUE
+67030305,67.03.03.05,Indenn.trasf.e altri rimb.sp.apprendisti,670303,account.data_account_type_expense,other,TRUE
+67030399,67.03.03.99,Indenn.trasf.e altri rimb.spese dipend.,670303,account.data_account_type_expense,other,TRUE
+670307,67.03.07,Rimborsi spese personale a piÞ di lista,6703,account.data_account_type_view,view,TRUE
+67030701,67.03.07.01,Rimborsi spese person.piÞ di lista ded.,670307,account.data_account_type_expense,other,TRUE
+67030703,67.03.07.03,Rimborsi personale piÞ di lista indeduc.,670307,account.data_account_type_expense,other,TRUE
+67030799,67.03.07.99,Rimborsi spese personale a piÞ di lista,670307,account.data_account_type_expense,other,TRUE
+670309,67.03.09,Erogazioni liberali a favore di dipend.,6703,account.data_account_type_expense,other,TRUE
+670311,67.03.11,Premi aziendali,6703,account.data_account_type_expense,other,TRUE
+670313,67.03.13,"Ricerca, formazione e addestramento",6703,account.data_account_type_expense,other,TRUE
+670315,67.03.15,Indennità di mensa,6703,account.data_account_type_expense,other,TRUE
+670317,67.03.17,Servizi di terzi mensa aziendale,6703,account.data_account_type_expense,other,TRUE
+670319,67.03.19,Erogaz.altre indennità/incentivi/accordi,6703,account.data_account_type_expense,other,TRUE
+670321,67.03.21,Indennità mancato preavviso,6703,account.data_account_type_expense,other,TRUE
+670323,67.03.23,Costi per servizi generalità dipendenti,6703,account.data_account_type_expense,other,TRUE
+670325,67.03.25,Visite mediche periodiche ai dipendenti,6703,account.data_account_type_expense,other,TRUE
+670327,67.03.27,Quote trattamento di quiescenza,6703,account.data_account_type_expense,other,TRUE
+670329,67.03.29,Spese strutt.non dest.gen.dip.art.95 c.2,6703,account.data_account_type_expense,other,TRUE
+670351,67.03.51,Altri costi per il personale dipendente,6703,account.data_account_type_expense,other,TRUE
+69,69,ACCANTONAMENTI PER RISCHI E ACC.TI VARI,00,account.data_account_type_view,view,TRUE
+6901,69.01,ACCANTONAMENTI PER RISCHI,69,account.data_account_type_view,view,TRUE
+690101,69.01.01,Accantonamento fondo garanzia,6901,account.data_account_type_view,view,TRUE
+69010101,69.01.01.01,Accantonamento fondo garanzia inded.,690101,account.data_account_type_expense,other,TRUE
+69010103,69.01.01.03,Accantonamento fondo garanzia(imp.antic),690101,account.data_account_type_expense,other,TRUE
+69010199,69.01.01.99,Accantonamento fondo garanzia,690101,account.data_account_type_expense,other,TRUE
+690151,69.01.51,Accantonamento altri fondi rischi,6901,account.data_account_type_view,view,TRUE
+69015101,69.01.51.01,Acc.to inded. per altri fondi rischi,690151,account.data_account_type_expense,other,TRUE
+69015103,69.01.51.03,Acc.to altri fondi rischi (imp.anticip.),690151,account.data_account_type_expense,other,TRUE
+69015199,69.01.51.99,Accantonamento altri fondi rischi,690151,account.data_account_type_expense,other,TRUE
+6903,69.03,ACCANTONAMENTI VARI,69,account.data_account_type_view,view,TRUE
+690301,69.03.01,Acc.to fondo imposte,6903,account.data_account_type_expense,other,TRUE
+690303,69.03.03,Accantonamento fondo manutenzione,6903,account.data_account_type_view,view,TRUE
+69030301,69.03.03.01,Accantonamento fondo manutenzione inded.,690303,account.data_account_type_expense,other,TRUE
+69030303,69.03.03.03,Acc.to fondo manutenzione (imp.antic.),690303,account.data_account_type_expense,other,TRUE
+69030399,69.03.03.99,Accantonamento fondo manutenzione,690303,account.data_account_type_expense,other,TRUE
+690305,69.03.05,Acc.to fondo operazioni concorsi a premi,6903,account.data_account_type_expense,other,TRUE
+690307,69.03.07,Acc.to fondo svalutaz.titoli negoziabili,6903,account.data_account_type_expense,other,TRUE
+690311,69.03.11,Acc.to riprist.beni azienda in affitto,6903,account.data_account_type_expense,other,TRUE
+690351,69.03.51,Accantonamento altri fondi e spese,6903,account.data_account_type_view,view,TRUE
+69035101,69.03.51.01,Acc.to altri fondi e spese inded.,690351,account.data_account_type_expense,other,TRUE
+69035103,69.03.51.03,Acc.to altri fondi spese (imp.anticip.),690351,account.data_account_type_expense,other,TRUE
+69035199,69.03.51.99,Accantonamento altri fondi e spese,690351,account.data_account_type_expense,other,TRUE
+71,71,ONERI DIVERSI DI GESTIONE,00,account.data_account_type_view,view,TRUE
+7101,71.01,ONERI TRIBUTARI,71,account.data_account_type_view,view,TRUE
+710101,71.01.01,IVA indetraibile,7101,account.data_account_type_expense,other,TRUE
+710103,71.01.03,ICI,7101,account.data_account_type_expense,other,TRUE
+710104,71.01.04,IMU,7101,account.data_account_type_expense,other,TRUE
+710105,71.01.05,Diritti camerali,7101,account.data_account_type_expense,other,TRUE
+710107,71.01.07,Imposta di registro e concess. govern.,7101,account.data_account_type_expense,other,TRUE
+710109,71.01.09,Tasse concess.govern.telefonia mobile,7101,account.data_account_type_expense,other,TRUE
+710111,71.01.11,Imposte ipotecarie e catastali,7101,account.data_account_type_expense,other,TRUE
+710113,71.01.13,Tassa raccolta e smaltimento rifiuti,7101,account.data_account_type_expense,other,TRUE
+710115,71.01.15,Dazi doganali,7101,account.data_account_type_expense,other,TRUE
+710117,71.01.17,TASI,7101,account.data_account_type_expense,other,TRUE
+710151,71.01.51,Altre imposte e tasse,7101,account.data_account_type_view,view,TRUE
+71015101,71.01.51.01,Altre imposte e tasse deducibili,710151,account.data_account_type_expense,other,TRUE
+71015103,71.01.51.03,Altre imposte e tasse indeducibili,710151,account.data_account_type_expense,other,TRUE
+71015199,71.01.51.99,Altre imposte e tasse,710151,account.data_account_type_expense,other,TRUE
+7103,71.03,ALTRI COSTI DI ESERCIZIO,71,account.data_account_type_view,view,TRUE
+710301,71.03.01,"Spese, perdite e sopravvenienze passive",7103,account.data_account_type_view,view,TRUE
+71030101,71.03.01.01,"Spese, perdite e sopravv.passive deduc.",710301,account.data_account_type_expense,other,TRUE
+71030103,71.03.01.03,"Spese, perdite e sopr.pass.beni uso prom",710301,account.data_account_type_expense,other,TRUE
+71030105,71.03.01.05,"Spese, perdite e sopravv.passive inded.",710301,account.data_account_type_expense,other,TRUE
+71030199,71.03.01.99,"Spese, perdite e sopravvenienze passive",710301,account.data_account_type_expense,other,TRUE
+710303,71.03.03,"Sanzioni, penalità e multe",7103,account.data_account_type_expense,other,TRUE
+710307,71.03.07,Contributi associativi,7103,account.data_account_type_view,view,TRUE
+71030701,71.03.07.01,Contributi associativi versati,710307,account.data_account_type_expense,other,TRUE
+71030703,71.03.07.03,Contributi associativi non versati,710307,account.data_account_type_expense,other,TRUE
+71030799,71.03.07.99,Contributi associativi,710307,account.data_account_type_expense,other,TRUE
+710309,71.03.09,Cancelleria varia,7103,account.data_account_type_expense,other,TRUE
+710311,71.03.11,"Abbonamenti, libri e pubblicazioni",7103,account.data_account_type_expense,other,TRUE
+710315,71.03.15,Perdite su crediti,7103,account.data_account_type_view,view,TRUE
+71031501,71.03.15.01,Perdite su crediti deducibili,710315,account.data_account_type_expense,other,TRUE
+71031503,71.03.15.03,Perdite su crediti indeducibili,710315,account.data_account_type_expense,other,TRUE
+71031505,71.03.15.05,Perdite su crediti inded.(imp.anticip.),710315,account.data_account_type_expense,other,TRUE
+71031507,71.03.15.07,Perdite su crediti per interessi di mora,710315,account.data_account_type_expense,other,TRUE
+71031599,71.03.15.99,Perdite su crediti,710315,account.data_account_type_expense,other,TRUE
+710317,71.03.17,Arrotondamenti passivi diversi,7103,account.data_account_type_expense,other,TRUE
+710319,71.03.19,Carbur.e lubrif.(no costi produz.),7103,account.data_account_type_view,view,TRUE
+71031901,71.03.19.01,Carb.e lubr.veic.az.non strum.(no prod),710319,account.data_account_type_expense,other,TRUE
+71031903,71.03.19.03,Carbur.e lubrif.inded.(no costi produz.),710319,account.data_account_type_expense,other,TRUE
+71031999,71.03.19.99,Carbur.e lubrif.(no costi produz.),710319,account.data_account_type_expense,other,TRUE
+710321,71.03.21,Costi di competenza di altri esercizi,7103,account.data_account_type_expense,other,TRUE
+710323,71.03.23,Erogazioni liberali art.100 c.2,7103,account.data_account_type_view,view,TRUE
+71032301,71.03.23.01,Erogaz.liberali deducibili art.100 c.2,710323,account.data_account_type_expense,other,TRUE
+71032303,71.03.23.03,Erogaz.liberali indeducib. art.100 c.2,710323,account.data_account_type_expense,other,TRUE
+71032399,71.03.23.99,Erogazioni liberali art.100 c.2,710323,account.data_account_type_expense,other,TRUE
+710329,71.03.29,Penalità e risarcimenti passivi,7103,account.data_account_type_expense,other,TRUE
+710351,71.03.51,Costi e spese diverse,7103,account.data_account_type_expense,other,TRUE
+7105,71.05,MINUSVAL. DA ALIENAZ./ELIMINAZ. CESPITI,71,account.data_account_type_view,view,TRUE
+710501,71.05.01,Minusv.da alien/eliminaz.cespiti,7105,account.data_account_type_view,view,TRUE
+71050101,71.05.01.01,Minusv.da alien/eliminaz.cespiti deduc.,710501,account.data_account_type_expense,other,TRUE
+71050103,71.05.01.03,Minusv.da alien./eliminaz.cespiti inded.,710501,account.data_account_type_expense,other,TRUE
+71050199,71.05.01.99,Minusv.da alien/eliminaz.cespiti,710501,account.data_account_type_expense,other,TRUE
+710503,71.05.03,Minusvalenza da alienaz./elimin.cespiti,7105,account.data_account_type_expense,other,TRUE
+73,73,PROVENTI FINANZIARI,00,account.data_account_type_view,view,TRUE
+7303,73.03,PROVENTI DA PARTEC.IN SOC. DI CAPITALI,73,account.data_account_type_view,view,TRUE
+730301,73.03.01,Dividendi da altre società di capitali,7303,account.data_account_type_view,view,TRUE
+73030101,73.03.01.01,Dividendi da società di capitali imp.,730301,account.data_account_type_income,other,TRUE
+73030103,73.03.01.03,Divid.s.cap.deten.da soc.pers/ditte ind.,730301,account.data_account_type_income,other,TRUE
+73030105,73.03.01.05,Divid.da soc.di capit.deten.da soc.cap.,730301,account.data_account_type_income,other,TRUE
+73030107,73.03.01.07,Dividendi da soc.di cap.non imp.art.167,730301,account.data_account_type_income,other,TRUE
+73030109,73.03.01.09,Div.di utili ante 2008 da soc.cap.,730301,account.data_account_type_income,other,TRUE
+73030199,73.03.01.99,Dividendi da altre società di capitali,730301,account.data_account_type_income,other,TRUE
+730303,73.03.03,Plusv.da part.in soc.di cap.non immob.,7303,account.data_account_type_income,other,TRUE
+730305,73.03.05,Altri proventi da società di capitali,7303,account.data_account_type_view,view,TRUE
+73030501,73.03.05.01,Altri proventi impon.da soc.di capitali,730305,account.data_account_type_income,other,TRUE
+73030503,73.03.05.03,Prov.da part.in s.cap.(s.pers./dit.ind.),730305,account.data_account_type_income,other,TRUE
+73030505,73.03.05.05,Prov.da part.in s.capit.deten.da s.capit,730305,account.data_account_type_income,other,TRUE
+73030507,73.03.05.07,Altri prov.da soc.di cap. non imp ar.167,730305,account.data_account_type_income,other,TRUE
+73030509,73.03.05.09,Proventi da partecipazioni esenti,730305,account.data_account_type_income,other,TRUE
+73030599,73.03.05.99,Altri proventi da società di capitali,730305,account.data_account_type_income,other,TRUE
+7305,73.05,PROVENTI DA PARTEC.IN TRASPAR. FISCALE,73,account.data_account_type_view,view,TRUE
+730505,73.05.05,Divid.da soc.capitale in reg.di trasp.,7305,account.data_account_type_income,other,TRUE
+730511,73.05.11,Prov.part.in soc.cap.in reg.di trasp.,7305,account.data_account_type_income,other,TRUE
+7307,73.07,PROVENTI DA PARTECIP.IN SOC. DI PERSONE,73,account.data_account_type_view,view,TRUE
+730705,73.07.05,Utili da altre società di persone,7307,account.data_account_type_income,other,TRUE
+7309,73.09,PROV.TI DA CREDITI A MEDIO/LUNGO TERMINE,73,account.data_account_type_view,view,TRUE
+730907,73.09.07,Inter.att.su crediti immob.v/terzi,7309,account.data_account_type_income,other,TRUE
+7311,73.11,PROVENTI DA TITOLI,73,account.data_account_type_view,view,TRUE
+731101,73.11.01,Proventi da titoli d'investimento,7311,account.data_account_type_view,view,TRUE
+73110101,73.11.01.01,Proventi da titoli d'investim.imponibili,731101,account.data_account_type_income,other,TRUE
+73110103,73.11.01.03,Proventi da titoli d'investimento esenti,731101,account.data_account_type_income,other,TRUE
+73110105,73.11.01.05,Interessi da titoli di investimento,731101,account.data_account_type_income,other,TRUE
+73110199,73.11.01.99,Proventi da titoli d'investimento,731101,account.data_account_type_income,other,TRUE
+731103,73.11.03,Proventi da titoli negoziabili,7311,account.data_account_type_view,view,TRUE
+73110301,73.11.03.01,Proventi da titoli negoziabili imponib.,731103,account.data_account_type_income,other,TRUE
+73110303,73.11.03.03,Proventi da titoli negoziabili esenti,731103,account.data_account_type_income,other,TRUE
+73110305,73.11.03.05,Interessi da titoli negoziabili,731103,account.data_account_type_income,other,TRUE
+73110399,73.11.03.99,Proventi da titoli negoziabili,731103,account.data_account_type_income,other,TRUE
+7313,73.13,PROVENTI FINANZIARI VARI,73,account.data_account_type_view,view,TRUE
+731307,73.13.07,Interessi att. su crediti verso clienti,7313,account.data_account_type_income,other,TRUE
+731309,73.13.09,Interessi attivi su c/c bancari,7313,account.data_account_type_income,other,TRUE
+731311,73.13.11,Interessi attivi postali,7313,account.data_account_type_income,other,TRUE
+731313,73.13.13,Interessi attivi diversi,7313,account.data_account_type_view,view,TRUE
+73131301,73.13.13.01,Interessi attivi diversi imponibili,731313,account.data_account_type_income,other,TRUE
+73131303,73.13.13.03,Interessi attivi esenti,731313,account.data_account_type_income,other,TRUE
+73131399,73.13.13.99,Interessi attivi diversi,731313,account.data_account_type_income,other,TRUE
+731315,73.13.15,Interessi attivi di mora,7313,account.data_account_type_view,view,TRUE
+73131501,73.13.15.01,Interessi attivi di mora percepiti,731315,account.data_account_type_income,other,TRUE
+73131503,73.13.15.03,Interessi attivi di mora non percepiti,731315,account.data_account_type_income,other,TRUE
+73131599,73.13.15.99,Interessi attivi di mora,731315,account.data_account_type_income,other,TRUE
+731317,73.13.17,Differenze attive su cambi,7313,account.data_account_type_income,other,TRUE
+731319,73.13.19,Utili da valut.part.in valuta(imp.diff.),7313,account.data_account_type_income,other,TRUE
+731327,73.13.27,Contributi in c/interessi esercizi prec.,7313,account.data_account_type_income,other,TRUE
+731329,73.13.29,Sconti attivi di natura finanziaria,7313,account.data_account_type_income,other,TRUE
+731339,73.13.39,Int.att.cred.fin.breve term.altre impr.,7313,account.data_account_type_income,other,TRUE
+731351,73.13.51,Altri proventi finanziari da terzi,7313,account.data_account_type_income,other,TRUE
+75,75,ONERI FINANZIARI,00,account.data_account_type_view,view,TRUE
+7501,75.01,ONERI FINANZIARI VERSO BANCHE,75,account.data_account_type_view,view,TRUE
+750101,75.01.01,Interessi passivi bancari,7501,account.data_account_type_expense,other,TRUE
+750105,75.01.05,Sconti passivi di portafoglio,7501,account.data_account_type_expense,other,TRUE
+750107,75.01.07,Commissioni e spese bancarie,7501,account.data_account_type_expense,other,TRUE
+750111,75.01.11,Commissioni bancarie su finanziamenti,7501,account.data_account_type_expense,other,TRUE
+750113,75.01.13,Commissioni massimo scoperto,7501,account.data_account_type_expense,other,TRUE
+750117,75.01.17,Commissioni disponibilità fondi,7501,account.data_account_type_expense,other,TRUE
+7503,75.03,ONERI FINANZIARI DIVERSI,75,account.data_account_type_view,view,TRUE
+750301,75.03.01,Interessi passivi su finanziam. di soci,7503,account.data_account_type_expense,other,TRUE
+750303,75.03.03,Inter.pass.e oneri su prestiti obbligaz.,7503,account.data_account_type_expense,other,TRUE
+750305,75.03.05,Interessi passivi su mutui,7503,account.data_account_type_expense,other,TRUE
+750307,75.03.07,Interessi/commissioni passive factoring,7503,account.data_account_type_expense,other,TRUE
+750309,75.03.09,Interessi passivi su finanziam. di terzi,7503,account.data_account_type_expense,other,TRUE
+750311,75.03.11,Interessi passivi commerciali,7503,account.data_account_type_expense,other,TRUE
+750313,75.03.13,Interessi passivi versam.iva trimestrali,7503,account.data_account_type_expense,other,TRUE
+750315,75.03.15,Perdite da valutaz.partite in valuta,7503,account.data_account_type_expense,other,TRUE
+750317,75.03.17,Differenze passive su cambi,7503,account.data_account_type_expense,other,TRUE
+750319,75.03.19,Interessi passivi acquisto automezzi,7503,account.data_account_type_expense,other,TRUE
+750321,75.03.21,Interessi passivi acquisto veicoli,7503,account.data_account_type_view,view,TRUE
+75032101,75.03.21.01,Inter.pass.acq.veicoli aziendali inded.,750321,account.data_account_type_expense,other,TRUE
+75032103,75.03.21.03,Inter.pass.acq.veicoli aziend.deducibili,750321,account.data_account_type_expense,other,TRUE
+75032107,75.03.21.07,Inter.pass.acq.veic.promiscui dipendenti,750321,account.data_account_type_expense,other,TRUE
+75032109,75.03.21.09,Inter.pass.acq.veic.aziendali non strum.,750321,account.data_account_type_expense,other,TRUE
+75032199,75.03.21.99,Interessi passivi acquisto veicoli,750321,account.data_account_type_expense,other,TRUE
+750323,75.03.23,Contributi c/interessi dell'esercizio,7503,account.data_account_type_expense,other,TRUE
+750325,75.03.25,Inter.pass.acquisto apparecchi telefon.,7503,account.data_account_type_expense,other,TRUE
+750327,75.03.27,Interessi passivi di mora,7503,account.data_account_type_view,view,TRUE
+75032701,75.03.27.01,Interessi passivi di mora pagati,750327,account.data_account_type_expense,other,TRUE
+75032703,75.03.27.03,Interessi passivi di mora non pagati,750327,account.data_account_type_expense,other,TRUE
+75032799,75.03.27.99,Interessi passivi di mora,750327,account.data_account_type_expense,other,TRUE
+750329,75.03.29,Inter.pass.per dilaz. pagamento imposte,7503,account.data_account_type_expense,other,TRUE
+750333,75.03.33,Perdite su titoli,7503,account.data_account_type_expense,other,TRUE
+750335,75.03.35,Sconti passivi di natura finanziaria,7503,account.data_account_type_expense,other,TRUE
+750337,75.03.37,Utili associati in partecip. di capitale,7503,account.data_account_type_expense,other,TRUE
+750339,75.03.39,Commissioni e spese su factoring,7503,account.data_account_type_expense,other,TRUE
+750341,75.03.41,Interessi passivi indeducibili (no ROL),7503,account.data_account_type_expense,other,TRUE
+750351,75.03.51,Oneri finanziari diversi,7503,account.data_account_type_expense,other,TRUE
+77,77,PROVENTI STRAORDINARI,00,account.data_account_type_view,view,TRUE
+7701,77.01,PROVENTI STRAORDINARI,77,account.data_account_type_view,view,TRUE
+770101,77.01.01,Plusvalenze straordinarie,7701,account.data_account_type_view,view,TRUE
+77010105,77.01.01.05,Plusv.da cessione immobili civili,770101,account.data_account_type_income,other,TRUE
+77010107,77.01.01.07,Plusvalenze straordinarie imponibili,770101,account.data_account_type_income,other,TRUE
+77010109,77.01.01.09,Plusv.da cessione immob.civili rateizz.,770101,account.data_account_type_income,other,TRUE
+77010111,77.01.01.11,Plusv.straordinarie rateizzate,770101,account.data_account_type_income,other,TRUE
+77010113,77.01.01.13,Plusv.straordinarie non imponibili,770101,account.data_account_type_income,other,TRUE
+77010115,77.01.01.15,Plus.str.PEX deten.da soc.pers/ditte ind,770101,account.data_account_type_income,other,TRUE
+77010117,77.01.01.17,Plusv.straord.PEX deten.da soc.di capit.,770101,account.data_account_type_income,other,TRUE
+77010119,77.01.01.19,Plusv.str.PEX det.da soc.cap.ante 2008,770101,account.data_account_type_income,other,TRUE
+77010121,77.01.01.21,Plus.straord.civilist.da alienaz.cespiti,770101,account.data_account_type_income,other,TRUE
+77010123,77.01.01.23,Plus.str.civil.da alienaz.immobili civil,770101,account.data_account_type_income,other,TRUE
+77010199,77.01.01.99,Plusvalenze straordinarie,770101,account.data_account_type_income,other,TRUE
+770103,77.01.03,Sopravvenienze attive,7701,account.data_account_type_view,view,TRUE
+77010301,77.01.03.01,"Sopravv. attive a.88, c.3 non rateizzate",770103,account.data_account_type_income,other,TRUE
+77010303,77.01.03.03,Sopravvenienze attive non rateizzabili,770103,account.data_account_type_income,other,TRUE
+77010305,77.01.03.05,Sopravvenienze attive non imponibili,770103,account.data_account_type_income,other,TRUE
+77010307,77.01.03.07,Sop.att.non impon.da errori es.prec.,770103,account.data_account_type_income,other,TRUE
+77010399,77.01.03.99,Sopravvenienze attive,770103,account.data_account_type_income,other,TRUE
+770105,77.01.05,Risarcimento danni perdita cespiti,7701,account.data_account_type_income,other,TRUE
+770107,77.01.07,Contributi c/capitale,7701,account.data_account_type_view,view,TRUE
+77010701,77.01.07.01,Contributi c/capitale da rateizzare,770107,account.data_account_type_income,other,TRUE
+77010703,77.01.07.03,Contrib.c/capit.art.88 c.3 non rateizz.,770107,account.data_account_type_income,other,TRUE
+77010799,77.01.07.99,Contributi c/capitale,770107,account.data_account_type_income,other,TRUE
+770109,77.01.09,Rivalutazioni di natura straordinaria,7701,account.data_account_type_income,other,TRUE
+770151,77.01.51,Altri proventi straordinari,7701,account.data_account_type_income,other,TRUE
+79,79,ONERI STRAORDINARI,00,account.data_account_type_view,view,TRUE
+7901,79.01,ONERI STRAORDINARI,79,account.data_account_type_view,view,TRUE
+790101,79.01.01,Minusvalenze e perdite straordinarie,7901,account.data_account_type_view,view,TRUE
+79010101,79.01.01.01,Minusv.e perdite straordinarie deducib.,790101,account.data_account_type_expense,other,TRUE
+79010103,79.01.01.03,Minusv.straord.PEX deten.da soc. di cap.,790101,account.data_account_type_expense,other,TRUE
+79010105,79.01.01.05,Minus.str.PEX deten.da s.pers./dit. ind.,790101,account.data_account_type_expense,other,TRUE
+79010107,79.01.01.07,Minusv.da cessione immobili civili,790101,account.data_account_type_expense,other,TRUE
+79010109,79.01.01.09,Minusv.indeducibili art.109 c.3-bis,790101,account.data_account_type_expense,other,TRUE
+79010111,79.01.01.11,Minusv.straord.civilist.da alien.cespiti,790101,account.data_account_type_expense,other,TRUE
+79010113,79.01.01.13,Minusv.str.civ.da alien.immobili civili,790101,account.data_account_type_expense,other,TRUE
+79010199,79.01.01.99,Minusvalenze e perdite straordinarie,790101,account.data_account_type_expense,other,TRUE
+790103,79.01.03,Sopravvenienze passive non gestionali,7901,account.data_account_type_view,view,TRUE
+79010301,79.01.03.01,Sopravv.passive non gestionali deducib.,790103,account.data_account_type_expense,other,TRUE
+79010303,79.01.03.03,Sopravv.passive non gestionali inded.,790103,account.data_account_type_expense,other,TRUE
+79010305,79.01.03.05,Sop.pass.inded.da errori es.prec.,790103,account.data_account_type_expense,other,TRUE
+79010399,79.01.03.99,Sopravvenienze passive non gestionali,790103,account.data_account_type_expense,other,TRUE
+790105,79.01.05,Erogazioni liberali straordinarie,7901,account.data_account_type_view,view,TRUE
+79010501,79.01.05.01,Erogazioni liberali deducibili straord.,790105,account.data_account_type_expense,other,TRUE
+79010503,79.01.05.03,Erogazioni liberali indeducib. straord.,790105,account.data_account_type_expense,other,TRUE
+79010599,79.01.05.99,Erogazioni liberali straordinarie,790105,account.data_account_type_expense,other,TRUE
+790107,79.01.07,Imposte relative esercizi precedenti,7901,account.data_account_type_expense,other,TRUE
+790151,79.01.51,Altri oneri straordinari,7901,account.data_account_type_expense,other,TRUE
+80,80,AMMORTAMENTI,00,account.data_account_type_view,view,TRUE
+8001,80.01,AMMORTAMENTI IMMOBILIZZAZ.IMMATERIALI,80,account.data_account_type_view,view,TRUE
+800101,80.01.01,Amm.to spese societarie,8001,account.data_account_type_expense,other,TRUE
+800103,80.01.03,Amm.to spese organizzative,8001,account.data_account_type_expense,other,TRUE
+800105,80.01.05,Amm.to avviamento impianti o produzione,8001,account.data_account_type_expense,other,TRUE
+800107,80.01.07,Amm.to costi di impianto e di ampliam.,8001,account.data_account_type_expense,other,TRUE
+800109,80.01.09,Amm.to costi di ricerca e sviluppo,8001,account.data_account_type_expense,other,TRUE
+800111,80.01.11,Amm.to costi di pubblicita',8001,account.data_account_type_expense,other,TRUE
+800113,80.01.13,Amm. dir.brev.ind.e utiliz.opere ingegno,8001,account.data_account_type_expense,other,TRUE
+800115,80.01.15,"Amm.to concessioni, licenze",8001,account.data_account_type_expense,other,TRUE
+800117,80.01.17,Amm.to marchi,8001,account.data_account_type_expense,other,TRUE
+800119,80.01.19,Amm.to avviamento,8001,account.data_account_type_expense,other,TRUE
+800121,80.01.21,Amm.to software capitalizzato,8001,account.data_account_type_expense,other,TRUE
+800123,80.01.23,Amm. software in concess.capitalizzato,8001,account.data_account_type_expense,other,TRUE
+800125,80.01.25,Amm.to spese manutenzione da ammortizz.,8001,account.data_account_type_expense,other,TRUE
+800127,80.01.27,Amm.to spese di manut.su beni di terzi,8001,account.data_account_type_expense,other,TRUE
+800129,80.01.29,Amm.to spese finanziarie da ammortizzare,8001,account.data_account_type_expense,other,TRUE
+800131,80.01.31,Amm.to altri beni immateriali indeducib.,8001,account.data_account_type_expense,other,TRUE
+800151,80.01.51,Amm.to altri beni immateriali,8001,account.data_account_type_expense,other,TRUE
+800153,80.01.53,Amm.to altre spese pluriennali,8001,account.data_account_type_expense,other,TRUE
+8003,80.03,AMMORTAMENTI IMMOBILIZZAZIONI MATERIALI,80,account.data_account_type_view,view,TRUE
+800301,80.03.01,Amm.to ordinario fabbricati civili,8003,account.data_account_type_view,view,TRUE
+80030101,80.03.01.01,Amm.to ordinario fabbricati civili ind.,800301,account.data_account_type_expense,other,TRUE
+80030103,80.03.01.03,Amm.to ordin.fabbric. non strum.inded.,800301,account.data_account_type_expense,other,TRUE
+80030199,80.03.01.99,Amm.to ordinario fabbricati civili,800301,account.data_account_type_expense,other,TRUE
+800303,80.03.03,Amm.to ordinario altri terreni e fabbr.,8003,account.data_account_type_expense,other,TRUE
+800305,80.03.05,Amm.to ordinario fabbricati strumentali,8003,account.data_account_type_view,view,TRUE
+80030501,80.03.05.01,Amm.to ordinario fabbricati strum.ded.,800305,account.data_account_type_expense,other,TRUE
+80030503,80.03.05.03,Amm.to ord. fabbr. strumentali indeduc,800305,account.data_account_type_expense,other,TRUE
+80030599,80.03.05.99,Amm.to ordinario fabbricati strumentali,800305,account.data_account_type_expense,other,TRUE
+800313,80.03.13,Amm.ordinario impianti condizionamento,8003,account.data_account_type_expense,other,TRUE
+800317,80.03.17,Amm.to ordinario impianti idrotermos.,8003,account.data_account_type_expense,other,TRUE
+800319,80.03.19,Amm.to ordinario impianti elettrici,8003,account.data_account_type_expense,other,TRUE
+800321,80.03.21,Amm.to ordin.impianti telefonici,8003,account.data_account_type_view,view,TRUE
+80032101,80.03.21.01,Amm.to ordin.impianti telef.totalm.ded.,800321,account.data_account_type_expense,other,TRUE
+80032103,80.03.21.03,Amm.to ordin.impianti telefonici,800321,account.data_account_type_expense,other,TRUE
+80032105,80.03.21.05,Amm.to ordin.impianti telefonici indeduc,800321,account.data_account_type_expense,other,TRUE
+80032199,80.03.21.99,Amm.to ordin.impianti telefonici,800321,account.data_account_type_expense,other,TRUE
+800323,80.03.23,Amm.to ordinario impianti specifici,8003,account.data_account_type_expense,other,TRUE
+800325,80.03.25,Amm.ordinario macchinari non automatici,8003,account.data_account_type_expense,other,TRUE
+800327,80.03.27,Amm.to ordinario macchinari automatici,8003,account.data_account_type_expense,other,TRUE
+800329,80.03.29,Amm.to ordin.altri impianti e macchinari,8003,account.data_account_type_expense,other,TRUE
+800331,80.03.31,Amm.ord.attrez.spec.industr.comm.agric.,8003,account.data_account_type_expense,other,TRUE
+800333,80.03.33,Amm.to ordinario attrezz.varia e minuta,8003,account.data_account_type_expense,other,TRUE
+800335,80.03.35,Amm.to ordinario mobili e arredi,8003,account.data_account_type_expense,other,TRUE
+800337,80.03.37,Amm.ordin.mobili e macchine da ufficio,8003,account.data_account_type_expense,other,TRUE
+800339,80.03.39,Amm.ord.macchine d'ufficio elettroniche,8003,account.data_account_type_expense,other,TRUE
+800341,80.03.41,Amm.to ordinario costruzioni leggere,8003,account.data_account_type_expense,other,TRUE
+800343,80.03.43,Amm.to ordinario costruzioni pesanti,8003,account.data_account_type_expense,other,TRUE
+800345,80.03.45,Amm.to ordinario automezzi,8003,account.data_account_type_expense,other,TRUE
+800347,80.03.47,Amm.to ordinario telefonia mobile,8003,account.data_account_type_view,view,TRUE
+80034701,80.03.47.01,Amm.to ordin.telef.mobile totalm.deduc.,800347,account.data_account_type_expense,other,TRUE
+80034703,80.03.47.03,Amm.to ordinario telefonia mobile,800347,account.data_account_type_expense,other,TRUE
+80034705,80.03.47.05,Amm.to ordin. telefonia mobile indeduc.,800347,account.data_account_type_expense,other,TRUE
+80034799,80.03.47.99,Amm.to ordinario telefonia mobile,800347,account.data_account_type_expense,other,TRUE
+800349,80.03.49,Ammortamento ordinario veicoli,8003,account.data_account_type_view,view,TRUE
+80034901,80.03.49.01,Amm.to ordinario veicoli aziend.deducib.,800349,account.data_account_type_expense,other,TRUE
+80034903,80.03.49.03,Amm.to ordin.veicoli indeducibili,800349,account.data_account_type_expense,other,TRUE
+80034905,80.03.49.05,Amm.to ordin.veicoli promisc.dipendenti,800349,account.data_account_type_expense,other,TRUE
+80034999,80.03.49.99,Ammortamento ordinario veicoli,800349,account.data_account_type_expense,other,TRUE
+800351,80.03.51,Amm.ordin.mezzi di trasp.aerei/marittimi,8003,account.data_account_type_expense,other,TRUE
+800353,80.03.53,Amm.to ordin.mezzi di trasporto interno,8003,account.data_account_type_expense,other,TRUE
+800355,80.03.55,Amm.to ordinario imballaggi,8003,account.data_account_type_expense,other,TRUE
+800357,80.03.57,Amm.to inded.beni devolv.gratuit.,8003,account.data_account_type_expense,other,TRUE
+800359,80.03.59,Amm.to ordinario altri beni materiali,8003,account.data_account_type_view,view,TRUE
+80035901,80.03.59.01,Amm.to ordinari altri beni mater.deduc.,800359,account.data_account_type_expense,other,TRUE
+80035903,80.03.59.03,Amm.to ordin.beni materiali indeducibili,800359,account.data_account_type_expense,other,TRUE
+80035999,80.03.59.99,Amm.to ordinario altri beni materiali,800359,account.data_account_type_expense,other,TRUE
+8005,80.05,AMM.TI CIVILISTICI IMMOBILIZZ. MATERIALI,80,account.data_account_type_view,view,TRUE
+800501,80.05.01,Amm.to civilistico fabbricati civili,8005,account.data_account_type_expense,other,TRUE
+800503,80.05.03,Amm.to civilistico fabbricati strument.,8005,account.data_account_type_expense,other,TRUE
+800505,80.05.05,Amm.to civilist.altri terreni e fabbric.,8005,account.data_account_type_expense,other,TRUE
+800507,80.05.07,Amm.civilistico imp.di condizionamento,8005,account.data_account_type_expense,other,TRUE
+800509,80.05.09,Amm.civilistico imp.idrotermosanitari,8005,account.data_account_type_expense,other,TRUE
+800511,80.05.11,Amm.to civilistico impianti elettrici,8005,account.data_account_type_expense,other,TRUE
+800513,80.05.13,Amm.to civilistico impianti telefonici,8005,account.data_account_type_expense,other,TRUE
+800515,80.05.15,Amm.to civilistico impianti specifici,8005,account.data_account_type_expense,other,TRUE
+800517,80.05.17,Amm.civilist.macchinari non automatici,8005,account.data_account_type_expense,other,TRUE
+800519,80.05.19,Amm.to civilistico macchinari automatici,8005,account.data_account_type_expense,other,TRUE
+800521,80.05.21,Amm.to civil.altri impianti e macchinari,8005,account.data_account_type_expense,other,TRUE
+800523,80.05.23,Amm.to civil.attr.spec.ind.comm.agric.,8005,account.data_account_type_expense,other,TRUE
+800525,80.05.25,Amm.to civilistico attrez.varia e minuta,8005,account.data_account_type_expense,other,TRUE
+800527,80.05.27,Amm.to civilistico mobili e arredi,8005,account.data_account_type_expense,other,TRUE
+800529,80.05.29,Amm.to civil.mobili e macchine da uffic.,8005,account.data_account_type_expense,other,TRUE
+800531,80.05.31,Amm.to civil.macch.d'ufficio elettron.,8005,account.data_account_type_expense,other,TRUE
+800533,80.05.33,Amm.to civilistico costruzioni leggere,8005,account.data_account_type_expense,other,TRUE
+800535,80.05.35,Amm.to civilistico costruzioni pesanti,8005,account.data_account_type_expense,other,TRUE
+800537,80.05.37,Amm.to civilistico telefonia mobile,8005,account.data_account_type_expense,other,TRUE
+800539,80.05.39,Amm.to civilistico autoveicoli,8005,account.data_account_type_expense,other,TRUE
+800541,80.05.41,Amm.civilist.mezzi trasp.aerei e maritt.,8005,account.data_account_type_expense,other,TRUE
+800543,80.05.43,Amm.to civilistico imballaggi,8005,account.data_account_type_expense,other,TRUE
+800545,80.05.45,Amm.to civilist.mezzi di trasp.interno,8005,account.data_account_type_expense,other,TRUE
+800547,80.05.47,Amm.to civilistico automezzi,8005,account.data_account_type_expense,other,TRUE
+800551,80.05.51,Amm.to civilistico altri beni materiali,8005,account.data_account_type_expense,other,TRUE
+8007,80.07,AMM.TI CIVILISTICI IMMOBILIZZ. IMMATER.,80,account.data_account_type_view,view,TRUE
+800701,80.07.01,Amm.to civilistico spese societarie,8007,account.data_account_type_expense,other,TRUE
+800703,80.07.03,Amm.to civilistico spese organizzative,8007,account.data_account_type_expense,other,TRUE
+800705,80.07.05,Amm.to civil.avviam.impianti o produz,8007,account.data_account_type_expense,other,TRUE
+800707,80.07.07,Amm.to civil.costi di impianto e ampl.,8007,account.data_account_type_expense,other,TRUE
+800709,80.07.09,Amm.to civil.costi ricerca e sviluppo,8007,account.data_account_type_expense,other,TRUE
+800711,80.07.11,Amm.to civilistico costi di pubblicita',8007,account.data_account_type_expense,other,TRUE
+800713,80.07.13,Amm.to civil.dir.brev.ind.e util.op.ing.,8007,account.data_account_type_expense,other,TRUE
+800715,80.07.15,"Amm.to civilistico concessioni, licenze",8007,account.data_account_type_expense,other,TRUE
+800717,80.07.17,Amm.to civilistico marchi,8007,account.data_account_type_expense,other,TRUE
+800719,80.07.19,Amm.to civilistico avviamento,8007,account.data_account_type_expense,other,TRUE
+800721,80.07.21,Amm.to civilistico software capitalizz.,8007,account.data_account_type_expense,other,TRUE
+800723,80.07.23,Amm.to civil.software in concess.capit.,8007,account.data_account_type_expense,other,TRUE
+800725,80.07.25,Amm.to civil.spese manut.da ammort.,8007,account.data_account_type_expense,other,TRUE
+800727,80.07.27,Amm.to civil.spese finanziarie da amm.,8007,account.data_account_type_expense,other,TRUE
+800729,80.07.29,Amm.to civil.altre spese pluriennali,8007,account.data_account_type_expense,other,TRUE
+800731,80.07.31,Amm.to civil.spese manut.beni di terzi,8007,account.data_account_type_expense,other,TRUE
+800751,80.07.51,Amm.to civil.altri beni immateriali,8007,account.data_account_type_expense,other,TRUE
+81,81,RIVALUTAZIONI,00,account.data_account_type_view,view,TRUE
+8101,81.01,RIVALUTAZIONI IMMOBILIZZAZ. FINANZIARIE,81,account.data_account_type_view,view,TRUE
+810103,81.01.03,Rivalutaz. partecipaz.in altre imprese,8101,account.data_account_type_income,other,TRUE
+810105,81.01.05,Rivalutazione titoli di Stato,8101,account.data_account_type_income,other,TRUE
+810107,81.01.07,Rivalutazione obbligazioni,8101,account.data_account_type_income,other,TRUE
+810109,81.01.09,Rivalutaz.quote fondi comuni d'investim.,8101,account.data_account_type_income,other,TRUE
+810111,81.01.11,Rivalutazione azioni proprie,8101,account.data_account_type_income,other,TRUE
+810113,81.01.13,Rivalutazione altri titoli di investim.,8101,account.data_account_type_income,other,TRUE
+810117,81.01.17,Rivalutazione finanz.attivi a terzi,8101,account.data_account_type_income,other,TRUE
+8103,81.03,RIVALUT.ATTIVITA' FINANZIARIE NON IMMOB.,81,account.data_account_type_view,view,TRUE
+810303,81.03.03,Rivalut.altre partecip.non immobilizzate,8103,account.data_account_type_income,other,TRUE
+810305,81.03.05,Rivalut.azioni proprie non immobilizzate,8103,account.data_account_type_income,other,TRUE
+810307,81.03.07,Rivalutazione titoli negoziabili diversi,8103,account.data_account_type_income,other,TRUE
+83,83,SVALUTAZIONI,00,account.data_account_type_view,view,TRUE
+8301,83.01,SVALUTAZ.IMMOBILIZZAZIONI IMMATERIALI,83,account.data_account_type_view,view,TRUE
+830101,83.01.01,Svalutazione avviamento,8301,account.data_account_type_expense,other,TRUE
+830103,83.01.03,Svalutazione spese pluriennali,8301,account.data_account_type_expense,other,TRUE
+830105,83.01.05,Svalutazione beni immateriali,8301,account.data_account_type_expense,other,TRUE
+8303,83.03,SVALUTAZ.IMMOBILIZZ. MATERIALI,83,account.data_account_type_view,view,TRUE
+830301,83.03.01,Svalutaz.terreni e fabbricati,8303,account.data_account_type_expense,other,TRUE
+830303,83.03.03,Svalutaz. impianti e macchinari,8303,account.data_account_type_expense,other,TRUE
+830305,83.03.05,Svalutaz.attrezzatura ind.le e commerc.,8303,account.data_account_type_expense,other,TRUE
+830307,83.03.07,Svalutaz.veicoli,8303,account.data_account_type_expense,other,TRUE
+830351,83.03.51,Svalutaz. altri beni materiali,8303,account.data_account_type_expense,other,TRUE
+8305,83.05,SVALUTAZ.IMMOBILIZZAZIONI FINANZIARIE,83,account.data_account_type_view,view,TRUE
+830503,83.05.03,Sval.partecipaz.in altre imprese,8305,account.data_account_type_view,view,TRUE
+83050301,83.05.03.01,Sval.partecipaz.in altre imprese,830503,account.data_account_type_expense,other,TRUE
+83050303,83.05.03.03,Sval.part.in altre imprese (in soc.pers),830503,account.data_account_type_expense,other,TRUE
+830505,83.05.05,Svalutazioni titoli di Stato,8305,account.data_account_type_expense,other,TRUE
+830507,83.05.07,Svalutazioni obbligazioni,8305,account.data_account_type_expense,other,TRUE
+830509,83.05.09,Svalutazioni di obbligazioni convertib.,8305,account.data_account_type_expense,other,TRUE
+830511,83.05.11,Sval.quote di fondi comuni d'invest.,8305,account.data_account_type_expense,other,TRUE
+830513,83.05.13,Svalutazioni di azioni proprie,8305,account.data_account_type_expense,other,TRUE
+830515,83.05.15,Svalutazioni altri titoli di investim.,8305,account.data_account_type_expense,other,TRUE
+830520,83.05.20,Svalutazioni finanziam. attivi a terzi,8305,account.data_account_type_view,view,TRUE
+83052001,83.05.20.01,Svalutazioni finanz.att.a terzi deducib.,830520,account.data_account_type_expense,other,TRUE
+83052003,83.05.20.03,Svalutazioni finanz.att.a terzi indeduc.,830520,account.data_account_type_expense,other,TRUE
+83052099,83.05.20.99,Svalutazioni finanziam. attivi a terzi,830520,account.data_account_type_expense,other,TRUE
+830521,83.05.21,Sval.titoli non partecipativi inded.,8305,account.data_account_type_expense,other,TRUE
+8307,83.07,SVALUT. ATTIVITA' FINANZIARIE NON IMMOB.,83,account.data_account_type_view,view,TRUE
+830703,83.07.03,Sval.altre partecip. non immobilizzate,8307,account.data_account_type_view,view,TRUE
+83070301,83.07.03.01,Sval.altre partecip. non immobilizzate,830703,account.data_account_type_expense,other,TRUE
+83070303,83.07.03.03,Sval.altre part.non immob.(in soc.pers),830703,account.data_account_type_expense,other,TRUE
+830705,83.07.05,Svalut. azioni proprie non immobilizzate,8307,account.data_account_type_expense,other,TRUE
+830707,83.07.07,Svalutazione titoli negoziabili indeduc.,8307,account.data_account_type_expense,other,TRUE
+830709,83.07.09,Svalutazione titoli negoziabili,8307,account.data_account_type_view,view,TRUE
+83070901,83.07.09.01,Svalutazione titoli negoziabili deducibili,830709,account.data_account_type_expense,other,TRUE
+83070903,83.07.09.03,Svalutazione titoli negoziabili indeduc.,830709,account.data_account_type_expense,other,TRUE
+83070999,83.07.09.99,Svalutazione titoli negoziabili,830709,account.data_account_type_expense,other,TRUE
+8309,83.09,SVALUTAZIONE CREDITI,83,account.data_account_type_view,view,TRUE
+830901,83.09.01,Acc.to sval. crediti v/clienti,8309,account.data_account_type_expense,other,TRUE
+830909,83.09.09,Acc.to sval. crediti diversi,8309,account.data_account_type_expense,other,TRUE
+830911,83.09.11,Acc.ti sval. crediti per int. di mora,8309,account.data_account_type_expense,other,TRUE
+84,84,IMPOSTE DELL'ESERCIZIO,00,account.data_account_type_view,view,TRUE
+8401,84.01,IMPOSTE DELL'ESERCIZIO,84,account.data_account_type_view,view,TRUE
+840101,84.01.01,IRES corrente,8401,account.data_account_type_expense,other,TRUE
+840103,84.01.03,IRAP corrente,8401,account.data_account_type_expense,other,TRUE
+840105,84.01.05,IRES differita di competenza,8401,account.data_account_type_expense,other,TRUE
+840107,84.01.07,IRAP differita di competenza,8401,account.data_account_type_expense,other,TRUE
+840109,84.01.09,IRES anticipata di competenza,8401,account.data_account_type_expense,other,TRUE
+840111,84.01.11,IRAP anticipata di competenza,8401,account.data_account_type_expense,other,TRUE
+840117,84.01.17,IRES anticipata da esercizi precedenti,8401,account.data_account_type_expense,other,TRUE
+840119,84.01.19,IRAP anticipata da esercizi precedenti,8401,account.data_account_type_expense,other,TRUE
+840121,84.01.21,IRES differita da esercizi precedenti,8401,account.data_account_type_expense,other,TRUE
+840123,84.01.23,IRAP differita da esercizi precedenti,8401,account.data_account_type_expense,other,TRUE
+840125,84.01.25,Altre imposte dell'esercizio,8401,account.data_account_type_view,view,TRUE
+84012501,84.01.25.01,Altre imposte dell'esercizio indeduc.,840125,account.data_account_type_expense,other,TRUE
+84012503,84.01.25.03,Altre imposte dell'esercizio non versate,840125,account.data_account_type_expense,other,TRUE
+84012599,84.01.25.99,Altre imposte dell'esercizio,840125,account.data_account_type_expense,other,TRUE
+840127,84.01.27,Proventi ades.reg.cons.fisc./tras.fisc.,8401,account.data_account_type_income,other,TRUE
+840129,84.01.29,Oneri ades.reg.cons.fisc./tras.fisc.,8401,account.data_account_type_expense,other,TRUE
+87,87,ALTRI CONTI D'ORDINE,00,account.data_account_type_view,view,TRUE
+8701,87.01,NOSTRI IMPEGNI,87,account.data_account_type_view,view,TRUE
+870109,87.01.09,Canoni di leasing residui,8701,account.conf_account_type_chk,other,TRUE
+8705,87.05,BENI DI TERZI PRESSO DI NOI,87,account.data_account_type_view,view,TRUE
+870505,87.05.05,Beni di terzi in leasing,8705,account.conf_account_type_chk,other,TRUE
+88,88,CONTI TRANSITORI,00,account.data_account_type_view,view,TRUE
+8801,88.01,CLIENTI E FORNITORI C/TRANSITORI,88,account.data_account_type_view,view,TRUE
+880101,88.01.01,Clien.c/trans.op.part.migr.PROFIS/GESCOM,8801,account.data_account_type_asset,other,TRUE
+880103,88.01.03,Forn.c/trans.op.part.migr.PROFIS/GESCOM,8801,account.data_account_type_asset,other,TRUE
+89,89,CONTI DI CHIUSURA E RIAPERTURA,00,account.data_account_type_view,view,TRUE
+8901,89.01,STATO PATRIMONIALE INIZIALE,89,account.data_account_type_view,view,TRUE
+890101,89.01.01,Stato patrimoniale iniziale,8901,account.data_account_type_asset,other,TRUE
+890103,89.01.03,Ripresa partite clienti,8901,account.data_account_type_asset,other,TRUE
+890105,89.01.05,Ripresa partite fornitori,8901,account.data_account_type_asset,other,TRUE
+8903,89.03,CONTO ECONOMICO,89,account.data_account_type_view,view,TRUE
+890301,89.03.01,Conto economico,8903,account.data_account_type_asset,other,TRUE
+8905,89.05,STATO PATRIMONIALE FINALE,89,account.data_account_type_view,view,TRUE
+890501,89.05.01,Stato patrimoniale finale,8905,account.data_account_type_asset,other,TRUE
+8911,89.11,RIPRESA SALDI,89,account.data_account_type_view,view,TRUE
+891101,89.11.01,Ripresa saldi in corso d'anno,8911,account.data_account_type_asset,other,TRUE
