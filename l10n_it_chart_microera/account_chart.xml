@@ -6,11 +6,11 @@
             <field name="name">MicroEra Chart of Accounts</field>
             <field name="account_root_id" ref="00"/>
             <field name="tax_code_root_id" ref="vat_code_chart_root"/>
-            <field name="bank_account_view_id" ref="19"/>
-            <field name="property_account_receivable" ref="110301"/>
-            <field name="property_account_payable" ref="330301"/>
-            <field name="property_account_expense_categ" ref="57010101"/>
-            <field name="property_account_income_categ" ref="471103"/>
+            <field name="bank_account_view_id" ref="19"/>					<!--  19			DISPONIBILITA' LIQUIDE   				-->
+            <field name="property_account_receivable" ref="110301"/>		<!--  11.03.01		Clienti terzi Italia   					-->
+            <field name="property_account_payable" ref="330301"/>			<!--  33.03.01		Fornitori terzi Italia  				-->
+            <field name="property_account_expense_categ" ref="61011701"/>	<!--  61.01.17.01	Altri costi per prest.di terzi affer.   -->
+            <field name="property_account_income_categ" ref="471103"/>  	<!--  47.11.03		Prestazioni di servizi   				-->
             <field name="currency_id" ref="base.EUR"/>
         </record>
     </data>
