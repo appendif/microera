@@ -1,0 +1,245 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* jimo_pos_sale_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-27 09:11+0000\n"
+"PO-Revision-Date: 2014-08-29 11:26+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.6.8\n"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,ean13:0
+msgid "ean13"
+msgstr "Ean13"
+
+#. module: jimo_pos_sale_report
+#: model:ir.actions.act_window,help:jimo_pos_sale_report.action_pos_sale_report
+msgid "This report performs analysis on your POS sales orders."
+msgstr "Questo report esegue analisi sugli ordini POS"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "February"
+msgstr "Febbraio"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "Group By..."
+msgstr "Group By..."
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,unit_price:0
+msgid "Unit Price"
+msgstr "Importo Unitario"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "Employee"
+msgstr "Commessa"
+
+#. module: jimo_pos_sale_report
+#: model:ir.actions.act_window,name:jimo_pos_sale_report.action_pos_sale_report
+#: model:ir.model,name:jimo_pos_sale_report.model_jimo_pos_sale_report
+#: model:ir.ui.menu,name:jimo_pos_sale_report.menu_action_pos_sale_report
+msgid "Jimo POS Sale report"
+msgstr "Report POS Jimo"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,total_price:0
+msgid "Total Price"
+msgstr "Importo Totale"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "Order Year"
+msgstr "Anno"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,product_id:0
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "March"
+msgstr "Marzo"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,manager1_id:0
+msgid "Manager1"
+msgstr "Manager 1"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "May"
+msgstr "Maggio"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,brand_id:0
+msgid "Brand"
+msgstr "Brand"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,posorder_id:0
+msgid "POS Order"
+msgstr "Ordine POS"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "June"
+msgstr "Giugno"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,pos_name:0
+msgid "POS"
+msgstr "POS"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,quantity:0
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "Order Month"
+msgstr "Mese"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "November"
+msgstr "Novembre"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,discount:0
+msgid "Discount (%)"
+msgstr "Sconto %"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,date_order:0
+msgid "POS Order Date"
+msgstr "Data"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,day:0
+msgid "Day"
+msgstr "Giorno"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,customer_id:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,standard_price:0
+msgid "Cost Price"
+msgstr "Importo Costo "
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "October"
+msgstr "Ottobre"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "January"
+msgstr "Gennaio"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "Order Day"
+msgstr "Giorno"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "April"
+msgstr "Aprile"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,saleperson_id:0
+msgid "Saleperson"
+msgstr "Utente"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "July"
+msgstr "Luglio"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,manager2_id:0
+msgid "Manager2"
+msgstr "Manager 2"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,shop_id:0
+msgid "Shop"
+msgstr "Negozio"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,employee_id:0
+msgid "Shop Assistant"
+msgstr "Commessa"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,supplier_id:0
+msgid "Supplier"
+msgstr "Produttore"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,list_price:0
+msgid "Sale Price"
+msgstr "Prezzo Base"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "December"
+msgstr "Dicembre"
+
+#. module: jimo_pos_sale_report
+#: field:jimo.pos.sale.report,pos_reference:0
+msgid "Receipt"
+msgstr "Scontrino"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0
+msgid "POS Sale report"
+msgstr "Report vendite POS"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,month:0
+msgid "Month"
+msgstr "Mese"
+
+#. module: jimo_pos_sale_report
+#: selection:jimo.pos.sale.report,month:0
+msgid "September"
+msgstr "Settembre"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,year:0
+msgid "Year"
+msgstr "Anno"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,it_saleperson_id:0
+msgid "Saleperson IT"
+msgstr "Agente IT"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:0 field:jimo.pos.sale.report,company_id:0
+msgid "Company"
+msgstr "Società"
