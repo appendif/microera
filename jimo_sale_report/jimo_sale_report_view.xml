@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_sale_report_tree" model="ir.ui.view">
+        <field name="name">jimo.sale.report.tree</field>
+        <field name="model">jimo.sale.report</field>
+        <field name="arch" type="xml">
+            <tree string="sale report" create="false">
+                <field name="date_done" invisible="1" />
+                <field name="year" />
+                <field name="month" />
+                <field name="day" />
+                <field name="saleorder_id" />
+                <field name="customer_id" />
+                <field name="product_id" />
+<!--            <field name="ean13" />					-->
+                <field name="brand_id" />
+                <field name="company_id" />
+                <field name="supplier_id" />
+                <field name="shop_id" />
+                <field name="order_qty"   sum="Total ordered"/>
+                <field name="shipped_qty" sum="Total shipped"/>
+                <field name="list_price" />
+                <field name="standard_price" />
+                <field name="unit_price" />
+                <field name="total_price" sum="Total Price"/>
+                <field name="saleperson_id" />
+                <field name="employee_id" />
+                <field name="manager1_id" />
+                <field name="manager2_id" />
+                <field name="it_saleperson_id" />
+                <field name="it_employee_id" />
+                <field name="commorder_id" />
+                <field name="comm_paid" />
+           </tree>
+        </field>
+    </record>
+
+    <record id="view_sale_report_search" model="ir.ui.view">
+        <field name="name">jimo.sale.report.search</field>
+        <field name="model">jimo.sale.report</field>
+        <field name="arch" type="xml">
+            <search string="Sale report">
+<!--		
+            	<group expand="1" string="Commission...">
+    				<filter string="Paid"   icon="terp-dolar_ok!" domain="[('comm_paid','!=',False)]" help = "Commission Paid"   />
+    				<filter string="Unpaid" icon="terp-dolar"     domain="[('comm_paid','=' ,False)]" help = "Commission Unpaid" />
+            	</group>
+-->
+                <field name="date_done" />
+                <field name="month" />
+                <field name="year" />
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="supplier_id" context="{'contact_display':'partner'}"/>
+                <field name="customer_id" context="{'contact_display':'partner'}"/>
+                <field name="saleperson_id" />
+                <field name="it_saleperson_id" />
+                <field name="employee_id" />
+                <field name="manager1_id" />
+                <field name="manager2_id" />
+                <field name="saleorder_id" context="{'contact_display':'sale.order'}"/>
+                <field name="product_id" default_focus="1"/>
+                <field name="brand_id" />
+                <field name="shop_id" />
+                <field name="commorder_id" />
+
+                <group expand="1" string="Group By...">
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>
+                    <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
+                    <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
+                    <filter name="group_saleorder" string="Sale Order" context="{'group_by':'saleorder_id'}"/>
+                    <filter name="group_saleperson" string="Saleperson" context="{'group_by':'saleperson_id'}"/>
+                    <filter name="group_saleperson_it" string="Saleperson IT" context="{'group_by':'it_saleperson_id'}"/>
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
+                    <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
+                    <filter name="group_employee_it" string="Employee IT" context="{'group_by':'it_employee_id'}"/>
+                    <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
+                    <filter name="group_customer" string="Customer" context="{'group_by':'customer_id'}"/>
+                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_done'}" help="Day Delivered"/>
+                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Month Delivered"/>
+                    <filter string="Year"  icon="terp-go-year"  context="{'group_by':'year'}"  help="Year Delivered"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        
+    <record id="action_sale_report" model="ir.actions.act_window">
+        <field name="name">Jimo delivered sale report</field>
+        <field name="res_model">jimo.sale.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="help">This report performs analysis on your delivery and sales orders.</field>
+    </record>
+
+    <menuitem
+        id="menu_jimo_reporting"
+        name="Jimo"
+        sequence="16"
+        parent="base.menu_reporting"
+        groups="base.group_sale_manager" />
+
+    <menuitem 
+    	id="menu_action_sale_report" 
+    	action="action_sale_report" 
+    	parent="menu_jimo_reporting" 
+    	sequence="1" />
+
+</data>
+</openerp>
