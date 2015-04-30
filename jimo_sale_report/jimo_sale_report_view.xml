@@ -18,7 +18,7 @@
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
-                <field name="shop_id" />
+                <field name="warehouse_id" />
                 <field name="order_qty"   sum="Total ordered"/>
                 <field name="shipped_qty" sum="Total shipped"/>
                 <field name="list_price" />
@@ -62,12 +62,12 @@
                 <field name="saleorder_id" context="{'contact_display':'sale.order'}"/>
                 <field name="product_id" default_focus="1"/>
                 <field name="brand_id" />
-                <field name="shop_id" />
+                <field name="warehouse_id" />
                 <field name="commorder_id" />
 
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
-                    <filter name="group_shop" string="Shop" context="{'group_by':'shop_id'}"/>
+                    <filter name="group_warehouse" string="Warehouse" context="{'group_by':'warehouse_id'}"/>
                     <filter name="group_brand" string="Brand" context="{'group_by':'brand_id'}"/>
                     <filter name="group_product" string="Product" context="{'group_by':'product_id'}"/>
                     <filter name="group_saleorder" string="Sale Order" context="{'group_by':'saleorder_id'}"/>

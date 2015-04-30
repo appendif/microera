@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ###############################################################################
 #                                                                             #
 #   OpenERP, Open Source Management Solution                                  #
@@ -57,7 +56,7 @@ class jimo_sale_report(orm.Model):
         'company_id': fields.many2one('res.company', 'Company', readonly=True),
         'supplier_id': fields.many2one('res.partner', 'Supplier', readonly=True),
         'it_saleperson_id': fields.many2one('res.users', 'Saleperson IT', readonly=True),
-        'shop_id': fields.many2one('sale.shop', 'Shop', readonly=True),
+        'warehouse_id': fields.many2one('stock.warehouse', 'Warehouse', readonly=True),
         'order_qty': fields.float('Order Qty', digits=(16, 2), readonly=True),
         'shipped_qty': fields.float('Shipped Qty', digits=(16, 2), readonly=True),
         'list_price': fields.float('Sale Price', digits=(16, 2), readonly=True),
@@ -109,34 +108,36 @@ SELECT
     pp.ean13 AS ean13,
     pt.product_brand_id AS brand_id,
     so.company_id AS company_id,
-    so.shop_id AS shop_id,
-    sp.type AS type,
+    so.warehouse_id AS warehouse_id,
+    spt.code AS code,
 
     su.id AS supplier_id,
     su.user_id AS it_saleperson_id,
 
-    (CASE WHEN sp.type='out' THEN sm.product_qty ELSE -sm.product_qty END)
+    (CASE WHEN spt.code='outgoing' THEN sm.product_qty ELSE -sm.product_qty END)
         AS shipped_qty,
 
     ( select sum(
-        (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END))
+        (CASE WHEN spt.code='outgoing' THEN product_uom_qty ELSE -product_uom_qty END))
         from sale_order_line where order_id=so.id and product_id=sm.product_id)
             AS order_qty,
 
     pt.list_price AS list_price,
-    pt.standard_price AS standard_price,
+    pt.list_price AS standard_price,
 
     ( select sum(price_unit
-        * (100.0-discount) / 100.0
-        * (100.0-so.global_discount_percentage) / 100.0 )
+/*       * (100.0-discount) / 100.0
+         * (100.0-so.global_discount_percentage) / 100.0  */
+        )
         from sale_order_line where order_id=so.id and product_id=sm.product_id)
             AS unit_price,
 
     ( select sum(
-        (CASE WHEN sp.type='out' THEN product_uom_qty ELSE -product_uom_qty END)
+        (CASE WHEN spt.code='outgoing' THEN product_uom_qty ELSE -product_uom_qty END)
         * price_unit
-        * (100.0-discount) / 100.0
-        * (100.0-so.global_discount_percentage) / 100.0 )
+/*      * (100.0-discount) / 100.0
+        * (100.0-so.global_discount_percentage) / 100.0  */
+        )
         from sale_order_line where order_id=so.id and product_id=sm.product_id)
             AS total_price,
 
@@ -149,20 +150,22 @@ SELECT
         company_id=so.company_id and state<>'cancel') AS commorder_id
 
     FROM stock_picking sp
-         JOIN sale_order so        ON (sp.sale_id=so.id)
     LEFT JOIN stock_move sm        ON (sm.picking_id=sp.id)
+    LEFT JOIN stock_picking_type spt ON (spt.id=sm.picking_type_id)
+         JOIN procurement_order pr ON (pr.id=sm.procurement_id)
+         JOIN sale_order so        ON (so.id=pr.sale_line_id)
          JOIN product_product pp   ON (sm.product_id=pp.id)
          JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
 
     LEFT JOIN res_partner su ON (su.id = ( select min(name)
-            from product_supplierinfo
-            where product_id=pp.id and company_id=so.company_id ))
+            from product_supplierinfo 
+            where product_tmpl_id=pp.product_tmpl_id and company_id=so.company_id ))
 
     LEFT JOIN user_to_employee ue1  ON (ue1.user_id=so.user_id)
     LEFT JOIN user_to_employee ue2  ON (ue2.user_id=su.user_id)
 
     WHERE sp.date_done IS NOT NULL
-      AND sp.sale_id IS NOT NULL
+      AND pr.sale_line_id IS NOT NULL
     ORDER BY sp.date_done DESC
             )""")
 

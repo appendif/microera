@@ -29,7 +29,7 @@ Jimo Sale Report
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it',
     'depends': ['base', 'product', 'stock', 'sale', 'purchase',
-                'product_brand', 'global_discount'],
+                'product_brand'],  # 'global_discount'
     'data': [
         'jimo_sale_report_view.xml',
         'security/ir.model.access.csv',
