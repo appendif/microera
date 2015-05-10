@@ -236,7 +236,7 @@ msgstr "Agente IT"
 #. module: jimo_sale_report
 #: model:ir.actions.act_window,help:jimo_sale_report.action_sale_report
 msgid "This report performs analysis on your delivery and sales orders."
-msgstr "Questo report esegue analisi sugli consegne e ordini di vendita"
+msgstr "Questo report esegue analisi su consegne e ordini di vendita"
 
 #. module: jimo_sale_report
 #: field:jimo.sale.report,date_done:0
