@@ -18,12 +18,12 @@
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
+                <field name="purchaseorder_id" />
                 <field name="warehouse_id" />
                 <field name="order_qty"   sum="Total ordered"/>
                 <field name="shipped_qty" sum="Total shipped"/>
                 <field name="list_price" />
-                <field name="standard_price" />
-                <field name="unit_price" />
+                <field name="sale_price" />
                 <field name="total_price" sum="Total Price"/>
                 <field name="saleperson_id" />
                 <field name="employee_id" />
@@ -60,6 +60,7 @@
                 <field name="manager1_id" />
                 <field name="manager2_id" />
                 <field name="saleorder_id" context="{'contact_display':'sale.order'}"/>
+                <field name="purchaseorder_id" context="{'contact_display':'purchase.order'}"/>
                 <field name="product_id" default_focus="1"/>
                 <field name="brand_id" />
                 <field name="warehouse_id" />

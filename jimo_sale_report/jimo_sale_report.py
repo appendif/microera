@@ -55,13 +55,13 @@ class jimo_sale_report(orm.Model):
         'brand_id': fields.many2one('product.brand', 'Brand', readonly=True),
         'company_id': fields.many2one('res.company', 'Company', readonly=True),
         'supplier_id': fields.many2one('res.partner', 'Supplier', readonly=True),
+        'purchaseorder_id': fields.many2one('purchase.order', 'Purchase Order', readonly=True),
         'it_saleperson_id': fields.many2one('res.users', 'Saleperson IT', readonly=True),
         'warehouse_id': fields.many2one('stock.warehouse', 'Warehouse', readonly=True),
         'order_qty': fields.float('Order Qty', digits=(16, 2), readonly=True),
         'shipped_qty': fields.float('Shipped Qty', digits=(16, 2), readonly=True),
-        'list_price': fields.float('Sale Price', digits=(16, 2), readonly=True),
-        'standard_price': fields.float('Cost Price', digits=(16, 2), readonly=True),
-        'unit_price': fields.float('Unit Price', digits=(16, 2), readonly=True),
+        'list_price': fields.float('List Price', digits=(16, 2), readonly=True),
+        'sale_price': fields.float('Sale Price', digits=(16, 2), readonly=True),
         'total_price': fields.float('Total Price', digits=(16, 2), readonly=True),
         'employee_id': fields.many2one('hr.employee', 'Employee', readonly=True),
         'manager1_id': fields.many2one('hr.employee', 'Manager1', readonly=True),
@@ -97,10 +97,10 @@ SELECT
             create or replace view jimo_sale_report as (
 SELECT
     sm.id AS id,
-    to_char(date_trunc('day',sp.date_done), 'YYYY-MM-DD') AS date_done,
-    to_char(date_trunc('day',sp.date_done), 'YYYY') AS year,
-    to_char(date_trunc('day',sp.date_done), 'MM') AS month,
-    to_char(date_trunc('day',sp.date_done), 'DD') AS day,
+    to_char(date_trunc('day',sm.date), 'YYYY-MM-DD') AS date_done,
+    to_char(date_trunc('day',sm.date), 'YYYY') AS year,
+    to_char(date_trunc('day',sm.date), 'MM') AS month,
+    to_char(date_trunc('day',sm.date), 'DD') AS day,
     so.id AS saleorder_id,
     so.user_id AS saleperson_id,
     so.partner_id AS customer_id,
@@ -109,64 +109,33 @@ SELECT
     pt.product_brand_id AS brand_id,
     so.company_id AS company_id,
     so.warehouse_id AS warehouse_id,
-    spt.code AS code,
-
     su.id AS supplier_id,
+    po.id AS purchaseorder_id,
     su.user_id AS it_saleperson_id,
-
-    (CASE WHEN spt.code='outgoing' THEN sm.product_qty ELSE -sm.product_qty END)
-        AS shipped_qty,
-
-    ( select sum(
-        (CASE WHEN spt.code='outgoing' THEN product_uom_qty ELSE -product_uom_qty END))
-        from sale_order_line where order_id=so.id and product_id=sm.product_id)
-            AS order_qty,
-
+    sm.product_qty AS shipped_qty,
+   (sol.product_uom_qty / u.factor * u2.factor) AS order_qty,
     pt.list_price AS list_price,
-    pt.list_price AS standard_price,
-
-    ( select sum(price_unit
-/*       * (100.0-discount) / 100.0
-         * (100.0-so.global_discount_percentage) / 100.0  */
-        )
-        from sale_order_line where order_id=so.id and product_id=sm.product_id)
-            AS unit_price,
-
-    ( select sum(
-        (CASE WHEN spt.code='outgoing' THEN product_uom_qty ELSE -product_uom_qty END)
-        * price_unit
-/*      * (100.0-discount) / 100.0
-        * (100.0-so.global_discount_percentage) / 100.0  */
-        )
-        from sale_order_line where order_id=so.id and product_id=sm.product_id)
-            AS total_price,
-
+   (sol.price_unit * (100.0 - sol.discount) / 100.0) AS sale_price,
+   (sol.product_uom_qty * sol.price_unit * (100.0 - sol.discount) / 100.0) AS total_price,
     ue1.employee_id AS employee_id,
     ue1.manager1_id AS manager1_id,
     ue1.manager2_id AS manager2_id,
     ue2.employee_id AS it_employee_id,
-
-    ( select max(id) from sale_order where origin=so.name and
-        company_id=so.company_id and state<>'cancel') AS commorder_id
-
-    FROM stock_picking sp
-    LEFT JOIN stock_move sm        ON (sm.picking_id=sp.id)
-    LEFT JOIN stock_picking_type spt ON (spt.id=sm.picking_type_id)
-         JOIN procurement_order pr ON (pr.id=sm.procurement_id)
-         JOIN sale_order so        ON (so.id=pr.sale_line_id)
-         JOIN product_product pp   ON (sm.product_id=pp.id)
-         JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
-
-    LEFT JOIN res_partner su ON (su.id = ( select min(name)
-            from product_supplierinfo 
-            where product_tmpl_id=pp.product_tmpl_id and company_id=so.company_id ))
-
-    LEFT JOIN user_to_employee ue1  ON (ue1.user_id=so.user_id)
-    LEFT JOIN user_to_employee ue2  ON (ue2.user_id=su.user_id)
-
-    WHERE sp.date_done IS NOT NULL
-      AND pr.sale_line_id IS NOT NULL
-    ORDER BY sp.date_done DESC
+   (select max(id) from sale_order where origin=so.name and company_id=so.company_id and state<>'cancel') AS commorder_id
+  FROM sale_order_line sol
+   JOIN sale_order so                   ON so.id = sol.order_id
+   JOIN procurement_order pr            ON pr.sale_line_id = sol.id
+   JOIN purchase_order_line pol            ON pol.id = pr.purchase_line_id
+   JOIN purchase_order po               ON po.id = pol.order_id
+   JOIN stock_move sm               ON sm.procurement_id = pr.id
+   LEFT JOIN product_product pp         ON pp.id = sm.product_id
+   LEFT JOIN product_template pt        ON pt.id = pp.product_tmpl_id
+   LEFT JOIN product_uom u                 ON u.id = sol.product_uom
+   LEFT JOIN product_uom u2               ON u2.id = pt.uom_id
+   LEFT JOIN res_partner su                  ON su.id = po.partner_id
+   LEFT JOIN user_to_employee ue1   ON ue1.user_id=so.user_id
+   LEFT JOIN user_to_employee ue2   ON ue2.user_id=su.user_id
+ ORDER BY sm.date DESC
             )""")
 
 jimo_sale_report()
