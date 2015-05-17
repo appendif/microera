@@ -9,7 +9,7 @@
 	        <field name="arch" type="xml">
                 <field name="ean13" position="after">
 						<button colspan="2" name="auto_ean" type="object" string="Generate unique EAN code"
-							attrs="{'invisible': [('product_variant_count', '>', 1)]}" 
+							attrs="{'invisible': ['|', ('product_variant_count', '>', 1), ('ean13', '!=', False)]}" 
 							class="oe_edit_only oe_link" />
                 </field>
             </field>
@@ -22,6 +22,7 @@
             <field name="arch" type="xml">
                 <field name="ean13" position="after">
 						<button colspan="2" name="auto_ean" type="object" string="Generate unique EAN code"
+							attrs="{'invisible': [('ean13', '!=', False)]}"
 							class="oe_edit_only oe_link" />
                 </field>
             </field>
