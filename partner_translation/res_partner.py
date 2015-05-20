@@ -27,3 +27,4 @@ class res_partner(models.Model):
     _inherit = "res.partner"
 
     name = fields.Char(translate=True)
+    display_name = fields.Char(translate=True)
