@@ -45,11 +45,11 @@ class jimo_pos_sale_report(osv.osv):
         'company_id':fields.many2one('res.company', 'Company', readonly=True),
         'supplier_id':fields.many2one('res.partner', 'Supplier', readonly=True),
         'it_saleperson_id': fields.many2one('res.users', 'Saleperson IT', readonly=True),
-        'shop_id':fields.many2one('sale.shop', 'Shop', readonly=True),
+        'location_id':fields.many2one('stock.location', 'Location', readonly=True),
         'pos_name':fields.char('POS', size=32, readonly=True, help=""),
         'quantity':fields.float('Quantity', digits=(16, 2), readonly=True, help=""),
-        'list_price':fields.float('Sale Price', digits=(16, 2), readonly=True, help=""),
-        'standard_price':fields.float('Cost Price', digits=(16, 2), readonly=True, help=""),
+        'list_price':fields.float('List Price', digits=(16, 2), readonly=True, help=""),
+        'sale_price':fields.float('Sale Price', digits=(16, 2), readonly=True, help=""),
         'unit_price':fields.float('Unit Price', digits=(16, 2), readonly=True, help=""),
         'total_price':fields.float('Total Price', digits=(16, 2), readonly=True, help=""),
         'discount':fields.float('Discount (%)', digits=(16, 2), readonly=True, help=""),
@@ -78,11 +78,11 @@ SELECT
     oh.company_id AS company_id,
     su.id AS supplier_id,
     su.user_id AS it_saleperson_id,
-    oh.shop_id AS shop_id,
+    oh.location_id AS location_id,
     pc.name AS pos_name,
     ol.qty AS quantity,
     pt.list_price AS list_price,
-    pt.standard_price AS standard_price,
+    (ol.price_unit * (100.0 - ol.discount) / 100.0) AS sale_price,
     ol.price_unit as unit_price,
     ol.price_subtotal_incl as total_price,
     ol.discount as discount,
@@ -100,8 +100,8 @@ SELECT
          WHERE product_id=pp.id AND company_id=oh.company_id ))
     LEFT JOIN pos_session ps       ON (oh.session_id=ps.id)
     LEFT JOIN pos_config pc        ON (ps.config_id=pc.id)
-    LEFT JOIN user_to_employee ue1 ON (ue1.employee_id=oh.shopass_id)
-    LEFT JOIN user_to_employee ue2 ON (ue2.user_id=su.user_id)
+    LEFT JOIN user_to_employee ue1   ON ue1.user_id=oh.user_id
+    LEFT JOIN user_to_employee ue2   ON ue2.user_id=su.user_id
 
     WHERE oh.state IN ('paid', 'done', 'invoiced')
             )""")

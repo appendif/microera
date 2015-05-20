@@ -19,7 +19,7 @@
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
-<!--            <field name="shop_id" />                -->
+<!--            <field name="location_id" />                -->
                 <field name="pos_name" />
                 <field name="quantity"   sum="Quantity"/>
                 <field name="list_price" />
