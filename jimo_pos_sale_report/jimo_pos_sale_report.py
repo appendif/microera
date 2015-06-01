@@ -95,9 +95,9 @@ SELECT
     LEFT JOIN pos_order oh         ON (ol.order_id=oh.id)
          JOIN product_product pp   ON (ol.product_id=pp.id)
          JOIN product_template pt  ON (pp.product_tmpl_id=pt.id)
-    LEFT JOIN res_partner su       ON
-        (su.id = ( select min(name) FROM product_supplierinfo
-         WHERE product_id=pp.id AND company_id=oh.company_id ))
+    LEFT JOIN res_partner su       ON (su.id =
+        ( SELECT min(name) FROM product_supplierinfo
+          WHERE product_tmpl_id=pt.id AND company_id=oh.company_id ))
     LEFT JOIN pos_session ps       ON (oh.session_id=ps.id)
     LEFT JOIN pos_config pc        ON (ps.config_id=pc.id)
     LEFT JOIN user_to_employee ue1   ON ue1.user_id=oh.user_id
