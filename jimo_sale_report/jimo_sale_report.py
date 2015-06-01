@@ -135,6 +135,7 @@ SELECT
    LEFT JOIN res_partner su                  ON su.id = po.partner_id
    LEFT JOIN user_to_employee ue1   ON ue1.user_id=so.user_id
    LEFT JOIN user_to_employee ue2   ON ue2.user_id=su.user_id
+ WHERE sm.state = 'done'
  ORDER BY sm.date DESC
             )""")
 
