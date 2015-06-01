@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_sale_order_inherit_form">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				
+	            <field name='invoiced' position="after">
+	                <field name="dropshipping_paid"/>
+	                <field name="commission_sale_id"/>
+	            </field>
+			</field>
+		</record>
+	</data>
+</openerp>
