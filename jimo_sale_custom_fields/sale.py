@@ -28,7 +28,9 @@ class sale_order(osv.osv):
         res = {}
         for sale in self.browse(cr, uid, ids, context=context):
             sale_obj = self.pool.get("sale.order")
-            sale_ids = sale_obj.search(cr, uid, [('origin', '=', sale.name)], None)
+            sale_ids = sale_obj.search(cr, uid, [('origin', '=', sale.name),
+                                                 ('company_id', '=', sale.company_id),
+                                                 ('state', '!=', 'cancel')], None)
             if sale_ids:
                 res[sale.id] = sale_ids[0]
         return res
@@ -46,7 +48,7 @@ class sale_order(osv.osv):
 
     _columns = {
         'dropshipping_paid': fields.boolean('Direct payment done', help='Direct payment done'),
-        'commission_sale_id': fields.function(_get_commission_sale_id, type="many2one", relation="sale.order", string="Commission sale order"),
+        'comm_sale_id': fields.function(_get_commission_sale_id, type="many2one", relation="sale.order", string="Commission sale order"),
         'invoiced': fields.function(_invoiced, string='Paid',
             fnct_search=_invoiced_search, type='boolean', help="It indicates that an invoice has been paid."),
 

@@ -31,8 +31,9 @@
                 <field name="manager2_id" />
                 <field name="it_saleperson_id" />
                 <field name="it_employee_id" />
-                <field name="commorder_id" />
+                <field name="paid" />
                 <field name="comm_paid" />
+                <field name="comm_sale_id" />
            </tree>
         </field>
     </record>
@@ -42,12 +43,14 @@
         <field name="model">jimo.sale.report</field>
         <field name="arch" type="xml">
             <search string="Sale report">
-<!--		
-            	<group expand="1" string="Commission...">
-    				<filter string="Paid"   icon="terp-dolar_ok!" domain="[('comm_paid','!=',False)]" help = "Commission Paid"   />
-    				<filter string="Unpaid" icon="terp-dolar"     domain="[('comm_paid','=' ,False)]" help = "Commission Unpaid" />
+
+            	<group expand="1" string="Payments...">
+    				<filter string="Sale Paid"   		icon="terp-dolar_ok!" domain="[('paid','=',True)]" 	     />
+    				<filter string="Sale Unpaid"		icon="terp-dolar"     domain="[('paid','=',False)]" 	 />
+    				<filter string="Commission Paid"   	icon="terp-dolar_ok!" domain="[('comm_paid','=',True)]"  />
+    				<filter string="Commission Unpaid" 	icon="terp-dolar"     domain="[('comm_paid','=',False)]" />
             	</group>
--->
+
                 <field name="date_done" />
                 <field name="month" />
                 <field name="year" />
@@ -64,7 +67,7 @@
                 <field name="product_id" default_focus="1"/>
                 <field name="brand_id" />
                 <field name="warehouse_id" />
-                <field name="commorder_id" />
+                <field name="comm_sale_id" />
 
                 <group expand="1" string="Group By...">
                     <filter name="group_company" string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>

@@ -28,14 +28,37 @@ class jimo_sale_report(orm.Model):
     _description = "Jimo delivered sale report"
     _auto = False
 
+    def _comm_paid(self, cr, uid, ids, name, arg, context=None):
+        res = {}
+        for record in self.browse(cr, uid, ids, context=context):
+            res[record.id] = False
+            if record.comm_sale_id:
+                if record.comm_sale_id.invoiced:
+                    res[record.id] = True
+        return res
+
     def _invoiced(self, cr, uid, ids, name, arg, context=None):
         res = {}
-        for line in self.browse(cr, uid, ids, context=context):
-            res[line.id] = False
-            if line.commorder_id:
-                sale = line.commorder_id
-                if sale.invoiced:
-                    res[line.id] = True
+        for record in self.browse(cr, uid, ids, context=context):
+            res[record.id] = record.saleorder_id.invoiced
+        return res
+
+    def _paid_search(self, cr, uid, obj, name, domain, context=None):
+        if not len(domain):
+            return []
+        recs = self.search(cr, uid, [], context=context)
+        if not recs:
+            return [('id', '=', 0)]
+
+        res = []
+        for field, operator, value in domain:
+            if operator == '=':
+                operator = '=='
+            ids = []
+            for element in self.browse(cr, uid, recs, context=context):
+                if eval(str(element[field]) + operator + str(value)):
+                    ids.append(element.id)
+            res.append(('id', 'in', ids))
         return res
 
     _columns = {
@@ -67,8 +90,9 @@ class jimo_sale_report(orm.Model):
         'manager1_id': fields.many2one('hr.employee', 'Manager1', readonly=True),
         'manager2_id': fields.many2one('hr.employee', 'Manager2', readonly=True),
         'it_employee_id': fields.many2one('hr.employee', 'Employee IT', readonly=True),
-        'commorder_id': fields.many2one('sale.order', 'Commission Order', readonly=True),
-        'comm_paid': fields.function(_invoiced, string='Commission Paid', type='boolean'),
+        'paid': fields.function(_invoiced, string='Sale Paid', type='boolean', fnct_search=_paid_search),
+        'comm_paid': fields.function(_comm_paid, string='Commission Paid', type='boolean', fnct_search=_paid_search),
+        'comm_sale_id': fields.many2one('sale.order', 'Commission Order', readonly=True),
     }
 
     def init(self, cr):
@@ -121,20 +145,20 @@ SELECT
     ue1.manager1_id AS manager1_id,
     ue1.manager2_id AS manager2_id,
     ue2.employee_id AS it_employee_id,
-   (select max(id) from sale_order where origin=so.name and company_id=so.company_id and state<>'cancel') AS commorder_id
+   (select max(id) from sale_order where origin=so.name and company_id=so.company_id and state<>'cancel') AS comm_sale_id
   FROM sale_order_line sol
-   JOIN sale_order so                   ON so.id = sol.order_id
-   JOIN procurement_order pr            ON pr.sale_line_id = sol.id
-   JOIN purchase_order_line pol            ON pol.id = pr.purchase_line_id
-   JOIN purchase_order po               ON po.id = pol.order_id
-   JOIN stock_move sm               ON sm.procurement_id = pr.id
-   LEFT JOIN product_product pp         ON pp.id = sm.product_id
-   LEFT JOIN product_template pt        ON pt.id = pp.product_tmpl_id
-   LEFT JOIN product_uom u                 ON u.id = sol.product_uom
-   LEFT JOIN product_uom u2               ON u2.id = pt.uom_id
-   LEFT JOIN res_partner su                  ON su.id = po.partner_id
-   LEFT JOIN user_to_employee ue1   ON ue1.user_id=so.user_id
-   LEFT JOIN user_to_employee ue2   ON ue2.user_id=su.user_id
+   JOIN sale_order so             ON so.id = sol.order_id
+   JOIN procurement_order pr      ON pr.sale_line_id = sol.id
+   JOIN purchase_order_line pol   ON pol.id = pr.purchase_line_id
+   JOIN purchase_order po         ON po.id = pol.order_id
+   JOIN stock_move sm             ON sm.procurement_id = pr.id
+   LEFT JOIN product_product pp   ON pp.id = sm.product_id
+   LEFT JOIN product_template pt  ON pt.id = pp.product_tmpl_id
+   LEFT JOIN product_uom u        ON u.id = sol.product_uom
+   LEFT JOIN product_uom u2       ON u2.id = pt.uom_id
+   LEFT JOIN res_partner su       ON su.id = po.partner_id
+   LEFT JOIN user_to_employee ue1 ON ue1.user_id=so.user_id
+   LEFT JOIN user_to_employee ue2 ON ue2.user_id=su.user_id
  WHERE sm.state = 'done'
  ORDER BY sm.date DESC
             )""")
