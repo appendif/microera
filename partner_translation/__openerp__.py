@@ -28,8 +28,9 @@
     'depends': ['base'],
     'demo_xml': [],
     'description': """
-Provide translation capabilities to Partner Name    """,
-    'data': [],
+Provide translation capabilities to Partner Name
+    """,
+    'data': ['res_partner_view.xml'],
     'test': [],
     'init_xml': [],
     'installable': True,

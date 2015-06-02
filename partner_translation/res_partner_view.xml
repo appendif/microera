@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="view_partner_form_inherit">
+			<field name="name">res.partner.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+	            <field name='title' position="after">
+	                <field name="foreign_name"/>
+	            </field>
+			</field>
+		</record>
+
+        <record id="view_partner_tree_inherit" model="ir.ui.view">
+            <field name="name">res.partner.tree</field>
+            <field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+	            <field name='display_name' position="after">
+	                <field name="foreign_name"/>
+	            </field>
+            </field>
+        </record>
+
+       <record id="view_res_partner_filter_inherit" model="ir.ui.view">
+            <field name="name">res.partner.select</field>
+            <field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+	            <field name='name' position="after">
+                   <field name="foreign_name" string="Foreign Name" filter_domain="[('foreign_name','ilike', self)]"/>
+	            </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

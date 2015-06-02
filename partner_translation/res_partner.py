@@ -20,11 +20,17 @@
 ###############################################################################
 
 
-from openerp import models, fields
+from openerp.osv import osv, fields
 
 
-class res_partner(models.Model):
+class res_partner(osv.osv):
     _inherit = "res.partner"
 
-    name = fields.Char(translate=True)
-    display_name = fields.Char(translate=True)
+    #name = fields.Char(translate=True)
+    #display_name = fields.Char(translate=True)
+
+    _columns = {
+        'foreign_name': fields.char('Foreign Name'),
+    }
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

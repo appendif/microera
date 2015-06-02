@@ -28,9 +28,9 @@ class sale_order(osv.osv):
         res = {}
         for sale in self.browse(cr, uid, ids, context=context):
             sale_obj = self.pool.get("sale.order")
-            sale_ids = sale_obj.search(cr, uid, [('origin', '=', sale.name),
-                                                 ('company_id', '=', sale.company_id),
-                                                 ('state', '!=', 'cancel')], None)
+            sale_ids = sale_obj.search(cr, uid, [('origin', '=', sale.name)], None)
+                                        #  ('company_id', '=', sale.company_id),
+                                        #  ('state', '!=', 'cancel')], None)
             if sale_ids:
                 res[sale.id] = sale_ids[0]
         return res
