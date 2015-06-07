@@ -35,7 +35,7 @@ between countries that use a different alphabet
     - Add foreign_name field to partner model
     - Redefine display_name field to partner model
     - Redefine name_get method of partner model appending the value of
-foreign_name field (if any) after name field
+      foreign_name field (if any) after name field
 
   Todo:
     - Use context to switch on/off the new feature
