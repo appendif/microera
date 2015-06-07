@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Provide translation capabilities to Partner Name',
+    'name': 'Provide translation capabilities to Partner Display Name',
     'version': '0.1',
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it/',
@@ -28,7 +28,18 @@
     'depends': ['base'],
     'demo_xml': [],
     'description': """
-Provide translation capabilities to Partner Name
+Provides visualization and searchability to partners name for cooperation
+between countries that use a different alphabet
+
+  Funcionalities:
+    - Add foreign_name field to partner model
+    - Redefine display_name field to partner model
+    - Redefine name_get method of partner model appending the value of
+        foreign_name field (if any) after name field
+
+  Todo:
+    - Use context to switch on/off the new feature
+
     """,
     'data': ['res_partner_view.xml'],
     'test': [],
