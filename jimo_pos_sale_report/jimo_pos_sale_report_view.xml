@@ -13,12 +13,12 @@
                 <field name="day" />
                 <field name="posorder_id" />
                 <field name="pos_reference" />
-<!--            <field name="customer_id" />            -->
+<!--            <field name="customer_id" />   -->
                 <field name="product_id" />
 <!--            <field name="ean13" />                  -->
                 <field name="brand_id" />
                 <field name="company_id" />
-                <field name="supplier_id" />
+                <field name="supplier_id" context="{'hide_foreign_name':True}" />
 <!--            <field name="location_id" />                -->
                 <field name="pos_name" />
                 <field name="quantity"   sum="Quantity"/>

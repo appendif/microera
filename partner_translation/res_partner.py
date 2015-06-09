@@ -37,8 +37,9 @@ class res_partner(osv.Model):
         for record in self.browse(cr, uid, ids, context=context):
             name = record.name
 
-            if record.foreign_name and record.foreign_name not in name:
-                name = "%s (%s)" % (name, record.foreign_name)
+            if not context.get('hide_foreign_name', False):
+                if record.foreign_name and record.foreign_name not in name:
+                    name = "%s (%s)" % (name, record.foreign_name)
 
             if record.parent_id and not record.is_company:
                 name = "%s, %s" % (record.parent_name, name)
