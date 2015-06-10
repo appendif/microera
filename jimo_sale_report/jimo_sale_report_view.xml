@@ -12,12 +12,12 @@
                 <field name="month" />
                 <field name="day" />
                 <field name="saleorder_id" />
-                <field name="customer_id" context="{'hide_foreign_name': true}" />
+                <field name="customer_id" />
                 <field name="product_id" />
 <!--            <field name="ean13" />					-->
                 <field name="brand_id" />
                 <field name="company_id" />
-                <field name="supplier_id" context="{'hide_foreign_name': true}" />
+                <field name="supplier_id" />
                 <field name="purchaseorder_id" />
                 <field name="warehouse_id" />
                 <field name="order_qty"   sum="Total ordered"/>
@@ -98,6 +98,7 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree</field>
         <field name="help">This report performs analysis on your delivery and sales orders.</field>
+        <field name="context">{'hide_foreign_name':True}</field>        
     </record>
 
     <menuitem
