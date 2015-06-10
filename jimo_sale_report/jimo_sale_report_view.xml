@@ -12,12 +12,12 @@
                 <field name="month" />
                 <field name="day" />
                 <field name="saleorder_id" />
-                <field name="customer_id" context="{'hide_foreign_name':True}" />
+                <field name="customer_id" context="{'hide_foreign_name': true}" />
                 <field name="product_id" />
 <!--            <field name="ean13" />					-->
                 <field name="brand_id" />
                 <field name="company_id" />
-                <field name="supplier_id" context="{'hide_foreign_name':True}" />
+                <field name="supplier_id" context="{'hide_foreign_name': true}" />
                 <field name="purchaseorder_id" />
                 <field name="warehouse_id" />
                 <field name="order_qty"   sum="Total ordered"/>
