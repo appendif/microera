@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Unhide origin field in Sale Order',
+    'name': 'Sale Show Origin',
     'version': '0.1',
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it/',

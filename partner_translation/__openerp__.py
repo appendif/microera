@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Provide translation capabilities to Partner Display Name',
+    'name': 'Partner Translation',
     'version': '0.1',
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it/',

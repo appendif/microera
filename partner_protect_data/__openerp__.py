@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Hide partners to unpriviliged users',
+    'name': 'Partner Protect Data',
     'version': '0.1',
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it/',
