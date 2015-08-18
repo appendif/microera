@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_auto_ean
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-18 11:43+0000\n"
+"PO-Revision-Date: 2015-08-18 13:58+0100\n"
+"Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_auto_ean
+#: view:product.ean_wizard:product_auto_ean.ean13_generator
+msgid "Apply"
+msgstr "Applica"
+
+#. module: product_auto_ean
+#: view:product.ean_wizard:product_auto_ean.ean13_generator
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,create_uid:0
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,create_date:0
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,ean13:0
+msgid "EAN13"
+msgstr "EAN13"
+
+#. module: product_auto_ean
+#: view:product.ean_wizard:product_auto_ean.ean13_generator
+msgid "Ean13 Generator"
+msgstr "Generator Ean13"
+
+#. module: product_auto_ean
+#: view:product.ean_wizard:product_auto_ean.ean13_generator
+msgid ""
+"Enter code components, its will be converted\n"
+"						automatically to next unused valid EAN number."
+msgstr ""
+"Inserire i componenti del codice, saranno convertiti\n"
+"						automaticamente nel prossimo codice EAN libero."
+
+#. module: product_auto_ean
+#: view:product.product:product_auto_ean.product_normal_form_view_inherit_ean_auto
+#: view:product.template:product_auto_ean.product_template_form_view_inherit_ean_auto
+msgid "Generate unique EAN code"
+msgstr "Genera un codice EAN univoco"
+
+#. module: product_auto_ean
+#: code:addons/product_auto_ean/product_auto_ean.py:114
+#: code:addons/product_auto_ean/product_auto_ean.py:130
+#, python-format
+msgid "Generate unused EAN code"
+msgstr "Genera un codice EAN libero"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,write_date:0
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,last_used:0
+msgid "Last used"
+msgstr "Last used"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,next:0
+msgid "Next"
+msgstr "Next"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,partner:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: product_auto_ean
+#: field:product.ean_wizard,prefix:0
+msgid "Prefix"
+msgstr "Prefix"
+
+#. module: product_auto_ean
+#: model:ir.model,name:product_auto_ean.model_product_product
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: product_auto_ean
+#: model:ir.model,name:product_auto_ean.model_product_template
+msgid "Product Template"
+msgstr "Modello Prodotto"
+
+#. module: product_auto_ean
+#: view:product.ean_wizard:product_auto_ean.ean13_generator
+msgid "or"
+msgstr "or"
+

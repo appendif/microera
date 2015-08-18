@@ -1,61 +1,168 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* jimo_sale_report
+#	* jimo_sale_report
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-27 09:11+0000\n"
-"PO-Revision-Date: 2014-08-27 11:14+0100\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-08-18 11:57+0000\n"
+"PO-Revision-Date: 2015-08-18 14:15+0100\n"
+"Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.6.8\n"
+
+#. module: jimo_sale_report
+#: selection:jimo.sale.report,month:0
+msgid "April"
+msgstr "Aprile"
+
+#. module: jimo_sale_report
+#: selection:jimo.sale.report,month:0
+msgid "August"
+msgstr "Agosto"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,brand_id:0
+msgid "Brand"
+msgstr "Brand"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,comm_sale_id:0
+msgid "Commission Order"
+msgstr "Ordine di provvigioni"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,comm_paid:0
+msgid "Commission Paid"
+msgstr "Provvigioni Pagate"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Commission Unpaid"
+msgstr "Provvigioni non pagate"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,company_id:0
+msgid "Company"
+msgstr "Società"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,cost_price:0
+msgid "Cost Price"
+msgstr "Prezzo di Costo"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,customer_id:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,day:0
+msgid "Day"
+msgstr "Giorno"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Day Delivered"
+msgstr "Giorno Consegna"
+
+#. module: jimo_sale_report
+#: selection:jimo.sale.report,month:0
+msgid "December"
+msgstr "Dicembre"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,date_done:0
+msgid "Delivery Date"
+msgstr "Data Consegna"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,employee_id:0
+msgid "Employee"
+msgstr "Impiegato"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Employee IT"
+msgstr "Impiegato IT"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,it_employee_id:0
+msgid "Employee ITA"
+msgstr "Impiegato ITA"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
 msgid "February"
-msgstr "Febbraio\t"
+msgstr "Febbraio"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "Total ordered"
-msgstr "Totale Ordinato"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
 msgid "Group By..."
 msgstr "Group By..."
 
 #. module: jimo_sale_report
-#: field:jimo.sale.report,unit_price:0
-msgid "Unit Price"
-msgstr "Importo Unitario"
+#: field:jimo.sale.report,id:0
+msgid "ID"
+msgstr "ID"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "Year Delivered"
-msgstr "Anno di Consegna"
+#: selection:jimo.sale.report,month:0
+msgid "January"
+msgstr "Gennaio"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,employee_id:0
-msgid "Employee"
-msgstr "Venditore"
+#: model:ir.ui.menu,name:jimo_sale_report.menu_jimo_reporting
+msgid "Jimo"
+msgstr "Jimo"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,total_price:0
-msgid "Total Price"
-msgstr "Importo Totale"
+#: model:ir.actions.act_window,name:jimo_sale_report.action_sale_report
+#: model:ir.ui.menu,name:jimo_sale_report.menu_action_sale_report
+msgid "Jimo Sale Report"
+msgstr "Jimo Sale Report"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,product_id:0
-msgid "Product"
-msgstr "Prodotto"
+#: model:ir.model,name:jimo_sale_report.model_jimo_sale_report
+msgid "Jimo delivered sale report"
+msgstr "Jimo delivered sale report"
+
+#. module: jimo_sale_report
+#: selection:jimo.sale.report,month:0
+msgid "July"
+msgstr "Luglio"
+
+#. module: jimo_sale_report
+#: selection:jimo.sale.report,month:0
+msgid "June"
+msgstr "Giugno"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,list_price:0
+msgid "List Price"
+msgstr "Prezzo di Listino"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,manager1_id:0
+msgid "Manager1"
+msgstr "Manager 1"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,manager2_id:0
+msgid "Manager2"
+msgstr "Manager 2"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
@@ -64,114 +171,19 @@ msgstr "Marzo"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
-msgid "August"
-msgstr "Agosto"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,manager1_id:0
-msgid "Manager1"
-msgstr "Manager 1"
-
-#. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
 msgid "May"
 msgstr "Maggio"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,brand_id:0
-msgid "Brand"
-msgstr "Brand"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,month:0
+msgid "Month"
+msgstr "Mese"
 
 #. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "June"
-msgstr "Giugno"
-
-#. module: jimo_sale_report
-#: field:jimo.sale.report,order_qty:0
-msgid "Order Qty"
-msgstr "Quantità Ordine"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,saleorder_id:0
-msgid "Sale Order"
-msgstr "Ordine"
-
-#. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "July"
-msgstr "Luglio"
-
-#. module: jimo_sale_report
-#: field:jimo.sale.report,shipped_qty:0
-msgid "Shipped Qty"
-msgstr "Quantità Spedita"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,day:0
-msgid "Day"
-msgstr "Giorno"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "Sale report"
-msgstr "Report Vendite"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,customer_id:0
-msgid "Customer"
-msgstr "Cliente"
-
-#. module: jimo_sale_report
-#: field:jimo.sale.report,standard_price:0
-msgid "Cost Price"
-msgstr "Importo Costo"
-
-#. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "October"
-msgstr "Ottobre"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,year:0
-msgid "Year"
-msgstr "Anno"
-
-#. module: jimo_sale_report
-#: model:ir.actions.act_window,name:jimo_sale_report.action_sale_report
-#: model:ir.ui.menu,name:jimo_sale_report.menu_action_sale_report
-msgid "Jimo delivered sale report"
-msgstr "Report Vendite Consegnate JIMO"
-
-#. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "January"
-msgstr "Gennaio"
-
-#. module: jimo_sale_report
-#: field:jimo.sale.report,comm_paid:0
-msgid "Commission Paid"
-msgstr "Provvigioni Pagate"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "Day Delivered"
-msgstr "Giorno Consegna"
-
-#. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "April"
-msgstr "Aprile"
-
-#. module: jimo_sale_report
-#: field:jimo.sale.report,commorder_id:0
-msgid "Commission Order"
-msgstr "Ordine Provvigioni"
-
-#. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,saleperson_id:0
-msgid "Saleperson"
-msgstr "Venditore"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Month Delivered"
+msgstr "Mese Consegna"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
@@ -179,44 +191,74 @@ msgid "November"
 msgstr "Novembre"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "sale report"
-msgstr "Report Vendite"
+#: selection:jimo.sale.report,month:0
+msgid "October"
+msgstr "Ottobre"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,manager2_id:0
-msgid "Manager2"
-msgstr "Manager 2"
+#: field:jimo.sale.report,order_qty:0
+msgid "Order Qty"
+msgstr "Quantità Ordinata"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,shop_id:0
-msgid "Shop"
-msgstr "Negozio"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Payments..."
+msgstr "Pagamenti..."
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0
-msgid "Month Delivered"
-msgstr "Mese Consegna"
+#: field:jimo.sale.report,private_price:0
+msgid "Private Price"
+msgstr "Prezzo Riservato"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,supplier_id:0
-msgid "Supplier"
-msgstr "Produttore"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,product_id:0
+msgid "Product"
+msgstr "Prodotto"
 
 #. module: jimo_sale_report
-#: field:jimo.sale.report,list_price:0
+#: field:jimo.sale.report,purchaseorder_id:0
+msgid "Purchase Order"
+msgstr "Ordine d'Acquisto"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,saleorder_id:0
+msgid "Sale Order"
+msgstr "Ordine di Vendita"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,paid:0
+msgid "Sale Paid"
+msgstr "Acquisto pagato"
+
+#. module: jimo_sale_report
+#: field:jimo.sale.report,sale_price:0
 msgid "Sale Price"
 msgstr "Prezzo di Vendita"
 
 #. module: jimo_sale_report
-#: selection:jimo.sale.report,month:0
-msgid "December"
-msgstr "Dicembre"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Sale Unpaid"
+msgstr "Acquisto non pagato"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,month:0
-msgid "Month"
-msgstr "Mese"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Sale report"
+msgstr "Report Vendite"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,salesman_id:0
+msgid "Salesman"
+msgstr "Venditore"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,it_salesman_id:0
+msgid "Salesman ITA"
+msgstr "Venditore ITA"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
@@ -224,44 +266,56 @@ msgid "September"
 msgstr "Settembre"
 
 #. module: jimo_sale_report
-#: model:ir.ui.menu,name:jimo_sale_report.menu_jimo_reporting
-msgid "Jimo"
-msgstr "Jimo"
+#: field:jimo.sale.report,shipped_qty:0
+msgid "Shipped Qty"
+msgstr "Quantità Spedita"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,it_employee_id:0
-msgid "Employee IT"
-msgstr "Agente IT"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,supplier_id:0
+msgid "Supplier"
+msgstr "Fornitore"
 
 #. module: jimo_sale_report
 #: model:ir.actions.act_window,help:jimo_sale_report.action_sale_report
-msgid "This report performs analysis on your delivery and sales orders."
-msgstr "Questo report esegue analisi su consegne e ordini di vendita"
+msgid "This report performs analysis on your sales."
+msgstr "Questo report esegue analisi sulle vendite."
 
 #. module: jimo_sale_report
-#: field:jimo.sale.report,date_done:0
-msgid "Delivery Date"
-msgstr "Data Consegna"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree
+#: field:jimo.sale.report,total_price:0
+msgid "Total Price"
+msgstr "Prezzo Totale"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,it_saleperson_id:0
-msgid "Saleperson IT"
-msgstr "Agente IT"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree
+msgid "Total ordered"
+msgstr "Totale Ordinato"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree
 msgid "Total shipped"
 msgstr "Totale Consegnato"
 
 #. module: jimo_sale_report
-#: view:jimo.sale.report:0 field:jimo.sale.report,company_id:0
-msgid "Company"
-msgstr "Società"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,warehouse_id:0
+msgid "Warehouse"
+msgstr "Magazzino"
 
 #. module: jimo_sale_report
-#: model:ir.model,name:jimo_sale_report.model_jimo_sale_report
-msgid "Jimo Sale report"
-msgstr "Report Vendite JIMO"
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,year:0
+msgid "Year"
+msgstr "Anno"
 
-#~ msgid "ean13"
-#~ msgstr "ean13"
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+msgid "Year Delivered"
+msgstr "Anno di Consegna"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree
+msgid "sale report"
+msgstr "Report Vendite"
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record id="product_template_form_view_inherit_private_price" model="ir.ui.view">
+			<field name="name">product.template.only.form.inherit.private_price</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_only_form_view" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='standard_price']" position="after">
+					<field name="private_price" groups="account.group_account_manager" />
+				</xpath>
+
+			</field>
+		</record>
+	</data>
+</openerp>

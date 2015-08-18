@@ -1,0 +1,32 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_private_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-18 11:33+0000\n"
+"PO-Revision-Date: 2015-08-18 13:36+0100\n"
+"Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_private_price
+#: field:product.template,private_price:0
+msgid "Private Price"
+msgstr "Prezzo Riservato"
+
+#. module: product_private_price
+#: help:product.template,private_price:0
+msgid "Private Price for statistical and marketing purposes"
+msgstr "Prezzo Riservato per finalità statistiche e di marketing"
+
+#. module: product_private_price
+#: model:ir.model,name:product_private_price.model_product_template
+msgid "Product Template"
+msgstr "Modello Prodotto"
+

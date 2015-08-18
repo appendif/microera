@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* jimo_sale_custom_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-18 11:41+0000\n"
+"PO-Revision-Date: 2015-08-18 13:43+0100\n"
+"Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: jimo_sale_custom_fields
+#: field:sale.order,comm_sale_id:0
+msgid "Commission sale order"
+msgstr "Ordine di commissioni"
+
+#. module: jimo_sale_custom_fields
+#: field:sale.order,dropshipping_paid:0
+#: help:sale.order,dropshipping_paid:0
+msgid "Direct payment done"
+msgstr "Pagamento effettuato"
+
+#. module: jimo_sale_custom_fields
+#: model:ir.model,name:jimo_sale_custom_fields.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+

@@ -19,26 +19,6 @@
 #
 ##############################################################################
 
-{
-    'name': 'Jimo POS Sale Report',
-    'version': '0.1',
-    'category': 'Sales & Stock',
-    'description': """
-Jimo POS Sale Report
-    """,
-    'author': 'MicroEra srl',
-    'website': 'http://www.microera.it',
-    'depends': ['base', 'product', 'stock', 'sale', 'purchase',
-                'product_brand', 'point_of_sale',
-                'jimo_sale_report', 'product_private_price'],
-    'data': [
-        'jimo_pos_sale_report_view.xml',
-        'security/ir.model.access.csv',
-        'security/jimo_pos_sale_report_security.xml',
-    ],
-    'demo': [],
-    'installable': True,
-    'auto_install': False,
-}
+import product_private_price
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
