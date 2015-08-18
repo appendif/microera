@@ -7,7 +7,7 @@
 			<field name="inherit_id" ref="product.product_template_only_form_view" />
 			<field name="arch" type="xml">
 
-				<xpath expr="//field[@name='standard_price']" position="after">
+				<xpath expr="//group[@name='general']" position="inside">
 					<field name="private_price" groups="account.group_account_manager" />
 				</xpath>
 
