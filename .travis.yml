@@ -9,7 +9,7 @@ cache: pip
 addons:
   apt:
     packages:
-      - expect-dev  # provides unbuffer utility
+      - expect-dev   # provides unbuffer utility
       - python-lxml  # because pip installation is slow
 
 env:
@@ -20,7 +20,6 @@ env:
 
   matrix:
   - LINT_CHECK="1"
-  - TRANSIFEX="1"
   - TESTS="1" ODOO_REPO="odoo/odoo"
   - TESTS="1" ODOO_REPO="OCA/OCB"
 
@@ -31,8 +30,6 @@ install:
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
-  - pip install unicodecsv
-  - pip install codicefiscale
 
 script:
   - travis_run_tests
