@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/OCA/l10n-italy.svg?branch=8.0)](https://travis-ci.org/OCA/l10n-italy)
-[![Coverage Status](https://coveralls.io/repos/OCA/l10n-italy/badge.svg?branch=8.0)](https://coveralls.io/r/OCA/l10n-italy?branch=8.0)
+[![Build Status](https://travis-ci.org/appendif/microera.svg?branch=8.0)](https://travis-ci.org/appendif/microera)
 
 microera
 ========
