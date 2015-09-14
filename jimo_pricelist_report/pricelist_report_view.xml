@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="view_pricelist_report_tree" model="ir.ui.view">
+        <field name="name">jimo.pricelist.report.tree</field>
+        <field name="model">jimo.pricelist.report</field>
+        <field name="arch" type="xml">
+            <tree string="Pricelist Report" create="false">
+                <field name="id" />
+                
+                <field name="type" />
+                <field name="list_name" />
+                <field name="currency_id" />
+
+                <field name="version_name" />
+                <field name="active" />
+                <field name="date_start" />
+                <field name="date_end" />
+                
+                <field name="name" />
+                <field name="company_id" />
+                <field name="price_round" />
+                <field name="price_min_margin" />
+                <field name="price_max_margin" />
+                <field name="price_discount" />
+                <field name="sequence" />
+                <field name="product_tmpl_id" />
+                <field name="product_id" />
+                <field name="categ_id" />
+                <field name="base" />
+                <field name="base_pricelist_id" />
+                <field name="price_version_id" />
+                <field name="min_quantity" />
+                <field name="price_surcharge" />
+                                
+           </tree>
+        </field>
+    </record>
+
+    <record id="view_pricelist_report_search" model="ir.ui.view">
+        <field name="name">jimo.pricelist.report.search</field>
+        <field name="model">jimo.pricelist.report</field>
+        <field name="arch" type="xml">
+            <search string="Pricelist report">
+
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="name" />
+                <field name="type" />
+                <field name="product_id" default_focus="1"/>
+                <field name="base_pricelist_id" />
+                <field name="price_version_id" />
+                <field name="categ_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="version_name" />
+                <field name="list_name" />
+
+            </search>
+        </field>
+    </record>
+
+        
+    <record id="action_pricelist_report" model="ir.actions.act_window">
+        <field name="name">Jimo Pricelist Report</field>
+        <field name="res_model">jimo.pricelist.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="help">This report performs analysis on your pricelist.</field>
+    </record>
+
+<!--     <menuitem -->
+<!--         id="menu_jimo_reporting" -->
+<!--         name="Jimo" -->
+<!--         sequence="16" -->
+<!--         parent="base.menu_reporting" -->
+<!--         groups="base.group_sale_manager" /> -->
+
+    <menuitem 
+    	id="menu_action_pricelist_report" 
+    	action="action_pricelist_report" 
+    	parent="jimo_sale_report.menu_jimo_reporting" 
+    	sequence="3" />
+
+</data>
+</openerp>
