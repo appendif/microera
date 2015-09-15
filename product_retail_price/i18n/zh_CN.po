@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-15 14:11+0000\n"
-"PO-Revision-Date: 2015-09-15 16:13+0100\n"
+"PO-Revision-Date: 2015-09-15 16:15+0100\n"
 "Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 #. module: product_retail_price
 #: model:ir.model,name:product_retail_price.model_product_template
 msgid "Product Template"
-msgstr "Modello Prodotto"
+msgstr "产品模板"
 
 #. module: product_retail_price
 #: field:product.template,retail_price:0
 msgid "Retail Price"
-msgstr "Prezzo al dettaglio"
+msgstr "零售价"
 
 #. module: product_retail_price
 #: help:product.template,retail_price:0
 msgid "Retail unit Price"
-msgstr "Prezzo unitario al dettaglio"
+msgstr "零售价格"
 
