@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_retail_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-15 12:48+0000\n"
+"PO-Revision-Date: 2015-09-15 14:51+0100\n"
+"Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_retail_price
+#: model:ir.model,name:product_retail_price.model_product_template
+msgid "Product Template"
+msgstr "Modello Prodotto"
+
+#. module: product_retail_price
+#: field:product.template,retail_price:0
+#: help:product.template,retail_price:0
+msgid "Retail Price"
+msgstr "Prezzo al dettaglio"
+
