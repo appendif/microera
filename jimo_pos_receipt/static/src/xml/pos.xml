@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+<t t-extend="PosTicket">
+	<t t-jquery="div.pos-disc-font" t-operation="replace">	
+	    <div class="pos-disc-font">
+	        Unit price <t t-esc="widget.format_currency(orderline.get_unit_price())"/> <br />
+	        With a <t t-esc="orderline.get_discount()"/>% discount
+	    </div>
+	</t>
+</t>
+
+</templates>
