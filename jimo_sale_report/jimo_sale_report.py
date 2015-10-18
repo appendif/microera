@@ -79,6 +79,7 @@ class jimo_sale_report(orm.Model):
         'brand_id': fields.many2one('product.brand', 'Brand', readonly=True),
         'company_id': fields.many2one('res.company', 'Company', readonly=True),
         'supplier_id': fields.many2one('res.partner', 'Supplier', readonly=True),
+        'manufacturer':fields.many2one('res.partner', 'Manufacturer', readonly=True),
         'purchaseorder_id': fields.many2one('purchase.order', 'Purchase Order', readonly=True),
         'it_salesman_id': fields.many2one('res.users', 'Salesman ITA', readonly=True),
         'warehouse_id': fields.many2one('stock.warehouse', 'Warehouse', readonly=True),
@@ -137,6 +138,7 @@ SELECT
     so.company_id AS company_id,
     so.warehouse_id AS warehouse_id,
     su.id AS supplier_id,
+    pt.manufacturer AS manufacturer,
     po.id AS purchaseorder_id,
     su.user_id AS it_salesman_id,
     sm.product_qty AS shipped_qty,
@@ -154,9 +156,9 @@ SELECT
   FROM sale_order_line sol
    JOIN sale_order so             ON so.id = sol.order_id
    JOIN procurement_order pr      ON pr.sale_line_id = sol.id
+   JOIN stock_move sm             ON sm.procurement_id = pr.id
    JOIN purchase_order_line pol   ON pol.id = pr.purchase_line_id
    JOIN purchase_order po         ON po.id = pol.order_id
-   JOIN stock_move sm             ON sm.procurement_id = pr.id
    LEFT JOIN product_product pp   ON pp.id = sm.product_id
    LEFT JOIN product_template pt  ON pt.id = pp.product_tmpl_id
    LEFT JOIN product_uom u        ON u.id = sol.product_uom

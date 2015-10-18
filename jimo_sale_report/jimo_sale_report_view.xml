@@ -18,6 +18,7 @@
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
+                <field name="manufacturer" />                
                 <field name="purchaseorder_id" />
                 <field name="warehouse_id" />
                 <field name="order_qty"   sum="Total ordered"/>
@@ -53,12 +54,13 @@
     				<filter string="Commission Unpaid" 	icon="terp-dolar"     domain="[('comm_paid','=',False)]" />
             	</group>
 
-                <field name="date_done" />
-                <field name="month" />
                 <field name="year" />
+                <field name="month" />
+                <field name="date_done" />
                 <field name="company_id" groups="base.group_multi_company"/>
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
                 <field name="customer_id" context="{'contact_display':'partner'}"/>
+                <field name="manufacturer" context="{'contact_display':'partner'}"/>
                 <field name="salesman_id" />
                 <field name="it_salesman_id" />
                 <field name="employee_id" />
@@ -85,9 +87,10 @@
                     <filter name="group_employee_it" string="Employee IT" context="{'group_by':'it_employee_id'}"/>
                     <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
                     <filter name="group_customer" string="Customer" context="{'group_by':'customer_id'}"/>
-                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_done'}" help="Day Delivered"/>
-                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Month Delivered"/>
+                    <filter name="group_manufacturer" string="Manufacturer" context="{'group_by':'manufacturer'}"/>
                     <filter string="Year"  icon="terp-go-year"  context="{'group_by':'year'}"  help="Year Delivered"/>
+                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Month Delivered"/>
+                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'day'}"   help="Day Delivered"/>
                 </group>
             </search>
         </field>

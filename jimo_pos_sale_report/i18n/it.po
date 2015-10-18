@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-18 12:09+0000\n"
-"PO-Revision-Date: 2015-08-18 15:36+0100\n"
+"POT-Creation-Date: 2015-10-18 15:04+0000\n"
+"PO-Revision-Date: 2015-10-18 17:06+0100\n"
 "Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgstr "Jimo POS Sale Report"
 #. module: jimo_pos_sale_report
 #: model:ir.model,name:jimo_pos_sale_report.model_jimo_pos_sale_report
 msgid "Jimo POS Sale report"
-msgstr "Report Vendite POS Jimo"
+msgstr "Report POS Jimo"
 
 #. module: jimo_pos_sale_report
 #: selection:jimo.pos.sale.report,month:0
@@ -107,7 +107,7 @@ msgstr "Giugno"
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,list_price:0
 msgid "List Price"
-msgstr "Prezzo di Listino"
+msgstr "List Price"
 
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,location_id:0
@@ -125,6 +125,12 @@ msgstr "Manager 1"
 #: field:jimo.pos.sale.report,manager2_id:0
 msgid "Manager2"
 msgstr "Manager 2"
+
+#. module: jimo_pos_sale_report
+#: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
+#: field:jimo.pos.sale.report,manufacturer:0
+msgid "Manufacturer"
+msgstr "Produttore"
 
 #. module: jimo_pos_sale_report
 #: selection:jimo.pos.sale.report,month:0
@@ -155,27 +161,27 @@ msgstr "Ottobre"
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,date_order:0
 msgid "Order Date"
-msgstr "Data Ordine"
+msgstr "Order Date"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
 msgid "Order Day"
-msgstr "Giorno Ordine"
+msgstr "Giorno"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
 msgid "Order Month"
-msgstr "Mese Ordine"
+msgstr "Mese"
 
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,posorder_id:0
 msgid "Order Ref"
-msgstr "Rif. Ordine"
+msgstr "Order Ref"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
 msgid "Order Year"
-msgstr "Anno Ordine"
+msgstr "Anno"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
@@ -209,7 +215,7 @@ msgstr "Quantità"
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,pos_reference:0
 msgid "Receipt Ref"
-msgstr "Rif. Scontrino"
+msgstr "Receipt Ref"
 
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,sale_price:0
@@ -257,12 +263,12 @@ msgstr "Questo report esegue analisi sugli ordini POS"
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_tree
 #: field:jimo.pos.sale.report,total_price:0
 msgid "Total Price"
-msgstr "Prezzo Totale"
+msgstr "Importo Totale"
 
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,unit_price:0
 msgid "Unit Price"
-msgstr "Prezzo Unitario"
+msgstr "Importo Unitario"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
@@ -273,5 +279,5 @@ msgstr "Anno"
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,ean13:0
 msgid "ean13"
-msgstr "ean13"
+msgstr "Ean13"
 

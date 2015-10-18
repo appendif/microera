@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-18 11:57+0000\n"
-"PO-Revision-Date: 2015-08-18 14:15+0100\n"
+"POT-Creation-Date: 2015-10-18 15:02+0000\n"
+"PO-Revision-Date: 2015-10-18 17:09+0100\n"
 "Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -150,7 +150,7 @@ msgstr "Giugno"
 #. module: jimo_sale_report
 #: field:jimo.sale.report,list_price:0
 msgid "List Price"
-msgstr "Prezzo di Listino"
+msgstr "List Price"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
@@ -163,6 +163,12 @@ msgstr "Manager 1"
 #: field:jimo.sale.report,manager2_id:0
 msgid "Manager2"
 msgstr "Manager 2"
+
+#. module: jimo_sale_report
+#: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
+#: field:jimo.sale.report,manufacturer:0
+msgid "Manufacturer"
+msgstr "Produttore"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
@@ -198,7 +204,7 @@ msgstr "Ottobre"
 #. module: jimo_sale_report
 #: field:jimo.sale.report,order_qty:0
 msgid "Order Qty"
-msgstr "Quantità Ordinata"
+msgstr "Quantità Ordine"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
@@ -225,7 +231,7 @@ msgstr "Ordine d'Acquisto"
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
 #: field:jimo.sale.report,saleorder_id:0
 msgid "Sale Order"
-msgstr "Ordine di Vendita"
+msgstr "Ordine"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
@@ -285,7 +291,7 @@ msgstr "Questo report esegue analisi sulle vendite."
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree
 #: field:jimo.sale.report,total_price:0
 msgid "Total Price"
-msgstr "Prezzo Totale"
+msgstr "Importo Totale"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_tree

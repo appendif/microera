@@ -19,6 +19,7 @@
                 <field name="brand_id" />
                 <field name="company_id" />
                 <field name="supplier_id" />
+                <field name="manufacturer" />
 <!--            <field name="location_id" />                -->
                 <field name="pos_name" />
                 <field name="quantity"   sum="Quantity"/>
@@ -42,12 +43,13 @@
         <field name="model">jimo.pos.sale.report</field>
         <field name="arch" type="xml">
             <search string="POS Sale report">
-                <field name="date_order" />
-                <field name="month" />
                 <field name="year" />
+                <field name="month" />
+                <field name="date_order" />
                 <field name="company_id" groups="base.group_multi_company"/>
                 <field name="pos_name" />
                 <field name="supplier_id" context="{'contact_display':'partner'}"/>
+                <field name="manufacturer" context="{'contact_display':'partner'}"/>
                 <field name="salesman_id" />
                 <field name="it_salesman_id" />
                 <field name="employee_id" />
@@ -68,9 +70,10 @@
                     <filter name="group_manager1" string="Manager1" context="{'group_by':'manager1_id'}"/>
                     <filter name="group_manager2" string="Manager2" context="{'group_by':'manager2_id'}"/>
                     <filter name="group_supplier" string="Supplier" context="{'group_by':'supplier_id'}"/>
-                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'date_order'}" help="Order Day"/>
-                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Order Month"/>
+                    <filter name="group_manufacturer" string="Manufacturer" context="{'group_by':'manufacturer'}"/>
                     <filter string="Year"  icon="terp-go-year"  context="{'group_by':'year'}"  help="Order Year"/>
+                    <filter string="Month" icon="terp-go-month" context="{'group_by':'month'}" help="Order Month"/>
+                    <filter string="Day"   icon="terp-go-today" context="{'group_by':'day'}"   help="Order Day"/>
                 </group>
             </search>
         </field>

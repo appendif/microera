@@ -29,7 +29,7 @@ Jimo POS Sale Report
     'author': 'MicroEra srl',
     'website': 'http://www.microera.it',
     'depends': ['base', 'product', 'stock', 'sale', 'purchase',
-                'product_brand', 'point_of_sale',
+                'product_brand', 'point_of_sale', 'product_manufacturer',
                 'jimo_sale_report', 'product_private_price'],
     'data': [
         'jimo_pos_sale_report_view.xml',
