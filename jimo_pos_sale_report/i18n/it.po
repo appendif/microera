@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-18 15:04+0000\n"
-"PO-Revision-Date: 2015-10-18 17:06+0100\n"
+"POT-Creation-Date: 2015-10-18 15:52+0000\n"
+"PO-Revision-Date: 2015-10-18 17:54+0100\n"
 "Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -56,12 +56,12 @@ msgstr "Dicembre"
 #. module: jimo_pos_sale_report
 #: field:jimo.pos.sale.report,discount:0
 msgid "Discount %"
-msgstr "Sconto %"
+msgstr "Discount %"
 
 #. module: jimo_pos_sale_report
 #: view:jimo.pos.sale.report:jimo_pos_sale_report.view_pos_sale_report_search
 msgid "Employee"
-msgstr "Impiegato"
+msgstr "Commessa"
 
 #. module: jimo_pos_sale_report
 #: selection:jimo.pos.sale.report,month:0

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-18 15:02+0000\n"
-"PO-Revision-Date: 2015-10-18 17:09+0100\n"
+"POT-Creation-Date: 2015-10-18 15:55+0000\n"
+"PO-Revision-Date: 2015-10-18 17:56+0100\n"
 "Last-Translator: Fabrizio Appendino <appendif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -89,22 +89,22 @@ msgstr "Data Consegna"
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
 #: field:jimo.sale.report,employee_id:0
 msgid "Employee"
-msgstr "Impiegato"
+msgstr "Venditore"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
 msgid "Employee IT"
-msgstr "Impiegato IT"
+msgstr "Agente IT"
 
 #. module: jimo_sale_report
 #: field:jimo.sale.report,it_employee_id:0
 msgid "Employee ITA"
-msgstr "Impiegato ITA"
+msgstr "Employee ITA"
 
 #. module: jimo_sale_report
 #: selection:jimo.sale.report,month:0
 msgid "February"
-msgstr "Febbraio"
+msgstr "Febbraiot"
 
 #. module: jimo_sale_report
 #: view:jimo.sale.report:jimo_sale_report.view_sale_report_search
